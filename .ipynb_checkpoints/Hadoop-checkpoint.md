@@ -108,6 +108,4 @@ Github: https://github.com/tomwhite/hadoop-book/
 <hr>
 <br>
 <hr>
-
 # Chapter 2: MapReduce
-
