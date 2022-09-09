@@ -111,3 +111,15 @@ Github: https://github.com/tomwhite/hadoop-book/
 
 # Chapter 2: MapReduce
 
+#TODODefinition:
+
+MapReduce is:
+- A framework.
+- A programming model for data processing.
+- Can work with MapReduce program written in various languages.
+- Is inherently parallel.
+- Has two phases Map and Reduce.
+- Framework exposes functions - Map and Reduce, the input and output for both is (key,value) pair.
+    - The key and value can be of any datatype or data-structure.
+    - This design makes it possible to sequence multiple Map-Reduce.
+
