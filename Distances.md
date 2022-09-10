@@ -45,8 +45,7 @@ $\large d(x,y)=1-JSIM(x,y)$
 2.  $d(x,y)=0$ when $x=y$ else $d(x,y)>0$
 > Case-I: When $x=y$,
 >> $d(x,y)= 1 - \frac{x\cap y}{x\cup y}$ 
->> $d(x,y)= 1 - 1$
->> $d(x,y)= 0$  [Proved!]  
+>> $d(x,y)= 1 - 1=0$  [Proved!]  
 >
 > Case-II: When $x\not=y$  
 >> $Since, \frac{x\cap y}{x\cup y} <1$  
@@ -66,3 +65,4 @@ $\Large = \frac{\sum_{i=1}^n{x_i*y_i}}{\sum_{i=1}^n{x_i^2}*\sum_{i=1}^n{y_i^2}}$
 - There is no difference between a vector and its multiple.
 - Angle between two vectors is the smaller angle between them, range=$[0\degree,180\degree]$.
 # Hamming Distance
+<!-- #TODO: hamming distance -->

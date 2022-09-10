@@ -123,3 +123,34 @@ MapReduce is:
     - The key and value can be of any datatype or data-structure.
     - This design makes it possible to sequence multiple Map-Reduce.
 
+## Map
+>Definition: Map is the task that is to be run on each chunk of the data in map phase.
+- Input and output(s) are (key,value) pair(s).
+- They are run on the datanodes that possess the chunks.
+- Typically they run parallely on multiple nodes working on different chunks.
+- Its output (key,value) pairs are hashed into intermediate files.
+
+## Intermediate Files
+>These are the output files of Map tasks.
+- They sit on local file system.
+- If there are $r$ reduce tasks, there will be $r$ intermediate output files by **each** map task, thus in total we get (count of map tasks * r) intermediate files.
+- number of intermediate files = number of reduce tasks.
+- Combiners work upon this intermediate files.
+- These files are sent to nodes running the reduce tasks during sort and shuffle phase.
+
+## Combiner
+>These are the tasks that are run on the intermediate files.
+- By default they are identity function, but Hadoop framework exposes this function for overloading.
+- If there are $m$ map tasks, then there will be $m$ combiner functions for each of them.
+- **These functions are suitable when the reduce task is associative and commutative.**
+- **PURPOSE**: If there are multiple values for a key, then map tasks will create multiple (key, value<sub>i</sub>) pairs, instead of sending these individual pairs we can send (key, [values list or some aggregated value from list of values]) to reduce tasks to save the network bandwidth, these reducing multiple pairs to one pair for a key is done by combiners.
+
+## Sort and Shuffle
+1. The combiner works only at the level of each map tasks.
+1. At the end of Map phase there are intermediate files from each map tasks with values for a key distributed across intermediate files.
+1. **PURPOSE**:
+## Reduce
+>Definition: Reduce is the task that is run on the list of values for a key in reduce phase.
+- Input and output(s) are (key,value) pair(s).
+- They can be run on any node.
+- Typically they are run parallely on multiple nodes working on different keys.
