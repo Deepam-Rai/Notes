@@ -1,7 +1,7 @@
 # Hadoop
 
 ## Book: *Hadoop: The Definitive Guide by Tom White* 4th edition
-
+[Extra infos from outside the book are also added in this note.]
 > Hadoop Version - 2
 
 >http://hadoop.apache.org/  
@@ -113,23 +113,22 @@ Github: https://github.com/tomwhite/hadoop-book/
 
 #TODODefinition:
 
-MapReduce is:
-- A framework.
-- A programming model for data processing.
+- Is a framework.
+- Is a programming model for data processing.
 - Can work with MapReduce program written in various languages.
 - Is inherently parallel.
 - Has two phases Map and Reduce.
 - Framework exposes functions - Map and Reduce, the input and output for both is (key,value) pair.
     - The key and value can be of any datatype or data-structure.
     - This design makes it possible to sequence multiple Map-Reduce.
-
+- Uses HDFS for storage.
 ## Map
 >Definition: Map is the task that is to be run on each chunk of the data in map phase.
 - Input and output(s) are (key,value) pair(s).
 - They are run on the datanodes that possess the chunks.
 - Typically they run parallely on multiple nodes working on different chunks.
 - Its output (key,value) pairs are hashed into intermediate files.
-
+- Have the advantage of data locality.
 ## Intermediate Files
 >These are the output files of Map tasks.
 - They sit on local file system.
@@ -148,9 +147,19 @@ MapReduce is:
 ## Sort and Shuffle
 1. The combiner works only at the level of each map tasks.
 1. At the end of Map phase there are intermediate files from each map tasks with values for a key distributed across intermediate files.
-1. **PURPOSE**:
+1. **PURPOSE**: Even after combiner phase the values for a key are distributed across intermediate files, this phase gathers all of them and makes the value list.
+1. The inputs are $(key, value_1),(key, value_2),...,(key, value_n) $ from intermediate file**s** and the output is $(key, [value_1, value_2, ...,value_n])$.
+
 ## Reduce
 >Definition: Reduce is the task that is run on the list of values for a key in reduce phase.
 - Input and output(s) are (key,value) pair(s).
 - They can be run on any node.
 - Typically they are run parallely on multiple nodes working on different keys.
+- Dont have the advantage of data locality.
+
+## Data Flow
+- **Map Reduce Job Unit:** is a unit of work that client wants to be performed and consists of input data, MapReduce program and configuration instruction.
+- The client job is divided into input splits
+    - The more the splits -> more parallel computation -> more fine balancing of load -> too many splits increases overhead of managing splits themselves.
+    - One map task for each
+    - Each split can work on multiple chunks.
