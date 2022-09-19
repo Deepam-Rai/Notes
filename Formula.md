@@ -4,27 +4,27 @@
 # Counting
 ## Basic Principle of Counting/Multiplication of choices
 - If an operation consists of $step_1$ with $n_1$ choices, $step_2$ with $n_2$ choices,...,$step_k$ with $n_k$ choices, then that operation can be done in  
-$n_1*n_2*...*n_k$ number of ways.
+ $ n_1*n_2*...*n_k$ number of ways.
 ## Permutations - Distinct Arrangements
 - Permutation of $r$ out of $n$ unique items
     - $\large ^nP_r = \frac{n!}{(n-r)!}$ 
 - Permutation $n$ unique items
     - $\large ^nP_n=n!$
 - Permutation of $n$ items where $n_1,n_2,...,n_k$ duplicates present
-    - $\large \frac{n!}{n_1!n_2!...n_k!}$
+    - $\Large \frac{n!}{n_1!n_2!...n_k!}$
     - here $n_1+n_2+...+n_k+remaining\ unique\ items=n$
 ### Circular Permutations
 - $\large Circular\ permutation\ of\ n\ things= (n-1)!$
 ## Combinations
 - ways of taking subset of $r$ items from set of $n$ unique items
-    - $\large ^nC_r = \frac{^nP_r}{r!} = \frac{n!}{r!(n-r)!}$
+    - $\Large ^nC_r = \frac{^nP_r}{r!} = \frac{n!}{r!(n-r)!}$
 
 
 # Probability
 ## Random Variable
 ### Univariate
 #### Expectation - $\mu$
-- $E[X] = \sum xf(x)\ or\ \int^\infty_{-\inf}{xf(x)dx}$
+- $E[X] = \sum xf(x)\ or\ \int^\infty_{-\infty}{xf(x)dx}$
 - $E[a]=a$
 - $E[aX]=aE[X]$
 - $E[a\pm X]=a\pm E[X]$
