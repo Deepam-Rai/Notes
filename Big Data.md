@@ -37,3 +37,35 @@ Properties of proper hash-functions:
 1. The hash function should distribute hash-keys evenly in the buckets.
     - Doesn't hold when the number of hash-keys are less than number of buckets.
 
+<!-- #TODO: Rest of chap-1 -->
+# Chapter 2: Map Reduce
+
+Points:
+- Utilizes parallelism.
+- Cluster of commodity hardware.
+- Distributed File System.
+    - Redundancy, Replication for reliability.
+
+## Physical organization of compute nodes - Cluster Computing
+- Computer nodes are stored on rack**s**.
+- **Intra rack switch:** Communication within the rack.
+- **Inter rack switch:** Communication among the racks.
+    - Typically has more bandwidth than intra-rack switch.
+    - Can cause the whole cluster communication to fail.
+- More number of components => More chances of component failure.
+- Files:
+    - Stored redundantly - inter-rack preferred.
+    - Stored as **chunks**.
+    - Chunks are further collection of **elements** - the unit of files that cannot be divided(can be of any data type).
+- Computations divided into tasks - independent & parallel.
+- **DFS(Distributed File System):**
+    - Implementations: GFS(Google File System), HDFS(Hadoop Distributed FIle System), Cloudstore.
+    - Write once read many times type.
+    - Master node/Name node:
+        - The node which can direct to the nodes storing the chunks.
+        - Need not necessarily store metadata/schema - eg HDFS.
+        - Is itself replicated.
+
+## MapReduce
+- A style of computing.
+- **REFER TO HADOOP NOTES.**
