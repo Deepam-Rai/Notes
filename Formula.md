@@ -3,7 +3,7 @@
 - $\displaystyle{e = \lim_{x\to\infty}(1+\frac{1}{x})^x}$
 # Counting
 ## Basic Principle of Counting/Multiplication of choices
-- If an operation consists of $step_1$ with $n_1$ choices, $step_2$ with $n_2$ choices,..., $step_k$ with $n_k$ choices, then that operation can be done in $n_1*n_2*...*n_k$ number of ways.
+- If an operation consists of $step_1$ with $n_1$ choices, $step_2$ with $n_2$ choices,..., $step_k$ with $n_k$ choices, then that operation can be done in $n_1 * n_2 *...*n_k$ number of ways.
 ## Permutations - Distinct Arrangements
 - Permutation of $r$ out of $n$ unique items
     - $\large ^nP_r = \frac{n!}{(n-r)!}$ 
