@@ -65,7 +65,7 @@ A subgraph $H\subseteq G$ such that $V(H)=V(G)$ and $E(H)\subset E(G)$.
 A subgraph $F\in G$ such that for vertices $u,v\in V(F)$ if $uv\in E(G)$ then $uv\in E(F)$.
 
 #### Vertex induced subgraph of G
-If S is a nonempty subset of V(G), then the induced subgraph of G by S is an induced subgraph with vertex set S and is denoted as G\[S] or $<S>_G$
+If S is a nonempty subset of V(G), then the induced subgraph of G by S is an induced subgraph with vertex set S and is denoted as G\[S] or $\lt S\gt _G$
 - For $U\subseteq V(G)$, G-U is the induced subgraph of G, induced by V(G)-U.
 
 #### Edge induced subgraph of G
