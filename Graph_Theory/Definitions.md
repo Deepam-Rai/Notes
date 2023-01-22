@@ -1,9 +1,9 @@
 
 ----
 ### Graphs
-A graph G is an ordered pair of vertex nonempty set V and edge set E, denoted as G(V,E), where
-	V is a finite non-empty set of objects.
-	E is a two element subset of V.
+A graph G is an ordered pair of vertex nonempty set V and edge set E, denoted as G(V,E),   where
+	V is a finite non-empty set of objects.  
+	E is a two element subset of V.  
 
 This is a simple undirected graph.
 
@@ -11,16 +11,23 @@ This is a simple undirected graph.
 Number of vertices in a graph.
 #### Size
 Number of edges in a graph.
+#### Diameter
+Length of the longest path in the graph.
 
 ----
-### Adjacent edges
-Vertices $u,v\in V$ are said to be adjacent to each other if edge  $uv\in E$.
-
 ### Joined
 If $uv\in E$ then vertices u and v are said to be joined by edge uv.
 
 ### Neighbours
 Vertices $u,v\in V$ are said to be neighbours if they are joined by some edge.
+
+### Connected vertices
+If there exists a path between them.
+
+### Adjacent vertices
+Vertices $u,v\in V$ are said to be adjacent to each other if edge  $uv\in E$.
+#### In digraphs
+For $a,b\in V(D)$,  "a is adjacent to b" or "b is adjacent from a" if $(a,b)\in E(G)$.
 
 ### Incident
 If an edge $e\in E$ pairs vertex $v\in V$ with some other vertex then e and v are said to be incident with each other.
@@ -28,8 +35,11 @@ If an edge $e\in E$ pairs vertex $v\in V$ with some other vertex then e and v ar
 ### Adjacent edges
 If edges are incident on a common vertex then they are said to be ajacent edges.
 
-### Connected vertices
-If there exists a path between them.
+### Parallel edges
+Edges that joins same pair of vertices.
+
+### Loop
+An edge that connects a vertex to itself.
 
 ----
 ### Trivial graph
@@ -85,9 +95,18 @@ A connected subgraph of G which is not a proper subset of any another connected 
 - Connected graph G has k(G)=1.
 - Every graph is union of its components.
 
+### Multigraph
+A graph with parallel edges.
+
+### Di-graph
+A di-graph is an ordered pair of vertex set V and edge set E, denoted by D(V,E), where  
+	V = finite non-empty set of objects  
+	E $\subseteq V\times V$ , an ordered two element subset.
+
+
 ----
 ### Walk
-Sequence of vertices W such that consecutive vertices in the sequence are adjacent.
+Sequence of vertices W such that consecutive vertices in the sequence are adjacent.  
 It can be expressed as: $W=\{u=v_0,v_1,v_2,...,v_k=v\}$ which is a u-v walk.
 
 #### length of a walk
@@ -120,7 +139,6 @@ A 3-cycle.
 A cycle of odd length.
 #### Even cycle
 A cycle of even length.
-
 
 ----
 Points:
