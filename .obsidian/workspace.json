@@ -1,22 +1,18 @@
 {
   "main": {
-    "id": "3c05af43912cc09c",
+    "id": "4a663b83ea696c47",
     "type": "split",
     "children": [
       {
-        "id": "e165a60bc11668be",
+        "id": "06119f4081124328",
         "type": "tabs",
         "children": [
           {
-            "id": "e396da0090187a0e",
+            "id": "b36d8ddd6a37e666",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Definitions.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -25,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "156673097e853fec",
+    "id": "c1474ac7ee3b5086",
     "type": "split",
     "children": [
       {
-        "id": "ba154fa61b596d0a",
+        "id": "a0e47200d329b3c5",
         "type": "tabs",
         "children": [
           {
-            "id": "6838c5e8abaa00b2",
+            "id": "9a97b3aee185a082",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +39,7 @@
             }
           },
           {
-            "id": "5a76db5396c94698",
+            "id": "71beae3f7406c8f2",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +54,7 @@
             }
           },
           {
-            "id": "7b0d9d98b02aad20",
+            "id": "26b9e4f148aaa6f2",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -72,21 +68,20 @@
     "width": 300
   },
   "right": {
-    "id": "ea81194dc77de107",
+    "id": "c0ca6d7eb736b59d",
     "type": "split",
     "children": [
       {
-        "id": "51a2f31e38cee7fb",
+        "id": "ae0f71915f16c790",
         "type": "tabs",
         "children": [
           {
-            "id": "78debc14d11baa5b",
+            "id": "ece78a4c844e8648",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Definitions.md",
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -97,19 +92,18 @@
             }
           },
           {
-            "id": "e5517f771312af34",
+            "id": "dbc8237c0608e5de",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Definitions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "6595c503422b9698",
+            "id": "61d6841f224691bf",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,21 +114,19 @@
             }
           },
           {
-            "id": "bc2b75193cf34621",
+            "id": "3cc796b99f4c099d",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Definitions.md"
-              }
+              "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,9 +138,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e396da0090187a0e",
-  "lastOpenFiles": [
-    "README.md",
-    "Definitions.md"
-  ]
+  "active": "b36d8ddd6a37e666",
+  "lastOpenFiles": []
 }

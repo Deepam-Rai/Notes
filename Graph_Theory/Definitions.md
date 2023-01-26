@@ -1,7 +1,7 @@
 
 ----
 ### Graphs
-A graph G is an ordered pair of vertex nonempty set V and edge set E, denoted as G(V,E),   where
+A graph G is an ordered pair of vertex nonempty set V and edge set E, denoted as G(V,E),   where  
 	V is a finite non-empty set of objects.  
 	E is a two element subset of V.  
 
