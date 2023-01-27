@@ -12,7 +12,8 @@ Number of vertices in a graph.
 #### Size
 Number of edges in a graph.
 #### Diameter
-Length of the longest path in the graph.
+Max of distances between all vertex pairs in the graph.
+- Undefined in disconnected graphs.
 
 ----
 ### Joined
@@ -103,6 +104,26 @@ A di-graph is an ordered pair of vertex set V and edge set E, denoted by D(V,E),
 	V = finite non-empty set of objects  
 	E $\subseteq V\times V$ , an ordered two element subset.
 
+### Common Classes of Graph
+
+#### Path $P_n$
+If the vertices $v_1, v_2, v_3,...,v_n$ in graph G can be labelled or relabelled so that its edges are $v_1v_2, v_2v_3,..., v_{n-1}v_n$ then G is called a path.
+
+#### Cycle $C_n$
+If the vertices of a graph with order>2 can be labelled or relabelled $v_1, v_2, v_3,..., v_n$ so that its edges are $v_1v_2, v_2v_3,..., v_{n-1}v_n, v_nv_1$, then G is called a cycle.
+
+#### Complete Graph $K_n$
+Every two vertices of G are adjacent.
+- Size of $K_n= (^n_2)$.
+- $P_1=K_1,\ P_2=K_2,\ C_3=K_3$.
+
+#### Complement $\bar G$ of G
+$\bar G$ is a graph with vertex set V(G) and edge set $E(\bar G)$ such that $uv\in E(\bar G) <=> uv\notin E(G)$.
+- Let order of G be n and size be m, then size of $\bar G$ is $(^n_2)-m$.
+- At least one of $G\ or\ \bar G$ must be connected.
+
+#### Empty Graph $\bar K_n$
+A graph of order n with no edge.
 
 ----
 ### Walk
@@ -123,6 +144,13 @@ A walk where edges doesnt repeat.
 
 ### Path
 A walk where vertices doesnt repeat.
+
+
+### Distance $d_G(u,v)$
+The **length of** shortest path between them in G.
+#### Geodesic
+A u-v path of length $d_G(u,v)$ in G is called u-v geodesic.
+- If $d(u,v)=diam(G)$ and $w\not =u\ and\ v$, then no u-w geodesic can contain v as that would imply d(u,w)>d(u,v)=diam(G) which is impossible.
 
 ### Circuit
 A closed trail.
@@ -151,4 +179,5 @@ Points:
 -  $paths\subseteq trail \subseteq walk$.
 -  $cycle\subseteq circuit\subseteq trail \subseteq walk$.
 - The vertices and edges of trail, path, circuit or cycle in G forms a subgraph.
+- Let $d_G(u,v)$ = $\{u=v_0,v_1,...,v_k=v\}$ be shortest path between u and v, then for $0\le i\le j \le k$, subsequence $v_i$ to $v_j$ is shortest path between $v_i$ and $v_j$.
 
