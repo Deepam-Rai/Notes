@@ -104,6 +104,9 @@ A di-graph is an ordered pair of vertex set V and edge set E, denoted by D(V,E),
 	V = finite non-empty set of objects  
 	E $\subseteq V\times V$ , an ordered two element subset.
 
+#### Oriented Graph
+Digraph with no paralled edges.
+
 ### Common Classes of Graph
 
 #### Path $P_n$
@@ -124,6 +127,27 @@ $\bar G$ is a graph with vertex set V(G) and edge set $E(\bar G)$ such that $uv\
 
 #### Empty Graph $\bar K_n$
 A graph of order n with no edge.
+
+#### K-Partite Graph
+If V(G) can be divided into k partites $V_1,V_2,...,V_k$ such that if $uv\in E(G)=>u,v$ belongs to different partites.
+
+##### Bipartite Graph
+If V(G) can be represented as the union of two vertex sets $V_1(G), V_2(G)$ called partite sets such that,  
+$V(G) = V_1(G)\cup V_2(G)$, and  
+$x,y\in V_i(G) \Leftrightarrow xy\notin E(G)$ for i=1,2.
+
+##### Complete k-partite Graph $K_{n_1,n_2,...,n_k}$
+If every two vertex in different partites are joined by an edge.  
+
+##### Star graph
+If order of either U or V is 1.
+
+#### Isomorphic Graphs $G\cong H$
+If two graphs are same except possibly for the way that they are labelled or drawn.
+
+### Pseudograph
+Where parallel edges and loops are allowed.
+
 
 ----
 ### Walk
