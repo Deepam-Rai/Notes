@@ -5,7 +5,10 @@ A graph G is an ordered pair of vertex nonempty set V and edge set E, denoted as
 	V is a finite non-empty set of objects.  
 	E is a two element subset of V.  
 
-This is a simple undirected graph.
+This is a simple graph.
+- Undirected
+- No Parallel Edges
+- No Loops
 
 #### Order
 Number of vertices in a graph.
@@ -26,9 +29,12 @@ Vertices $u,v\in V$ are said to be neighbours if they are joined by some edge.
 If there exists a path between them.
 
 ### Adjacent vertices
-Vertices $u,v\in V$ are said to be adjacent to each other if edge  $uv\in E$.
+Vertices $u,v\in V$ are said to be adjacent to each other if edge  $uv\in E$. 
 #### In digraphs
 For $a,b\in V(D)$,  "a is adjacent to b" or "b is adjacent from a" if $(a,b)\in E(G)$.
+
+### Eccentricity of the vertex
+$=max\{Path(u,v) \forall v\in V(G)\ and\ u\not = v\}$
 
 ### Incident
 If an edge $e\in E$ pairs vertex $v\in V$ with some other vertex then e and v are said to be incident with each other.
@@ -81,7 +87,7 @@ If S is a nonempty subset of V(G), then the induced subgraph of G by S is an ind
 
 #### Edge induced subgraph of G
 If X is a nonempty subset of E(G) then induced subgraph of G denoted as G\[X] or $<X>_G$ will have $E( G[X])=X$ and V(G\[X]) consists of all vertices of G that are incident with at least one edge in X.
--  For $X\subseteq E(G)$ G-X = spannig subgraph of G induced by E(G)-X.
+-  For $X\subseteq E(G)$ G-X = spanning subgraph of G induced by E(G)-X.
 
 
 ### Connected graph
@@ -146,7 +152,7 @@ If order of either U or V is 1.
 If two graphs are same except possibly for the way that they are labelled or drawn.
 
 ### Pseudograph
-Where parallel edges and loops are allowed.
+Where loops are allowed.
 
 
 ----
@@ -164,10 +170,10 @@ If the first and the last vertices of walk are same, then it is a closed walk.
 If the first and the last vertices of walk are not same, then it is an open walk.
 
 ### Trail
-A walk where edges doesnt repeat.
+A walk where edges doesn't repeat.
 
 ### Path
-A walk where vertices doesnt repeat.
+A walk where vertices doesn't repeat.
 
 
 ### Distance $d_G(u,v)$
