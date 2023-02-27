@@ -19,6 +19,12 @@ Max of distances between all vertex pairs in the graph.
 - Undefined in disconnected graphs.
 
 ----
+### Degree of vertex
+The number of edges incident to the vertex
+- Outdegree: The number of vertices **to** which this vertex is adjacent.
+- Indegree: Number of vertices **from** which this vertex is adjacent.
+- Loop contributes 2 degree to a vertex.
+
 ### Joined
 If $uv\in E$ then vertices u and v are said to be joined by edge uv.
 
@@ -47,6 +53,7 @@ Edges that joins same pair of vertices.
 
 ### Loop
 An edge that connects a vertex to itself.
+- A loop contributes two degrees(1 out and 1 in) for degree count of the vertex.
 
 ----
 ### Trivial graph
@@ -186,6 +193,9 @@ A u-v path of length $d_G(u,v)$ in G is called u-v geodesic.
 A closed trail.
 - Begins and ends at the same vertex.
 - In a simple graph it will have $length\geq3$
+
+### K-Regular graphs
+All vertices have degree k.s
 
 ### Cycle
 A circuit where no vertex repeats except the first and the last.

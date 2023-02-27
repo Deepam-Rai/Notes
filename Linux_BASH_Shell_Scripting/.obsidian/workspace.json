@@ -49,14 +49,38 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Basics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9be78c2c93bc7a00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Command Line Argument.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6cce763c7591243a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Quoting.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -106,8 +130,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "59b4e1abf77683a7",
@@ -123,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Command Line Argument.md",
+                "file": "Quoting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Command Line Argument.md",
+                "file": "Quoting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Command Line Argument.md"
+                "file": "Quoting.md"
               }
             }
           }
@@ -184,10 +207,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d604cbb2dffc3153",
+  "active": "6cce763c7591243a",
   "lastOpenFiles": [
-    "Input Output.md",
+    "Command Line Argument.md",
+    "Quoting.md",
+    "Permissions.md",
     "Basics.md",
+    "Input Output.md",
     "Variables.md",
     "Input-Output.md",
     "Input/ Output 2.md",
