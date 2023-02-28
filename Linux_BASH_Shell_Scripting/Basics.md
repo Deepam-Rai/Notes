@@ -1,4 +1,4 @@
-
+Good source: https://tldp.org/
 ## Shell
 It is a program that acts as an interface between a user and the kernel.
 
@@ -8,7 +8,11 @@ It is a program that acts as an interface between a user and the kernel.
 - **Z Shell (/bin/zsh):** Most advanced and has most features.
 - **Others:** C Shell(/bin/csh), K Shell(/bin/ksh),etc.
 
-## shebang \#!
+## shebang `#!`
 - In first line of the script: to tell OS which interpreter or shell to use to parse rest of the file.
 	- eg: \#!/bin/bash, \#!/usr/bin/env, etc
 
+
+| cmd | Purpose |
+|--|--|
+| `bash --version` | version, license |

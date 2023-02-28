@@ -1,3 +1,4 @@
+# Variables
 - Temporary storage.
 - Exists for the lifespan of the program/terminal session.
 
@@ -10,7 +11,7 @@
 | eg: BASH_VERSION, HOME, etc | Any userdefined variables|
 
 
-## Global and Local Variables
+# Global and Local Variables (in a shell)
 - Global variables: Defined outside function.
 - Local variables: Defined inside function.
 - By default all variables are global.
@@ -29,3 +30,8 @@
 | read -p "\<text prompt>" \<variable> | Prompt a text message; take input; save to the variable. [[Input Output#Accepting user inputs via keyboard]]|
 | \<variable>=\`\<command>\` | Saving output of a command to a variable |
 
+# `export` command
+- Create child shell by running `/bin/bash`
+| Command | Purpose |
+|--|--|
+|`export <myvar>=<value>` | Now we can use this variable globally in all child shells too. |
