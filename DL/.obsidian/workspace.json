@@ -1,0 +1,156 @@
+{
+  "main": {
+    "id": "362d08288d863168",
+    "type": "split",
+    "children": [
+      {
+        "id": "3117efd471b7e793",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7a696aecb91e8872",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Perceptron.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4cad8e68a587420c",
+    "type": "split",
+    "children": [
+      {
+        "id": "93f0e8e6835786a1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5217c6ce93c7ae56",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9ce5c24dc32f7111",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1435b0339549df7d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e30715f5aa551623",
+    "type": "split",
+    "children": [
+      {
+        "id": "f59ab6bd97a2ec56",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "383db4e9bc54dff9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Perceptron.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d46d0c4a30869aa3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Perceptron.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "eb2e1765118bdde4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "695a31e8b2dbb65b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Perceptron.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "695a31e8b2dbb65b",
+  "lastOpenFiles": [
+    "Deep Learning by Ian Goodfellow et. al. Content.md",
+    "Perceptron.md",
+    "Definitions.md",
+    "Screenshot from 2022-07-29 16-18-11.png"
+  ]
+}
