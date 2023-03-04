@@ -13,22 +13,25 @@ where $\hat y \in \{0,1\}$
 
 ### AND
 
- $\theta = 2$ 
-| $x_1$ | $x_2$ | $\sum X$ | $\hat y$ |
-|----|----|------|---|
-| 0 | 0 | 0 | 0 |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 2 | 1 |
+$\theta = n$
+| $x_1$ | $x_2$ |...| $x_{n-1}$ | $x_n$ | $\sum X$ | $\hat y$ |
+|----|---|---|----|---- |-----|---|
+| 0 | 0 |... | 0  | 0  | 0    | 0 |
+| 0 | 1 |... | 0  | 1  | 1    | 0 |
+| ..|..| ..  | .. | .. | ..   | .. |
+| 1 | 1 |... | 1  | 0   | n-1 | 0 |
+| 1 | 1 |... | 1  | 1   | n  | 1  |
 
 ### OR
 $\theta = 1$
-| $x_1$ | $x_2$ | $\sum X$ | $\hat y$ |
-|----|----|------|---|
-| 0 | 0 | 0 | 0 |
-| 0 | 1 | 1 | 1 |
-| 1 | 0 | 1 | 1 |
-| 1 | 1 | 2 | 1 |
+| $x_1$ | $x_2$ |...| $x_{n-1}$ | $x_n$ | $\sum X$ | $\hat y$ |
+|----|---|---|----|---- |-----|---|
+| 0 | 0 |... | 0  | 0  | 0    | 0 |
+| 0 | 1 |... | 0  | 1  | 1    | 1 |
+| ..|..| ..  | .. | .. | ..   | .. |
+| 1 | 1 |... | 1  | 0   | n-1 | 1 |
+| 1 | 1 |... | 1  | 1   | n  | 1  |
+
 
 
 
@@ -60,6 +63,7 @@ where $\hat y \in \mathbb{R}$
 		1. $W\gets W+X$
 	3. if( $x\in N$ and $W.X\ge 0$ )
 		1. $W\gets W-X$
+#TODO mathematical intuition
 
 ## Basic gates using Perceptron
 
@@ -131,4 +135,17 @@ Not linearly separable.
 |Inputs: | Inputs are binary. | Inputs can be real numbers. |
 |Weights: | Inputs are not weighted. | Inputs are weighted. |
 |Decision Boundary: | Creates linear decision boundary. | Creates linear decision boundary, but can learn more complex than MP Neuron. |
-|XOR function: | Cannot factor. | Cannot. (but can with multiple layers.) |
+|Basic Gates: | Models AND, OR. Cannot model XOR, XAND, etc. | Models AND, OR, NOT. Cannot model XOR, XAND, etc. (but can with multiple layers.) |
+| Parameters: | Cannot be learned. #TODO verify | Can be learned. |
+
+
+
+----
+
+# Multi-layer Perceptron
+> Any boolean function of $n$ inputs can be modelled **exactly** by a multi-layer perceptron with 1 hidden layer of 2<sup>n</sup> perceptron and output layer with 1 perceptron.
+
+
+# Universal Approximation theorem
+> A multilayer network of sigmoid neurons with a single hidden layer can **approximate** any continuous function to any desired precision.
+

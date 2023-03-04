@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8828ddbc5b0087bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Activation Functions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Perceptron.md",
+                "file": "Activation Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Perceptron.md",
+                "file": "Activation Functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Perceptron.md"
+                "file": "Activation Functions.md"
               }
             }
           }
@@ -146,11 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "695a31e8b2dbb65b",
+  "active": "8828ddbc5b0087bd",
   "lastOpenFiles": [
-    "Deep Learning by Ian Goodfellow et. al. Content.md",
     "Perceptron.md",
+    "Activation Functions.md",
     "Definitions.md",
+    "Deep Learning by Ian Goodfellow et. al. Content.md",
     "Screenshot from 2022-07-29 16-18-11.png"
   ]
 }
