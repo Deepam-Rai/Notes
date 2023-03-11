@@ -36,3 +36,30 @@ $$[Proved!]$$
 > for **every** two **nonadjacent** vertices  $u$ and $v$ of G. Then G is connected and $diam(G)\lt2$.
 
 **Proof:**  
+Claim-I: G is connected.  
+	Case-I: If $u$ and $v$ are adjacent then its anyway connected.  
+	Case-II: If $u$ and $v$ are not adjacent then:  
+		$deg(u)+deg(v)\ge n-1 \implies$ $u$ and $v$ has at-least one common vertex,  
+		because G is a simple graph(no parallel edges).
+$\therefore$ G is connceted.  
+
+Claim-II: $diam(G)<2$  
+$\because$ Every non-adjacent vertices have a common neighbouring vertex.  
+$\implies$ Max distance between any two vertices = 2.  
+$\therefore diam(G)=2$
+$$[Proved!]$$
+
+> Corollary 2.5
+> If G is graph of order $n$ with $\delta(G)\ge\frac{n-1}{2}$ then G is connected.
+
+**Proof:**  
+For any two given vertices $u$ and $v$,  
+$$deg(u)+deg(v)= \frac{n-1}{2} + \frac{n-1}{2} =  n-1$$
+$\therefore$ By Theorem G is connected.  
+$$[Proved!]$$
+
+----
+> Theorem 2.6:
+> Let $r$ and $n$ be integers with $0\le r \le n-1$. There exists an r-regular graph of order $n$ iff one or $r$ or $n$ is even.
+
+**Proof:**  
