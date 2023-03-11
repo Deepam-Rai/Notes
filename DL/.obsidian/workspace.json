@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3117efd471b7e793",
+        "id": "1a4c7887392b81df",
         "type": "tabs",
         "children": [
           {
-            "id": "7a696aecb91e8872",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Perceptron.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8828ddbc5b0087bd",
+            "id": "c712f27efc370ecd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,9 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0bdf1b78aec0c06f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CNN Theory.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "36a68ea97ae4aadf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Special Architectures.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e30715f5aa551623",
@@ -98,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Activation Functions.md",
+                "file": "Special Architectures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Activation Functions.md",
+                "file": "Special Architectures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Activation Functions.md"
+                "file": "Special Architectures.md"
               }
             }
           }
@@ -147,7 +160,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,12 +173,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8828ddbc5b0087bd",
+  "active": "36a68ea97ae4aadf",
   "lastOpenFiles": [
-    "Perceptron.md",
+    "CNN Theory.md",
+    "Special Architectures.md",
     "Activation Functions.md",
-    "Definitions.md",
+    "Perceptron.md",
     "Deep Learning by Ian Goodfellow et. al. Content.md",
+    "Definitions.md",
     "Screenshot from 2022-07-29 16-18-11.png"
   ]
 }

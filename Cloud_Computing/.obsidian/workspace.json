@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "139e7f9eea51db3f",
+        "id": "36988cc298c98784",
         "type": "tabs",
         "children": [
           {
-            "id": "785412831f23d16c",
+            "id": "88c6034c0ab9159b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter 2 - Principles of Parallel and Distributed Computing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2945020324e550da",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Differences.md",
+                "file": "Chapter 3 - Virtualization.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chapter 2 - Principles of Parallel and Distributed Computing.md",
+                "file": "Chapter 3 - Virtualization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chapter 2 - Principles of Parallel and Distributed Computing.md",
+                "file": "Chapter 3 - Virtualization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chapter 2 - Principles of Parallel and Distributed Computing.md"
+                "file": "Chapter 3 - Virtualization.md"
               }
             }
           }
@@ -160,12 +148,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "785412831f23d16c",
+  "active": "88c6034c0ab9159b",
   "lastOpenFiles": [
     "Differences.md",
+    "Chapter 3 - Virtualization.md",
+    "Book.md",
     "Chapter 2 - Principles of Parallel and Distributed Computing.md",
     "Hardware Architectures for Parallel Processing.md",
-    "Book.md",
     "a.md",
     "Chapter.md",
     "Untitled.canvas",

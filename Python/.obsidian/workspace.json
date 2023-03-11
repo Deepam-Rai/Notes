@@ -1,43 +1,43 @@
 {
   "main": {
-    "id": "3c05af43912cc09c",
+    "id": "3ba6fcc847b9ebec",
     "type": "split",
     "children": [
       {
-        "id": "e165a60bc11668be",
+        "id": "7f107cc540ac8a99",
         "type": "tabs",
         "children": [
           {
-            "id": "e396da0090187a0e",
+            "id": "cfb21a8f0a659b7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Definitions.md",
+                "file": "Frequent Uses.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "dafe3decfe4ec65e",
+            "id": "028c43742048015a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Theorems.md",
+                "file": "Frequent Uses.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "e8776921638219c5",
+            "id": "1bb985643bc9cad6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Theorems.md",
+                "file": "Projects and Packages.md",
                 "mode": "source",
                 "source": false
               }
@@ -50,15 +50,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "156673097e853fec",
+    "id": "16b7cdd4712d8116",
     "type": "split",
     "children": [
       {
-        "id": "ba154fa61b596d0a",
+        "id": "c747d135f60f81e4",
         "type": "tabs",
         "children": [
           {
-            "id": "6838c5e8abaa00b2",
+            "id": "45cb24f1695e39ba",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -68,7 +68,7 @@
             }
           },
           {
-            "id": "5a76db5396c94698",
+            "id": "1602397db624a950",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -83,7 +83,7 @@
             }
           },
           {
-            "id": "7b0d9d98b02aad20",
+            "id": "d354dbe36e82bf78",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -94,25 +94,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "ea81194dc77de107",
+    "id": "c4ca5387a0af4028",
     "type": "split",
     "children": [
       {
-        "id": "51a2f31e38cee7fb",
+        "id": "5ee1fc0686be0fd0",
         "type": "tabs",
         "children": [
           {
-            "id": "78debc14d11baa5b",
+            "id": "1c8d86c8e9ed1697",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Theorems.md",
-                "collapseAll": true,
+                "file": "Projects and Packages.md",
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -123,19 +122,19 @@
             }
           },
           {
-            "id": "e5517f771312af34",
+            "id": "c8f6288cfe8b2e88",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Theorems.md",
+                "file": "Projects and Packages.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "6595c503422b9698",
+            "id": "99a315c41a74d3ae",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -146,17 +145,16 @@
             }
           },
           {
-            "id": "bc2b75193cf34621",
+            "id": "6978c06d4c288770",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Theorems.md"
+                "file": "Projects and Packages.md"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -173,15 +171,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e8776921638219c5",
+  "active": "1bb985643bc9cad6",
   "lastOpenFiles": [
-    "README.md.md",
-    "Definitions.md",
-    "Theorems.md",
-    "Extras.md",
-    "Untitled.md",
-    "2023-02-08.md",
-    "Untitled.canvas",
-    "README.md"
+    "Frequent Uses.md",
+    "Projects and Packages.md",
+    "File Handling.md"
   ]
 }

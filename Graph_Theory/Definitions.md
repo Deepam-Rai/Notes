@@ -1,4 +1,4 @@
-
+# ONLY SIMPLE GRAPHS
 ----
 ### Graphs
 A graph G is an ordered pair of vertex nonempty set V and edge set E, denoted as G(V,E),   where  
@@ -19,6 +19,7 @@ Max of distances between all vertex pairs in the graph.
 - Undefined in disconnected graphs.
 
 ----
+## **Common terms**
 ### Degree of vertex
 The number of edges incident to the vertex
 - Outdegree: The number of vertices **to** which this vertex is adjacent.
@@ -55,7 +56,92 @@ Edges that joins same pair of vertices.
 An edge that connects a vertex to itself.
 - A loop contributes two degrees(1 out and 1 in) for degree count of the vertex.
 
+### Distance $d_G(u,v)$
+The **length of** shortest path between them in G.
+
+### Bridge
+An edge $e$ is called a bridge if $k(G-e)=k(G)+1$. (k(G)=Number of components in G)  
+- A bridge never lies on a cycle.
+
 ----
+## **Sequences**
+
+### Degree Sequence
+The degrees of the vertices in G listed in a sequence.
+#### Graphical sequence
+A finite sequence of non-negative intergers is called graphical if it is a degree sequence of some graph.
+- Havel-Hakimi theorem helps to verify graphical sequence.
+
+### Vertex Sequence
+### Walk
+Sequence of vertices W such that consecutive vertices in the sequence are adjacent.  
+It can be expressed as: $W=\{u=v_0,v_1,v_2,...,v_k=v\}$ which is a u-v walk.
+
+#### length of a walk
+Number of edges in a walk.
+#### Equality
+Two u-v walks are equal if as sequences they are equal term by term.
+#### Trivial walk
+If the length of walk is 0.
+#### Closed walk
+If the first and the last vertices of walk are same, then it is a closed walk.
+#### Open walk
+If the first and the last vertices of walk are not same, then it is an open walk.
+
+### Trail
+A walk where edges doesn't repeat.
+
+### Path
+A walk where vertices doesn't repeat.
+- Distance $d_G(u,v)$ is the **length of shortest path** between them in G.
+#### Geodesic
+A u-v path of length $d_G(u,v)$ in G is called u-v geodesic.
+- If $d(u,v)=diam(G)$ and $w\not =u\ and\ v$, then no u-w geodesic can contain v as that would imply d(u,w)>d(u,v)=diam(G) which is impossible.
+
+### Circuit
+A closed trail.
+- Begins and ends at the same vertex.
+- In a simple graph it will have $length\geq3$
+
+
+### Cycle
+A circuit where no vertex repeats except the first and the last.
+#### k-cycle
+A cycle of length k.
+#### Triangle
+A 3-cycle.
+#### Odd cycle
+A cycle of odd length.
+#### Even cycle
+A cycle of even length.
+
+----
+## **Graph Matrices**
+$n$ = Order  
+$m$ = Size  
+$V(G)=[v_1,v_2,v_3,..., v_n]$  
+$E(G) = [e_1, e_2,...,e_m]$  
+$v_iv_j=$ edge between them.
+
+### Adjacency Matrix
+Matrix $A$ of dimension $n\times n$ where  
+$$\large A_{ij} = \cases{
+1, v_iv_j\in E(G) \\
+0, otherwise}$$
+- Dependent upon vertex labelling.
+- Symmetric for undirected graphs.
+- Number of 1 in i'th row and j'th col = degree of $v_i$.
+### Incidence Matrix
+Matrix $B$ of dimension $n\times m$ where  
+$$B_{ij} = \cases{
+1, \text{ if $v_i$ is incident with $e_j$}  \\
+0, \text{ otherwise}}$$
+- Dependent upon vertex labelling.
+- Number of 1 in i'th row = $deg(v_i)$.
+- Exactly two 1 in a every col, because an edge is incident with exactly 2 vertices.
+
+----
+## **Types of Graph**
 ### Trivial graph
 A graph with order 1.
 
@@ -120,96 +206,73 @@ A di-graph is an ordered pair of vertex set V and edge set E, denoted by D(V,E),
 #### Oriented Graph
 Digraph with no paralled edges.
 
-### Common Classes of Graph
+----
+## **Common Classes of Graph**
 
-#### Path $P_n$
+### Path $P_n$
 If the vertices $v_1, v_2, v_3,...,v_n$ in graph G can be labelled or relabelled so that its edges are $v_1v_2, v_2v_3,..., v_{n-1}v_n$ then G is called a path.
 
-#### Cycle $C_n$
+### Cycle $C_n$
 If the vertices of a graph with order>2 can be labelled or relabelled $v_1, v_2, v_3,..., v_n$ so that its edges are $v_1v_2, v_2v_3,..., v_{n-1}v_n, v_nv_1$, then G is called a cycle.
 
-#### Complete Graph $K_n$
+### Complete Graph $K_n$
 Every two vertices of G are adjacent.
 - Size of $K_n= (^n_2)$.
 - $P_1=K_1,\ P_2=K_2,\ C_3=K_3$.
 
-#### Complement $\bar G$ of G
+### Complement $\bar G$ of G
 $\bar G$ is a graph with vertex set V(G) and edge set $E(\bar G)$ such that $uv\in E(\bar G) <=> uv\notin E(G)$.
 - Let order of G be n and size be m, then size of $\bar G$ is $(^n_2)-m$.
 - At least one of $G\ or\ \bar G$ must be connected.
 
-#### Empty Graph $\bar K_n$
+### Empty Graph $\bar K_n$
 A graph of order n with no edge.
 
-#### K-Partite Graph
+### K-Regular graphs
+All vertices have degree k.
+- $\delta (G)= \Delta (G) = K$
+- There can be no odd-regular graph with odd vertices.
+#### 3-Regular graph
+Also known as cubic graph.
+#### Peterson Graph
+3-Regular graph with 10 vertices.
+#### $H_{r,n}$ Harary Graphs
+r-regular graph with n vertices such that:
+- we can arrange the nodes in a circle such that
+	- for even n: each node is joined to $\frac{r}{2}$ nodes on each side.
+	- for odd n: each node joined to $\frac{r-1}{2}$ on each side and to the node opposite to it.
+
+### Irregular Graphs
+With minimum order 2, and every distinct vertices having distinct degrees.
+- No non-trivial graph is irregular. (see The Party Theorem)
+
+### K-Partite Graph
 If V(G) can be divided into k partites $V_1,V_2,...,V_k$ such that if $uv\in E(G)=>u,v$ belongs to different partites.
 
-##### Bipartite Graph
+#### Bipartite Graph
 If V(G) can be represented as the union of two vertex sets $V_1(G), V_2(G)$ called partite sets such that,  
 $V(G) = V_1(G)\cup V_2(G)$, and  
 $x,y\in V_i(G) \Leftrightarrow xy\notin E(G)$ for i=1,2.
 
-##### Complete k-partite Graph $K_{n_1,n_2,...,n_k}$
+#### Complete k-partite Graph $K_{n_1,n_2,...,n_k}$
 If every two vertex in different partites are joined by an edge.  
 
-##### Star graph
+### Star graph
 If order of either U or V is 1.
 
-#### Isomorphic Graphs $G\cong H$
-If two graphs are same except possibly for the way that they are labelled or drawn.
+### Isomorphic Graphs $G\cong H$
+Labelled graphs $G\cong H$ iff $\exists$ one-to-one correspondence $\phi$ from V(G) to V(H) such that  $uv\in E(G) \iff \phi(u)\phi(v)\in E(H)$.
+- Their complements are also isomorphic: $\bar G\cong \bar H$.
+- G is called **self-isomorphic** if $G\cong \bar G$.
+	- Size = $\frac{1}{2}(^n_2)=\frac{n(n-1)}{4} \implies 4|n\ or\ 4|(n-1)$.
+- It is an equivalence relation on set of all graphs - creates equivalence classes.
 
 ### Pseudograph
 Where loops are allowed.
 
 
 ----
-### Walk
-Sequence of vertices W such that consecutive vertices in the sequence are adjacent.  
-It can be expressed as: $W=\{u=v_0,v_1,v_2,...,v_k=v\}$ which is a u-v walk.
-
-#### length of a walk
-Number of edges in a walk.
-#### Trivial walk
-If the length of walk is 0.
-#### Closed walk
-If the first and the last vertices of walk are same, then it is a closed walk.
-#### Open walk
-If the first and the last vertices of walk are not same, then it is an open walk.
-
-### Trail
-A walk where edges doesn't repeat.
-
-### Path
-A walk where vertices doesn't repeat.
-
-
-### Distance $d_G(u,v)$
-The **length of** shortest path between them in G.
-#### Geodesic
-A u-v path of length $d_G(u,v)$ in G is called u-v geodesic.
-- If $d(u,v)=diam(G)$ and $w\not =u\ and\ v$, then no u-w geodesic can contain v as that would imply d(u,w)>d(u,v)=diam(G) which is impossible.
-
-### Circuit
-A closed trail.
-- Begins and ends at the same vertex.
-- In a simple graph it will have $length\geq3$
-
-### K-Regular graphs
-All vertices have degree k.s
-
-### Cycle
-A circuit where no vertex repeats except the first and the last.
-#### k-cycle
-A cycle of length k.
-#### Triangle
-A 3-cycle.
-#### Odd cycle
-A cycle of odd length.
-#### Even cycle
-A cycle of even length.
-
-----
-Points:
+## Points
 - V and E are also represented as V(G) and E(G) respectively.
 - $V\not=\phi$  => Order of every graphs is at least 1.
 - Graphs G and H are equal if $V(G)=V(H) and E(G)=E(H).
