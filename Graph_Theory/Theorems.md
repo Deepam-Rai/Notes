@@ -148,8 +148,8 @@ $$[Proved!]$$
 $\exists \phi:V(G) \to V(H)$  
 **Claim-I:** $G\cong H \implies \bar G \cong \bar H$  
 Let, $u,v \in V(G)$, then  
-$uv \in E(G) \iff \phi(u)\phi(v) \in E(H)$  and $uv \notin E(G) \iff \phi(u)\phi(v) \notin E(H)$
-$\therefore uv \notin E(G) \iff \phi(u)\phi(v) \notin E(H)$  and $uv \in E(G) \iff \phi(u)\phi(v) \in E(H)$  
+$uv \in E(G) \iff \phi(u)\phi(v) \in E(H)$  and $uv \notin E(G) \iff \phi(u)\phi(v) \notin E(H)$  
+$\therefore uv \notin E(\bar G) \iff \phi(u)\phi(v) \notin E(\bar H)$  and $uv \in E(G) \iff \phi(u)\phi(\bar v) \in E(\bar H)$  
 $\implies \phi: V(\bar G) \to V(\bar H)$  
 $\implies \bar G \cong \bar H$  
 
