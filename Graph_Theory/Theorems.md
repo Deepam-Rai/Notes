@@ -1,6 +1,5 @@
 ----
-# The First Theorem of Graph Theory
-> **Theorem 2.1
+> **Theorem 2.1 (The First Theorem of Graph Theory)  
 > If G is a graph of size $m$ then,**  
 > $$\large \sum_{v\in V(G)}{deg(v_i)}=2m$$
 
@@ -176,8 +175,36 @@ $$[Proved!]$$
 > (a) G is bipartite $\iff$ H is bipartite  
 > (b) G is connected $\iff$ H is connected.**
 
-(a) #TODO
+
+**Proves:**  
+Let $\phi:V(G) \to V(H)$  
+
+(a)
 **Proof:**  
+Claim-I: $G$ is bipartite $\implies$ $H$ is bipartite.  
+$\because G$ is bipartite let $V(G)=V_1(G)\cup V_2(G)$, such that  
+$V_1(G) \cap V_2(G) = \emptyset$  
+
+First we show that there is corresponding vertex partition for $H$ too.  
+Let, $W_1(H) = \{\phi(u) \ such\ that\ u \in V_1(G)\}$  
+$W_2(H) = \{\phi(v) \ such\ that\ v \in V_2(G)\}$  
+Now, for any $a \in W(H) \exists u \in V(G)$ such that $u \in V_1(G) \ or \ V_2(G)$ but not both.  
+$\implies a \in W_1(H) \ or \ W_2(H)$ but not both.  
+$\implies W_1(H) \cup W_2(H) = W(H)$ and $W_1(H) \cap W_2(H) = \emptyset$  
+
+Now we show that any edge in E(H) joins vertices between these two vertex partitions only, and not within a partition.  
+Let, $ab = e \in E(H)$ where $a,b\in W(H)$  
+Now, $\exists u,v \in V(G)$ such that $a=\phi(u)$ and $b=\phi(v)$.  
+And $\phi(a)\phi(b) = uv \in E(G)$  
+$\because G$ is bipartite $u$ and $v$ belongs to different partite $V_1(G)$ and $V_2(G)$.  
+$\implies \phi(u),\phi(v)=a,b$ also belongs to different vertex sets $W_1(H)$ and $W_2(H)$.  
+$\implies e$ always joins vertices of two different vertex sets $W_1(H)$ and $W_2(H)$.  
+$\implies H$ is also bipartite.
+
+Claim-II: If $H$ is bipartite, then $G$ is bipartite.
+$\because \phi^{-1}$ exists, as $\phi$ is a bijective function.  
+Proof similar to claim-I follows.  
+$$[Proved!]$$
 
 (b)
 **Proof:**  
@@ -186,14 +213,14 @@ If $u-v$ path exists in $G$, then $\phi(u)-\phi(v)$ path exists in $H$.
 $\implies$ If all vertices in $G$ are connected by a path, then corresponding vertices in $H$ are also connected.  
 $\implies$ If G is connected H is also connected.
 
-Now, $\exists \phi': V(H) \to V(G)$, since  $\phi$ is a bijective function.  
+Now, $\exists \phi^{-1}: V(H) \to V(G)$, since  $\phi$ is a bijective function.  
 Similaryly, we can show that  
 If $H$ is connected, then $G$ is also connected.  
 $$[Proved!]$$
 
 ----
-> **Theorem 3.6:**  
-> Isomorphism is an equivalence relation on the set of all graphs.
+> **Theorem 3.6:  
+> Isomorphism is an equivalence relation on the set of all graphs.**
 
 **Proof:**  
 **Reflexive:**  
@@ -230,3 +257,37 @@ $$\therefore \text{Isomorphism is an equivalence relation}.$$
 $$[Proved!]$$
 
 ----
+> **Theorem 4.1:
+> An edge $e$ of graph $G$ is a bridge iff $e$ lies on no cycle of G.**
+
+**Proof:**  
+**Claim-I:** If $e$ is a bridge, then $e$ lies on no cycle of G.  
+Proof by contradiction: Let $e$ be a bridge that lies on cycle of G.  
+Let, $e=uv$, thus $e$ joins vertices $u,v \in V(G)$  
+We show that $G-e$ is still connected.  
+$\because uv$ lies in a cycle $\implies in\ G-e, \exists u-v$ path say $P$.
+Take $x,y \in V(G)$.  
+Case-I: $e$ didnt lie in $x-y$ path in $G$.  
+$\implies$ $e$ doesnt lie in $x-y$ path in $G-e \implies x,y$ is still connected in $G-e$.  
+Case-II: $e$ lie in $x-y$ path in $G$.  
+In $G-e$ take walk $W(x,y)=Path(x,u) + P + Path(v,y)$.  
+$\because$ Walk $W(x,y)$ exists in $G-e \implies Path(x,y)$ exists in $G-e$.  
+$\therefore x,y$ is still connected.  
+
+$\therefore G-e$ is connected $\implies e$ is not a bridge (by definition).  
+$\therefore$ If $e$ is a bridge, then it wont lie on any cycle of $G$.  
+
+**Claim-II:** If $e$ lies on no cycle of $G$, then $e$ is a bridge.  
+Proof by contrapositive($(p \implies q) \cong (\neg q \implies \neg p)$): If $e$ is not a bridge, then $e$ lies on cycle of $G$.   
+Let, $e = uv \in E(G)$.  
+$\because e$ is not a bridge.   
+$\implies G-e$ contains a $Path(u,v)$.  
+$\implies G$ also contains $Path(u,v)$ that is distinct from $e$.  
+Now, joining $Path(u,v)$ and $e$ will form a cycle containing $e$.  
+$\therefore e$ lies in a cycle in G.  
+
+Thus, combining claim-I and claim-II,  
+$$[Proved!]$$
+
+----
+

@@ -30,21 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "e8776921638219c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Theorems.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -173,11 +161,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e8776921638219c5",
+  "active": "dafe3decfe4ec65e",
   "lastOpenFiles": [
-    "README.md.md",
     "Definitions.md",
+    "achal.md",
     "Theorems.md",
+    "README.md.md",
     "Extras.md",
     "Untitled.md",
     "2023-02-08.md",
