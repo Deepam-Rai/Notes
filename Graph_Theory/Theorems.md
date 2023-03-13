@@ -66,7 +66,7 @@ $$[Proved!]$$
 
 ----
 > **Theorem 2.6:
-> Let $r$ and $n$ be integers with $0\le r \le n-1$. There exists an r-regular graph of order $n$ iff one or $r$ or $n$ is even.**
+> Let $r$ and $n$ be integers with $0\le r \le n-1$. There exists an r-regular graph of order $n$ iff one of $r$ or $n$ is even.**
 
 **Proof:**  
 **Claim-I:** If there exists r-regular graph of order n then at least one of $r$ or $n$ is even.  
@@ -112,7 +112,7 @@ And $G$ is induced subgraph of r-regular graph $H$.
 $$[Proved!]$$
 
 ----
->**Theorem 2.10
+>**Theorem 2.10 (Havel-Hakimi Theorem)  
 > A non-decreasing sequence $\large s: d_1, d_2, d_3,...,d_n$ of non-negative integers is graphical iff $\large s_1: d_2-1,d_3-1,...,d_{d_1+1}-1, d_{d_1+2},...,d_n$ is graphical.**
 
 **Proof:**  
@@ -200,7 +200,6 @@ $\implies W_1(H) \cup W_2(H) = W(H)$ and $W_1(H) \cap W_2(H) = \emptyset$
 Now we show that any edge in E(H) joins vertices between these two vertex partitions only, and not within a partition.  
 Let, $ab = e \in E(H)$ where $a,b\in W(H)$  
 Now, $\exists u,v \in V(G)$ such that $a=\phi(u)$ and $b=\phi(v)$.  
-And $\phi(a)\phi(b) = uv \in E(G)$  
 $\because G$ is bipartite $u$ and $v$ belongs to different partite $V_1(G)$ and $V_2(G)$.  
 $\implies \phi(u),\phi(v)=a,b$ also belongs to different vertex sets $W_1(H)$ and $W_2(H)$.  
 $\implies e$ always joins vertices of two different vertex sets $W_1(H)$ and $W_2(H)$.  
@@ -253,7 +252,7 @@ Now,
 $uv \in E(G_1) \iff \alpha(u)\alpha(v) \in E(G_2)$  
 and $\alpha(u)\alpha(v) \in E(G_2) \iff \beta(\alpha(u))\beta(\alpha(v)) \in E(G_2)$  
 or $\alpha(u)\alpha(v) \in E(G_2) \iff (\beta \circ \alpha)(u)(\beta\circ\alpha)(v) \in E(G_2)$  
-But $\because \alpha \ and \ \beta$ are bijective $\implies (\alpha \circ \beta)$ is also bijective.  
+But $\because \alpha \ and \ \beta$ are bijective $\implies (\beta \circ \alpha)$ is also bijective.  
 $\therefore uv \in E(G_1) \iff (\beta \circ \alpha)(u)(\beta\circ\alpha)(v) \in E(G_2)$  
 $\therefore G_1 \cong G_2$  
 $\therefore$ isomorphism is transitive.  

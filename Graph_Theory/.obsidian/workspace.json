@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Theorems.md",
+                "file": "Definitions.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Theorems.md",
+                "file": "Definitions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Theorems.md"
+                "file": "Definitions.md"
               }
             }
           }
@@ -161,10 +160,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dafe3decfe4ec65e",
+  "active": "e396da0090187a0e",
   "lastOpenFiles": [
-    "Definitions.md",
     "Theorems.md",
+    "Definitions.md",
     "achal.md",
     "README.md.md",
     "Extras.md",

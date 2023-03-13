@@ -41,13 +41,13 @@ Vertices $u,v\in V$ are said to be adjacent to each other if edge  $uv\in E$.
 For $a,b\in V(D)$,  "a is adjacent to b" or "b is adjacent from a" if $(a,b)\in E(G)$.
 
 ### Eccentricity of the vertex
-$=max\{Path(u,v) \forall v\in V(G)\ and\ u\not = v\}$
+Eccentricity of vertex $u=max\set{length(Path(u,v)) \forall v\in V(G)\ and\ u\not = v}$
 
 ### Incident
 If an edge $e\in E$ pairs vertex $v\in V$ with some other vertex then e and v are said to be incident with each other.
 
 ### Adjacent edges
-If edges are incident on a common vertex then they are said to be ajacent edges.
+Edges that are incident on a common vertex are called ajacent edges.
 
 ### Parallel edges
 Edges that joins same pair of vertices.
@@ -57,7 +57,7 @@ An edge that connects a vertex to itself.
 - A loop contributes two degrees(1 out and 1 in) for degree count of the vertex.
 
 ### Distance $d_G(u,v)$
-The **length of** shortest path between them in G.
+The **length of** shortest path between $u$ and $v$ in G.
 
 ### Bridge
 An edge $e$ is called a bridge if $k(G-e)=k(G)+1$. (k(G)=Number of components in G)  
@@ -75,7 +75,7 @@ A finite sequence of non-negative intergers is called graphical if it is a degre
 ### Vertex Sequence
 ### Walk
 Sequence of vertices W such that consecutive vertices in the sequence are adjacent.  
-It can be expressed as: $W=\{u=v_0,v_1,v_2,...,v_k=v\}$ which is a u-v walk.
+It can be expressed as: $W=\set{u=v_0,v_1,v_2,...,v_k=v}$ which is a u-v walk.
 
 #### length of a walk
 Number of edges in a walk.
@@ -96,7 +96,7 @@ A walk where vertices doesn't repeat.
 - Distance $d_G(u,v)$ is the **length of shortest path** between them in G.
 #### Geodesic
 A u-v path of length $d_G(u,v)$ in G is called u-v geodesic.
-- If $d(u,v)=diam(G)$ and $w\not =u\ and\ v$, then no u-w geodesic can contain v as that would imply d(u,w)>d(u,v)=diam(G) which is impossible.
+- If $d(u,v)=diam(G)$ and $w\not =u\ and\ v$, then no u-w geodesic can contain v as that would imply $d(u,w)>d(u,v)=diam(G)$ which is impossible.
 
 ### Circuit
 A closed trail.
@@ -106,6 +106,8 @@ A closed trail.
 
 ### Cycle
 A circuit where no vertex repeats except the first and the last.
+#### Length of a cycle
+Number of edges in the cycle.
 #### k-cycle
 A cycle of length k.
 #### Triangle
@@ -121,13 +123,13 @@ $n$ = Order
 $m$ = Size  
 $V(G)=[v_1,v_2,v_3,..., v_n]$  
 $E(G) = [e_1, e_2,...,e_m]$  
-$v_iv_j=$ edge between them.
+$v_iv_j=$ edge between $v_i$ and $v_j$.
 
 ### Adjacency Matrix
 Matrix $A$ of dimension $n\times n$ where  
 $$\large A_{ij} = \cases{
-1, v_iv_j\in E(G) \\
-0, otherwise}$$
+1,  v_iv_j\in E(G) \\
+0,   otherwise}$$
 - Dependent upon vertex labelling.
 - Symmetric for undirected graphs.
 - Number of 1 in i'th row and j'th col = degree of $v_i$.
