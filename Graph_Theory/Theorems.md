@@ -21,9 +21,9 @@ $G_2$= set of odd vertices.
 
 $$\large \therefore \sum_{v\in V(G_1)}{deg(v_i)} + \sum_{v\in V(G_2)}{ deg(v_i)}= \sum_{v\in V(G)}{deg(v_i)}$$
 
-$$\large \sum_{v\in V(G_1)}{deg(v_i)} + 2l = 2m$$
+$$\large 2l + \sum_{v\in V(G_2)}{deg(v_i)} = 2m$$
 
-$$\large \sum_{v\in V(G_1)}{deg(v_i)} = 2(m-l) = even\ number$$
+$$\large \sum_{v\in V(G_2)}{deg(v_i)} = 2(m-l) = even\ number$$
 
 $$\implies \text{Sum of degrees in $G_2$ should be an even number}$$
 
@@ -77,7 +77,7 @@ Thus at least one of them need to be even.
 **Claim-II:** If at least one of $r$ or $n$ is even then there exists a r-regular graph of order $n$.
 Proof by Construction:   
 We construct $H_{r,n}$ r-regular Harary graph with $V(H_{r,n})=\{v_1,v_2,...,v_n\}$  
-Case-I: $r$ is odd.  
+Case-I: $r$ is even.  
 Let $r=2k$.  
 $\forall 1\le i\le n$ connect $v_i$ to $v_{i-k},...,v_{i-2},v_{i-1},v_{i+1},v_{i+2},...,v_{i+k}$  
 Thus constructed graph is r-regular with order $n$.  
@@ -95,17 +95,21 @@ $$[Proved!]$$
 > **Theorem 2.7
 > For every graph $G$ with $r \ge \Delta(G), \exists$ r-regular graph $H$ containing $G$ as an induced subgraph.**  
 
-**Proof by Construction:**  
+**Proof by Construction:**  (Konig's construction)  
 Let $\large V(G)=\{v_1, v_2,...,v_n\}$  
 Create $G's$ shadow graph $G'$ whose each vertex $v_i'$ corresponds to $v_i$ in $G$.  
-Now for every $v_i$ with degree $\lt r$  
+For every $v_i$ with degree $\lt r$  
 it's counterpart $v_i'$ also has degree $\lt r$.  
-Add edge $v_iv_i'$ till both of their degree = r.  
+Add edge $v_iv_i'$ .  
+
+Now, if there still exists vertices with degree < $r$.  
+ Again create a shadow copy of the whole graph and add edges as in previous step.  
+
+Repeat this until all vertices have degree $r$.  
 
 Thus doing so for every graph gives us graph $H$ whose all vertices have degree $r$.  
 And $G$ is induced subgraph of r-regular graph $H$.  
 $$[Proved!]$$
->The graph formed need not be a simple graph.
 
 ----
 >**Theorem 2.10
@@ -126,14 +130,14 @@ $\implies s$ is graphical.
 Let $G$ be graph with degree sequence $s$.  
 Let, $V(G)=\{v_1, v_2,...,v_n\}$.  
 Case-I: If $v_1$ is adjacent to $\large v_2, v_3,...,v_{d_1+1}$  
-Then $H-v$ has degree sequence $s_1$, thus $s_1$ is graphical.
+Then $G-v_1$ has degree sequence $s_1$, thus $s_1$ is graphical.
 
 Case-II: If $v_1$ is not adjacent to one of these $\large v_2, v_3,...,v_{d_1+1}$   
 $\implies v_1$ is adjacent to say $\large v_s, s>d_1+1$ and say $v_1$ is not adjacent to $\large v_r, r\le d_1+1$.  
 Now, $\large \because deg(v_r)>deg(v_s) \implies \exists v_t$ such that $v_r$ is adjacent to $v_t$ but $v_s$ is not adjacent to $v_t$.  
 $\therefore$ The confirmed edges we are having are: $\large v_1v_s, v_rv_t$  
-Now, remove $\large v_1v_s, v_r,v_t$ and add edges $\large v_1v_r, v_sv_t$.  
-The resultant graph $G_1$ still remains graphable.  
+Now, remove $\large v_1v_s, v_rv_t$ and add edges $\large v_1v_r, v_sv_t$.  
+The resultant graph $G_1$ still remains graphical.  
 Following same manner we can make $v_1$ adjacent to $v_i, i\le 2 \le d_1+1$ in graph $G_1$.  
 $\therefore G_1$ will have degree sequence $s_1$.
 $\implies s_1$ is graphical.
@@ -149,7 +153,7 @@ $\exists \phi:V(G) \to V(H)$
 **Claim-I:** $G\cong H \implies \bar G \cong \bar H$  
 Let, $u,v \in V(G)$, then  
 $uv \in E(G) \iff \phi(u)\phi(v) \in E(H)$  and $uv \notin E(G) \iff \phi(u)\phi(v) \notin E(H)$  
-$\therefore uv \notin E(\bar G) \iff \phi(u)\phi(v) \notin E(\bar H)$  and $uv \in E(G) \iff \phi(u)\phi(\bar v) \in E(\bar H)$  
+$\therefore uv \notin E(\bar G) \iff \phi(u)\phi(v) \notin E(\bar H)$  and $uv \in E(\bar G) \iff \phi(u)\phi(\bar v) \in E(\bar H)$  
 $\implies \phi: V(\bar G) \to V(\bar H)$  
 $\implies \bar G \cong \bar H$  
 
@@ -171,7 +175,8 @@ $\therefore deg(u)=deg(v)$
 $$[Proved!]$$
 
 ----
-> **Theorem 3.5 Let $G \cong H$, then  
+> **Theorem 3.5  
+>  Let $G \cong H$, then  
 > (a) G is bipartite $\iff$ H is bipartite  
 > (b) G is connected $\iff$ H is connected.**
 
@@ -278,7 +283,7 @@ $\therefore G-e$ is connected $\implies e$ is not a bridge (by definition).
 $\therefore$ If $e$ is a bridge, then it wont lie on any cycle of $G$.  
 
 **Claim-II:** If $e$ lies on no cycle of $G$, then $e$ is a bridge.  
-Proof by contrapositive($(p \implies q) \cong (\neg q \implies \neg p)$): If $e$ is not a bridge, then $e$ lies on cycle of $G$.   
+Proof by contrapositive( $(p \implies q) \cong (\neg q \implies \neg p)$ ): If $e$ is not a bridge, then $e$ lies on cycle of $G$.   
 Let, $e = uv \in E(G)$.  
 $\because e$ is not a bridge.   
 $\implies G-e$ contains a $Path(u,v)$.  
