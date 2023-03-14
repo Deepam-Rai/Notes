@@ -1,3 +1,5 @@
+> Definition: Abstraction of computer resources.
+
 
 Server consodilation: Technique for aggregating multiple services and applications originally deployed on different servers on one physical server.
 
@@ -5,6 +7,25 @@ Three major components of virtualized environment:
 1. Host
 2. Vritualization layer
 3. Guest
+
+Advantages
+1. Sharing and efficient use of resources.
+2. Isolation: sandbox environments.
+3. Encapsulation
+4. Hardware Independence
+5. Managed execution and isolation - secure and controllable environments.
+6. Easy allocation and partitioning of resources.
+7. Fine tuning resources to meet effective quality of service.
+8. Portability and self-containment - enabling migration.
+9. Reducing cost of maintenance.
+
+Disadvantages:
+1. Decrease in performance because of virtualization layer.
+2. Some features cannot be exposed by abstraction layer thus becoming inaccessible.
+3. Implications for security -phishing.
+4. Not all applications are well suited.
+5. Added overhead makes performance slower.
+
 
 ----
 # Characteristics of virtualized environments
@@ -43,7 +64,7 @@ Aims to emulate execution environment. Execution of programs(OS, applications, a
 Exposes ISA to virtual machines.
 
 #### Hypervisors
-Recreates the hardware environment
+Vmm(Virtual Machine Manager/Monitors) - Recreates the hardware environment
 1. **Type-I/Native VM**: Runs directly on top of hardware; Interacts directly with ISA interface exposed by hardware.
 2. **Type-II/Hosted VM**: RUns on top of OS; Interacts through ABI.
 
@@ -121,3 +142,13 @@ some shit
 > Live migration: Temporarily stopping the execution and migration of VM instance, and resuming it again.
 
 ## Pros and Cons of virtualization
+Given at the starting.
+
+# Virtualization security requirements
+1. Secure interface: Network interface - Transport Layer Security(TLS).
+2. secure secondary storage: Network File System(NFS)
+3. secure execution environment
+
+Detailed examples of technology implementations - Xen, VMware, Hyper-V.
+
+----

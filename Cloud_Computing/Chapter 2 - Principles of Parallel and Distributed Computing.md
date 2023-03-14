@@ -55,6 +55,17 @@ Based upon the number of instruction and data streams that can be computed simul
 | Less likely to scale due to memory contention | Scalable. |
 | Eg. Silicon Graphics machine, Sun/IBM's SMP | |
 
+SISD:
+![SISD](../Images/Cloud%20Computing/SISD.png)
+
+SIMD:
+![SIMD](../Images/Cloud%20Computing/SIMD.png)
+
+MISD:
+![MISD](../Images/Cloud%20Computing/MISD.png)
+
+MIMD:
+![MIMD](../Images/Cloud%20Computing/MIMD.png)
 
 ## 2.3.3 Approaches to parallel programming
 1. Data parallelism: Split data and run a PE on each split using same instruction. Suitable for SIMD.
@@ -80,10 +91,10 @@ Based upon the lump of codes that can be parallelized
 
 
 ## 2.4.2 Components of a distributed system
-
 1. Applications
-2. Middleware layers: this is what actually enables distributed computing.
-4. OS and Hardware
+2. Middleware layers: support for heterogeneous resource sharing,communication and programming environments.
+4. OS: Execution platform including network connectivity services.
+5. Hardware: Network hardware.
 They confirm to a standard at all levels hiding the heterogeneity of the underlying systems and giving coherent and uniform environment.   
 
 ## 2.4.3 Architectural styles of distributed computing
@@ -138,7 +149,7 @@ Classes of architectural styles:
 		- Components: loosely connected, published events, sets callbacks for events.
 
 ### 2.4.3.3 System architectural styles
-1. Client/Server
+1. **Client/Server**
 	- Communication: using protocol, unidirectional(request/response)
 	- Operations: Server(listen, response), Client(request, accept)
 	- Client design models:
@@ -147,7 +158,7 @@ Classes of architectural styles:
 	- Conceptual Layers/Tiers/Components: Presentation, Application, Data Storage. Based upon this architectures:
 		1. Two-tier: Just client and server following fat-client model.
 		2. N-tier: client - server/client - server/client - ... - server.
-1. Peer-to-peer
+1. **Peer-to-peer**
 	- Component: peers - both client and server.
 	- Decentralized, scalable, difficult management.
 	- Eg, BitTorrent, Gnutella, Skype, etc.
@@ -165,8 +176,8 @@ Classes of architectural styles:
 ### 2.4.4.1 Message-based communication
 Message: Any discrete amount of information passed from one entity to another.  
 1. Message passing: Eg, Message Passing Interface(MPI) and OpenMP.
-2. Remote Procedure Call(RPC): triggering the execution code in remote processes. Marshaling of parameteres and values.
-3. Distributed objects: Remote invocation of methods exposed by objects. Has complexity of object state management and lifetime. Eg, Common Object Request Broker Architecture(CORBA), Component Object Model(COM, DCOM, COM+), Java Remote Method Invocation (RMI), .NET Remoting.
+2. **Remote Procedure Call(RPC)**: triggering the execution code in remote processes. Marshaling of parameteres and values.
+3. **Distributed objects Frameworks(DOF):** Remote invocation of methods exposed by objects. Has complexity of object state management and lifetime. Eg, Common Object Request Broker Architecture(CORBA), Component Object Model(COM, DCOM, COM+), Java Remote Method Invocation (RMI), .NET Remoting.
 4. Distributed objects and active agents: Objects with their own control threads, explicit use of messages to trigger exevution of methods, more complex semantics attached to messages.
 5. Web Services: RPC concept over HTTP. Simple Object Access Protocol(SOAP), Representational State Transfer(REST).
 
@@ -200,6 +211,8 @@ Message: Any discrete amount of information passed from one entity to another.
 		3. Design and implement client code that invoke the remore procedure.
 -  Pass by reference will not work, RPC should be able to marshall/unmarshall User Defined types, base for IPC.
 - Implementations: RPyC, XML-RPC, JSON-RPC, Thrift, CORBA, DCOM, Java RMI, .NET Remoting, etc.
+![RPC](../Images/Cloud%20Computing/RPC.png)
+
 
 ## 2.5.2 Distributed Object Frameworks
  allows objects to be in heterogeneous network and provides abstraction such that they seem to be in same address space.
@@ -230,15 +243,19 @@ Message: Any discrete amount of information passed from one entity to another.
 	- .NET Remoting
 		- Client/Server model.
 		- The Remoting infrastructure automatically provides proxy generation information on client application domain.
+		- supports many different protocols unlike Web Services that work over SOAP/HTTP.
+![DOF](../Images/Cloud%20Computing/DOA.png)
+
 
 ## 2.5.3 Service-oriented computing
 Service: Encapsulates a software component that provides a set of coherent and related functionalities that can be reused and integrated into bigger and more complex applications.  
 
-Characteristics of service:
+**Characteristics of service:**
 1. Boundaries are explicit
 2. Services are autonomous
 3. Services share schema and contracts, not class and interface definitions
 4. Services compatibility is determined based on policy: separates structural(contracts and schema) compatibility with semantic compatibility(capabilities and requirements).
+
 ### 2.5.3.2 Service oriented architecture (SOA)
 SOA is an architectural style supporting service orientation. Organizes software system into a collection of interacting services.  
 - Service provider: Provider and maintainer of the service.
@@ -248,7 +265,7 @@ SOA is an architectural style supporting service orientation. Organizes software
 - Service choreography: Coordinated interaction of services without single point of control.
 
 Guiding features:
-1. Service contracts: adhere to given agreement specified in service description document.
+1. Standardized Service contracts: adhere to given agreement specified in service description document.
 2. Loose Coupling: self contained components, minimal dependencies.
 4. Abstraction: completely defined by service contracts and description docs, logic hidden.
 5. Reusability: ..., leverage third-party services.
@@ -272,3 +289,5 @@ RESTful system (Representational State Transfer)
 - client sends requests over HTTP using standard HTTP methods(PUT,GET,POST,DELETE)
 - server issues response that includes representation of the resource.
 - lightweight alternative to SOAP.
+
+----

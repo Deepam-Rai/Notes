@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "06119f4081124328",
+        "id": "bda94163c4fa09eb",
         "type": "tabs",
         "children": [
           {
-            "id": "b36d8ddd6a37e666",
+            "id": "6832efdd447319fc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Cloud_Computing/Differences.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c0ca6d7eb736b59d",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Cloud_Computing/Differences.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Cloud_Computing/Differences.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Cloud_Computing/Differences.md"
+              }
             }
           }
         ]
@@ -138,6 +147,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b36d8ddd6a37e666",
-  "lastOpenFiles": []
+  "active": "9a97b3aee185a082",
+  "lastOpenFiles": [
+    "Cloud_Computing/Chapter 3 - Virtualization.md",
+    "Cloud_Computing/Chapter 2 - Principles of Parallel and Distributed Computing.md",
+    "Cloud_Computing/Chapter 1 - Foundations.md",
+    "Pasted image 20230314091559.png.md",
+    "Images/Cloud Computing/SISD.png",
+    "Images/Cloud Computing/SIMD.png",
+    "Images/Cloud Computing/RPC.png",
+    "Images/Cloud Computing/MISD.png",
+    "Images/Cloud Computing/MIMD.png",
+    "Images/Cloud Computing/DOA.png",
+    "Cloud_Computing/DOA.png",
+    "Cloud_Computing/RPC.png",
+    "Cloud_Computing/MIMD.png",
+    "Cloud_Computing/MISD.png",
+    "Big Data.md"
+  ]
 }

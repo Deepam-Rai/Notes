@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "36988cc298c98784",
+        "id": "7f776d576b02dfaa",
         "type": "tabs",
         "children": [
           {
-            "id": "88c6034c0ab9159b",
+            "id": "aebd7688ecf1e42f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter 3 - Virtualization.md",
+                "file": "Chapter 2 - Principles of Parallel and Distributed Computing.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chapter 3 - Virtualization.md",
+                "file": "Chapter 2 - Principles of Parallel and Distributed Computing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chapter 3 - Virtualization.md",
+                "file": "Chapter 2 - Principles of Parallel and Distributed Computing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chapter 3 - Virtualization.md"
+                "file": "Chapter 2 - Principles of Parallel and Distributed Computing.md"
               }
             }
           }
@@ -148,12 +148,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "88c6034c0ab9159b",
+  "active": "aebd7688ecf1e42f",
   "lastOpenFiles": [
+    "DOA.png",
+    "RPC.png",
+    "MIMD.png",
+    "MISD.png",
+    "SIMD.png",
+    "SISD.png",
+    "Pasted image 20230314091753.png",
+    "Pasted image 20230314091736.png",
+    "Pasted image 20230314091559.png",
+    "Pasted image 20230314091547.png",
+    "Pasted image 20230314091533.png",
     "Differences.md",
+    "Chapter 2 - Principles of Parallel and Distributed Computing.md",
+    "Chapter 1 - Foundations.md",
+    "Pasted image 20230314085215.png.md",
     "Chapter 3 - Virtualization.md",
     "Book.md",
-    "Chapter 2 - Principles of Parallel and Distributed Computing.md",
     "Hardware Architectures for Parallel Processing.md",
     "a.md",
     "Chapter.md",
