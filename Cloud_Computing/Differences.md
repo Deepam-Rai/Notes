@@ -1,6 +1,6 @@
 ----
 ## Cluster computing vs Grid computing
-| Aspect | Cluster Computing | Grid Computing|
+|  | Cluster Computing | Grid Computing|
 |---|---|---|
 | Architecture: | Connectes multiple computers in a network to work together as a single system. | Connects computers in different locations to work on a common goal. |
 |Resource sharing: | Typically shared within an organization or group. | Can be shared across organizations and groups. |
@@ -10,7 +10,7 @@
 
 ----
 ## Sequential vs Parallel Processing
-| Aspect | Sequential processing | Parallel processing |
+|  | Sequential processing | Parallel processing |
 |--|--|--|
 |Definition: | Executes single instruction at a time. | Executes multiple instructions at a time. |
 | Speed: | Slow for multiple parallelizable instructions. | Faster for parallelizable instructions. |
@@ -34,7 +34,7 @@
 
 ----
 ## Decentralized vs Distributed Computing
-| Aspect | Decentralized Computing | Distributed Computing |
+|  | Decentralized Computing | Distributed Computing |
 |---|---|---|
 |Control: | No single pointn of control. | Can have single point of control. |
 |Architecture: | P2P | Client-Server or P2P |
@@ -44,7 +44,7 @@
 
 ----
 ## Distributed Computing vs Grid Computing
-| Aspect | Distributed Computing | Grid Computing |
+|  | Distributed Computing | Grid Computing |
 |--|--|--|
 | Architecture: | Multiple computers connected over a network. | Multiple geographically distributed resources connected over a network. |
 |Scope: | Mostly used within an organization. | Mostly used by multiple organizations. |
@@ -54,7 +54,7 @@
 
 ----
 ## Simulation vs Emulation
-| Aspect | Simulation | Emulation |
+|  | Simulation | Emulation |
 |--|--|--|
 | Purpose: | Used to study or predict the behaviour of the system under different conditions. | Used to test or replicate the behaviour of the system in the controlled environment. |
 | Level of abstraction: | Typically implements high level abstractions. Only as much as required for modelling. | Typically implements low-level abstractions. |

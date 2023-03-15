@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "161ace0d98dabb75",
+        "id": "f58ad922369ef8df",
         "type": "tabs",
         "children": [
           {
-            "id": "0ecaaef448e3eeca",
+            "id": "87f220e63b0cb1b5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud_Computing/Differences.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud_Computing/Differences.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud_Computing/Differences.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Cloud_Computing/Differences.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -134,8 +126,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -147,11 +138,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0ecaaef448e3eeca",
+  "active": "87f220e63b0cb1b5",
   "lastOpenFiles": [
-    "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
-    "Cloud_Computing/Differences.md",
+    "ML/Classification Model Evaluation.md",
+    "Images/ML/confusion_matrix.jpg",
+    "Images/ML/ROC.png",
+    "Images/ML",
+    "Images/ML/AUC_ROC.png",
     "Cloud_Computing/Chapter 3 - Virtualization.md",
+    "ML",
+    "Cloud_Computing/Differences.md",
+    "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
     "Cloud_Computing/Chapter 2 - Principles of Parallel and Distributed Computing.md",
     "Cloud_Computing/Chapter 1 - Foundations.md",
     "Pasted image 20230314091559.png.md",
@@ -162,9 +159,6 @@
     "Images/Cloud Computing/MIMD.png",
     "Images/Cloud Computing/DOA.png",
     "Cloud_Computing/DOA.png",
-    "Cloud_Computing/RPC.png",
-    "Cloud_Computing/MIMD.png",
-    "Cloud_Computing/MISD.png",
     "Big Data.md"
   ]
 }
