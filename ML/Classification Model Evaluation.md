@@ -54,10 +54,12 @@ In practice typically such godly models are only those that over-fit the data.
 
 Typically a model will give probabilistic value in range $[0.0,1.0]$ where value $0$ means  $Negative$ and $1$ means $Positive$. But for values in between we need:
 > Threshold: A value such that
-$$Prediction = \begin{cases}
- Positive & \text{model value $\ge$ threshold} \\
- Negative & \text{model value $\lt$ threshold}
-\end{cases}$$
+```math
+Prediction = \begin{cases} 
+Positive & \text{model value $\ge$ threshold} \\
+Negative & \text{model value $\lt$ threshold}
+\end{cases}
+```
 
 Thus,
 - If we increase the $threshold$ then
