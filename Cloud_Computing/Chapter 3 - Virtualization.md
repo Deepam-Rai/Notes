@@ -1,7 +1,7 @@
 > Definition: Abstraction of computer resources.
 
 
-Server consodilation: Technique for aggregating multiple services and applications originally deployed on different servers on one physical server.
+**Server consodilation:** Technique for aggregating multiple services and applications originally deployed on different servers on one physical server.
 
 Three major components of virtualized environment:
 1. Host
@@ -10,14 +10,15 @@ Three major components of virtualized environment:
 
 Advantages
 1. Sharing and efficient use of resources.
-2. Isolation: sandbox environments.
-3. Encapsulation
-4. Hardware Independence
-5. Managed execution and isolation - secure and controllable environments.
-6. Easy allocation and partitioning of resources.
-7. Fine tuning resources to meet effective quality of service.
-8. Portability and self-containment - enabling migration.
-9. Reducing cost of maintenance.
+2. Portability and self-containment - enabling migration - moving instances from one VMM to another.
+3. Recovery: Can save the instances states backups.
+4. Isolation: sandbox environments.
+5. Encapsulation
+6. Hardware Independence
+7. Managed execution and isolation - secure and controllable environments.
+8. Easy allocation and partitioning of resources.
+9. Fine tuning resources to meet effective quality of service.
+10. Reducing cost of maintenance.
 
 Disadvantages:
 1. Decrease in performance because of virtualization layer.
@@ -64,7 +65,8 @@ Aims to emulate execution environment. Execution of programs(OS, applications, a
 Exposes ISA to virtual machines.
 
 #### Hypervisors
-Vmm(Virtual Machine Manager/Monitors) - Recreates the hardware environment
+>They are VMM(Virtual Machine Manager) that creates, monitors and manages virtual environments.
+
 1. **Type-I/Native VM**: Runs directly on top of hardware; Interacts directly with ISA interface exposed by hardware.
 2. **Type-II/Hosted VM**: RUns on top of OS; Interacts through ABI.
 
@@ -85,6 +87,7 @@ Vmm(Virtual Machine Manager/Monitors) - Recreates the hardware environment
 3. Efficienfy: Statistically dominant fraction of the machine isntructions should be executed withtou intervention from VM managers.
 
 ##### Properties of Hardware instructions to efficient support virtualization.
+Theorems:
 >For any conventional third-generation computer, a VMM may be constructed if the set of sensitive instructions for that computer is the subset of the set of privileged instructions.
 
 >A conventional third-generation computer is recursively virtualizable if:
@@ -99,17 +102,20 @@ Vmm(Virtual Machine Manager/Monitors) - Recreates the hardware environment
 2. Full virtualization: Able to run program, that can access hardware too, without any modification on VMM as if it was run on raw hardware.
 3. Paravirtualization
 4. Partial virtualization
+See difference between para and partial virtualization in `./Differences.md`
 
 #### OS level virtualization
 - Separated execution environments for applications.
 - There is no VMM or hypervisor, virtualization done within a single OS.
 - OS kernel allows for multiple isolated user space instances.
+- Examples: FreeBSD Jails, OpenVZ,etc
 
 ### Programming language level virtualization
 - Usually a VMM executing byte code(compilation output) of a program.
 - Gives program portability.
-- JIT(Just In Time): Byte code compiled to underlying machine code upon method call.
-- CLI(Common Language Infrastructure): stack based - operations performed based on execution stack. (another option is register-based)
+- Some terms:
+	- JIT(Just In Time): Byte code compiled to underlying machine code when method is called.
+	- CLI(Common Language Infrastructure): stack based - operations performed based on execution stack. (another option is register-based)
 
 ### Application level virtualization
 Strategies:
@@ -131,7 +137,7 @@ Example: SAN(Storage Area Network).
 Abstracts desktop environment. Access desktop remotely using client-server approach.
 
 ### Application server virtualization
-some shit
+some shit didnt understand.
 
 ----
 # Virtualization and Cloud computing

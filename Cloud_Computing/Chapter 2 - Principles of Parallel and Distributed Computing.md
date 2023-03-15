@@ -1,8 +1,9 @@
 
 # 2.1 Eras
 Models of computing:
-1. Sequential: Began 1940s
-2. Parallel: Began 1950s
+1. Sequential
+2. Parallel
+
 Key Elements of computing:
 1. Architectures
 2. Compilers
@@ -49,7 +50,7 @@ Based upon the number of instruction and data streams that can be computed simul
 | -- | -- |
 | Tightly coupled. | Loosely coupled. |
 | Communication takes place through shared memory. | Communication takes place through Inter Process Communication.|
-| Data modified by one PE in shared memory is visible to all. | Each PE have own memory. |
+| Data modified by one PE in shared memory is visible to all. | Each PE has own memory. |
 | Easier to program. | Comparatively difficult to program. |
 | Comparatively less tolerant to failures, a failure can affect entire system. | Comparatively more failure tolerant.  Failure are component wise. |
 | Less likely to scale due to memory contention | Scalable. |
@@ -68,7 +69,7 @@ MIMD:
 ![MIMD](../Images/Cloud%20Computing/MIMD.png)
 
 ## 2.3.3 Approaches to parallel programming
-1. Data parallelism: Split data and run a PE on each split using same instruction. Suitable for SIMD.
+1. Data parallelism: Split the data and run a PE on each split. Same instruction is issued in each PE. Suitable for SIMD.
 2. Process parallelism: A process with multiple but distinct activities that can be carried out in separate processors.
 3. Farmer-and-worker model: Master-slave model.
 
@@ -87,7 +88,7 @@ Based upon the lump of codes that can be parallelized
 
 ----
 # 2.4 Elements of distributed computing
-> Definition: A distributed system is one in which the components located at networked computers communicates and coordinate their actions only by passing of messages.
+> **Definition**: A distributed system is one in which the components located at networked computers communicates and coordinate their actions only by passing of messages.
 
 
 ## 2.4.2 Components of a distributed system
@@ -99,8 +100,8 @@ They confirm to a standard at all levels hiding the heterogeneity of the underly
 
 ## 2.4.3 Architectural styles of distributed computing
 
-Components: A unit of software that encapsulates a function or feature of the system.  
-Connectors: A communication mechanism that allows cooperation and coordination among components.  
+**Components:** A unit of software that encapsulates a function or feature of the system.  
+**Connectors:** A communication mechanism that allows cooperation and coordination among components.  
 
 Classes of architectural styles:
 1. Software architectural styles
@@ -174,7 +175,7 @@ Classes of architectural styles:
 ## 2.4.4 Models for interprocess communication
 
 ### 2.4.4.1 Message-based communication
-Message: Any discrete amount of information passed from one entity to another.  
+**Message:** Any discrete amount of information passed from one entity to another.  
 1. Message passing: Eg, Message Passing Interface(MPI) and OpenMP.
 2. **Remote Procedure Call(RPC)**: triggering the execution code in remote processes. Marshaling of parameteres and values.
 3. **Distributed objects Frameworks(DOF):** Remote invocation of methods exposed by objects. Has complexity of object state management and lifetime. Eg, Common Object Request Broker Architecture(CORBA), Component Object Model(COM, DCOM, COM+), Java Remote Method Invocation (RMI), .NET Remoting.
@@ -203,19 +204,19 @@ Message: Any discrete amount of information passed from one entity to another.
 ## 2.5.1 Remote Procedure Call
 - Fundamental abstraction enabling execution of procedures on client's requests.
 - The requested procedure may be out of process boundary, memory address space, system.
-- Synchronous patters - calling process thread remains blocked.
+- Synchronous patterns - calling process thread is blocked/paused until response is received.
 - Marshalling and unmarshalling of parameters and return values done by infrastructure.
 - Steps for implementation:
 		1. Design and implement server procedures that will be exposed for remote invocation.
 		2. Register those procedures on clients where it will be available for use.
 		3. Design and implement client code that invoke the remore procedure.
 -  Pass by reference will not work, RPC should be able to marshall/unmarshall User Defined types, base for IPC.
-- Implementations: RPyC, XML-RPC, JSON-RPC, Thrift, CORBA, DCOM, Java RMI, .NET Remoting, etc.
+- Implementations: RPyC, XML-RPC, JSON-RPC, Thrift, CORBA(SUpports), DCOM, Java RMI, .NET Remoting, etc.
 ![RPC](../Images/Cloud%20Computing/RPC.png)
 
 
 ## 2.5.2 Distributed Object Frameworks
- allows objects to be in heterogeneous network and provides abstraction such that they seem to be in same address space.
+ Allows objects to be in heterogeneous network and provides abstraction such that they seem to be in same address space.
 - It exposes the instances/objects (unlike methods in RPC). Illusion as if the object is local.
 - Interaction pattern:
 		1. Server maintains registry of active objects made available to other processes.
@@ -231,7 +232,7 @@ Message: Any discrete amount of information passed from one entity to another.
 	- CORBA(Common Object Request Broker Architecture)
 		- ORB(Object Request Bus): Central object bus; objects registers with ORB the interface its exposing;
 		- Interfaces defined in IDL(Interface Definition Language); IDL specification translated to stub-skeleton pair.
-		- Communication: lowest level - IIOP(Interbet Inter-ORB Protocol). Portable Object Adapter(POA) - runtime environment where skeletons are hosted and managed.
+		- Communication: lowest level - IIOP(Internet Inter-ORB Protocol). Portable Object Adapter(POA) - runtime environment where skeletons are hosted and managed.
 	- Distributed Component Object Model(DCOM/COM+)
 		- By Microsoft before .NET.
 		- COM object: a component that encapsulates a set of coherent and related operations; standardizes binary format.
@@ -244,11 +245,13 @@ Message: Any discrete amount of information passed from one entity to another.
 		- Client/Server model.
 		- The Remoting infrastructure automatically provides proxy generation information on client application domain.
 		- supports many different protocols unlike Web Services that work over SOAP/HTTP.
+
+Distributed Object Framework:
 ![DOF](../Images/Cloud%20Computing/DOA.png)
 
 
 ## 2.5.3 Service-oriented computing
-Service: Encapsulates a software component that provides a set of coherent and related functionalities that can be reused and integrated into bigger and more complex applications.  
+>**Service:** Encapsulates a software component that provides a set of coherent and related functionalities that can be reused and integrated into bigger and more complex applications.  
 
 **Characteristics of service:**
 1. Boundaries are explicit
@@ -261,7 +264,7 @@ SOA is an architectural style supporting service orientation. Organizes software
 - Service provider: Provider and maintainer of the service.
 	- Registries: can be used to publish services with additional - contract details, fees, nature of service,etc.
 - Service consumer
-- Service orchestration: When data is aggregated from other services or creation of workflow of services.
+- Service orchestration: When data is aggregated from other services or when creation of workflow of services is done.
 - Service choreography: Coordinated interaction of services without single point of control.
 
 Guiding features:
@@ -289,5 +292,42 @@ RESTful system (Representational State Transfer)
 - client sends requests over HTTP using standard HTTP methods(PUT,GET,POST,DELETE)
 - server issues response that includes representation of the resource.
 - lightweight alternative to SOAP.
+
+----
+# Migration to Cloud
+
+7 steps:
+1. Assess
+	1. application level
+	2. code level
+	3. design level
+	4. architecture/usage levels
+	5. tools
+	6. functionality
+	7. test cases and configuration
+2. Isolation
+	1. of environmental and systemic dependencies
+3. Map
+	1. separate the components that shoould reside in captive(your) data center and the ones that go to the cloud
+4. Re-Architect
+	1. Some functionalities might be lost, some might be added.
+5. Augment
+	1. Enhance with the cloud computing service.
+6. Test
+7. Optimize
+
+Risks:
+1. General
+	1. performance monitoring
+	2. business continuity and disaster recovery
+	3. legal compliance and issues
+	4. IP licensing issues
+	5. QoS parameters
+	6. Ownership, transfer and storage of data
+	7. Portability and interoperability
+2. Security
+	1. Trust and privacy
+	2. legal compliances
+	3. multi-tenance, impact of IT data leakage
 
 ----

@@ -59,8 +59,18 @@
 | Purpose: | Used to study or predict the behaviour of the system under different conditions. | Used to test or replicate the behaviour of the system in the controlled environment. |
 | Level of abstraction: | Typically implements high level abstractions. Only as much as required for modelling. | Typically implements low-level abstractions. |
 |Accuracy: | Depends upon quality of model/abstraction used. | Typically high as asbtraction is of low level. |
-| Resources: | Comparatively less. | Comparatively more. |
+| Resources: | Needs comparatively less. | Needs comparatively more. |
 | Use Case: | To test the interaction of a model with environment. | Testing how model interacts with environment. |
 
+
+----
+## Paravirtualization vs Partial Virtualization
+
+| | Para virtualization | Partial virtualization |
+|-|---|---|
+|Awareness: | Guest is aware of virtualization. | Guest is not aware of virtualization. |
+|Modification: | Requires guest modification. | Doesnt require guest modification. |
+|Access: | Guests can access VMM using predefined hypercalls. | Guests cannot access VMM. |
+|Proprietary guests: | Only the guest program ownser themselves can provide support for paravirtualiation. | Proprietary or not it doesnt matter. |
 
 ----

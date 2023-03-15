@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bda94163c4fa09eb",
+        "id": "161ace0d98dabb75",
         "type": "tabs",
         "children": [
           {
-            "id": "6832efdd447319fc",
+            "id": "0ecaaef448e3eeca",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c0ca6d7eb736b59d",
@@ -130,7 +129,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -147,8 +147,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9a97b3aee185a082",
+  "active": "0ecaaef448e3eeca",
   "lastOpenFiles": [
+    "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
+    "Cloud_Computing/Differences.md",
     "Cloud_Computing/Chapter 3 - Virtualization.md",
     "Cloud_Computing/Chapter 2 - Principles of Parallel and Distributed Computing.md",
     "Cloud_Computing/Chapter 1 - Foundations.md",

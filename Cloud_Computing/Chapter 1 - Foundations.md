@@ -1,14 +1,12 @@
 
 # Introduction
-Utility computing
-Cloud computing
 
 > Vision of cloud computing: IT services are traded as utilities in open market without technological or legal barriers.
 
 ----
 # Cloud computing at a glance
 ## Defining a cloud
-> Cloud computing is a model for enabling ubiquitous, convenient, on-demand network acess to a shared pool of configurable computing resources(e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.
+> **Cloud computing is a model for enabling ubiquitous, convenient, on-demand network acess to a shared pool of configurable computing resources(e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.**
 
 - Has utility oriented approach.
 - Uses pay-per-use strategy.
@@ -26,7 +24,7 @@ Reese criteria for service to be of cloud computing style:
 
 
 ## Advantages
-1. Offload some work-loads to cloud based systems.
+1. Offload work-loads to cloud based systems.
 2. No excessive up-front cost - helps startups to translate their ideas to business results.
 3. Valid when needed large one-time use computing power.
 4. System developers can concentrate on the business logic rather than managing complexity of infrastructure and scalability.
@@ -45,10 +43,13 @@ Reese criteria for service to be of cloud computing style:
 ## Cloud computing reference model(XaaS)
 1. Saas: Software-as-a-Service
 	- Applications and services.
-2. PaaS: Platform-as-a-Service
+	- Examples: facebook, google docs, salesforce, etc
+1. PaaS: Platform-as-a-Service
 	- Scalable and elastic runtime environments.
-3. IaaS: Infrastructure-as-a-Service
+	- Examples: Azure, Hadoop, Aneka, googel app engine, etc
+1. IaaS: Infrastructure-as-a-Service
 	- Hardware, storage and networking.
+	- Examples: Amazon EC2 and S3, vCloud, etc
 ![XaaS](../Images/Cloud%20Computing/XaaS.png)
 
 
@@ -86,23 +87,26 @@ Properties of distributed systems:
 	- large computing facilities leveraging multiple processing units.
 	- batch processing.
 	- cannot be considered distributed systems.
-1. Cluster computing
+2. Cluster computing
 	- Used comoddity hardware.
 	- contribution in evolution of tools and frameworks for distributed computing.
 	- scalable.
-1. Grid computing
+3. Grid computing
 	- aggregation of heterogeneous computing nodes.
+
 
 ## Virtualization
 - Confers degree of customization and control with minor impact on performance.
 - Creates virtual environments.
 - Isolation and executing of applications with finer control on resources they access.
 
+
 ## Web 2.0
 >It is the primary interface through which cloud computing delivers its services.
 - Brings interactivity and flexibility.
 - Extremely dynamic.
 - Loose coupling.
+
 
 ## Service oriented computing
 > It is the core reference model for cloud computing systems.  
@@ -114,7 +118,7 @@ Supports
 4. interoperable
 5. evolvable
 applications and systems.  
->Service: An abstraction representing a self-describing and platform-agnostic component that can perform any function - from simple function to complex business process.
+>**Service:** An abstraction representing a self-describing and platform-agnostic component that can perform any function - from simple function to complex business process.
 
 Service should be;
 1. loosely coupled
@@ -127,6 +131,7 @@ Services are composed and aggregated into **Service-oriented architecture(SOA)**
 > **Quality of Service(QoS):** identifies a set of functional and non-functional attributes that can be used to evaluate the behaviour of service from different perspectives.
 
 > Saas: Software-as-a-Service
+
 
 ## Utility-oriented computing
 > It is a vision of computing that defines a service-provisioning model for compute resources such as storage, compute power, applications and infrastructure that are packaged and offered on a pay-per-use basis.
