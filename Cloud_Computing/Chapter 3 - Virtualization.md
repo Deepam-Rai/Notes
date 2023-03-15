@@ -5,7 +5,7 @@
 
 Three major components of virtualized environment:
 1. Host
-2. Vritualization layer
+2. Virtualization layer
 3. Guest
 
 Advantages
@@ -21,18 +21,17 @@ Advantages
 10. Reducing cost of maintenance.
 
 Disadvantages:
-1. Decrease in performance because of virtualization layer.
+1. Decrease in performance because of virtualization layer (overheads)
 2. Some features cannot be exposed by abstraction layer thus becoming inaccessible.
-3. Implications for security -phishing.
-4. Not all applications are well suited.
-5. Added overhead makes performance slower.
+3. Implications for security - phishing.
+4. Not all applications are well suited (graphics).
 
 
 ----
 # Characteristics of virtualized environments
 1. Increased Security
 	1. Control and filter the activity of the guest.
-	2. Can hide resources and sensitive informations.
+	2. Can hide resources and sensitive informations (among guests).
 2. Managed Execution
 	1. Sharing: Full utilization.
 	2. Aggregation: Group of hosts represented as single host. eg. cluster manager.
