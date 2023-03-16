@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f58ad922369ef8df",
+        "id": "2c7244658ef08586",
         "type": "tabs",
         "children": [
           {
-            "id": "87f220e63b0cb1b5",
+            "id": "2503605d184aa490",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Linear Algebra/Matrix Multiplication.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c0ca6d7eb736b59d",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Linear Algebra/Matrix Multiplication.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Linear Algebra/Matrix Multiplication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Linear Algebra/Matrix Multiplication.md"
+              }
             }
           }
         ],
@@ -126,7 +135,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -138,8 +148,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "87f220e63b0cb1b5",
+  "active": "2503605d184aa490",
   "lastOpenFiles": [
+    "Linear Algebra/Matrix Multiplication.md",
+    "Linear Algebra/Vectors.md",
+    "Linear Algebra/README.md.md",
     "ML/Classification Model Evaluation.md",
     "Images/ML/confusion_matrix.jpg",
     "Images/ML/ROC.png",

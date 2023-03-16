@@ -27,3 +27,58 @@ Let $\vec a,\vec b \in \mathbb{R}^n$.
 - Zero vector is perpendicular to any vector.
 - $\vec a . \vec a = ||a||^2$
 - 
+
+---
+# Linear Combination
+Let, $V_1,V_2,...V_k$ be $k$ vectors $\in \mathbb{R}^n$,such that  
+$V_i = \begin{pmatrix}v_{i,1} \\ v_{i,2} \\ ... \\ v_{i,n}\end{pmatrix}$
+
+Their linear combination is given as,  
+$Y = a_1V_1 + a_2V_2 + ... + a_kV_k$ where $a_1, a_2, ..., a_k \in \mathbb{R}$   
+
+## Pictures: Visual representations
+Let,  
+$X,Y,Z,V \in \mathbb{R}^n$ and $a,b,c \in \mathbb{R}$  
+$aX + bY + cZ = V$ can be geometrically viewed in following ways:
+
+### Column picture
+$$ \newcommand\mycolv[1]{\begin{bmatrix}#1\end{bmatrix}}
+
+a\mycolv{x_1 \\ x_2 \\.\\.\\.\\x_n} + 
+b\mycolv{y_1 \\ y_2 \\.\\.\\.\\y_n} + 
+c\mycolv{z_1 \\ z_2 \\.\\.\\.\\z_n} 
+= \mycolv{v_1 \\ v_2 \\.\\.\\.\\v_n}$$
+Where we can view vectors $X,Y,Z$ as column vectors scaled by $a,b,c$ in $\mathbb{R}^n$ to get resultant vector $V$, in vector space graph.
+
+### Row picture
+$$\begin{aligned}
+\large ax_1 + by_1 + cz_1 = v_1 \\
+\large ax_2 + by_2 + cz_2 = v_2 \\
+. \\
+. \\
+\large ax_n + by_n + cz_n = v_n \\
+\end{aligned}$$
+Which we can view as $n$ planes in $\mathbb{R}^3$ euclidean space graph.
+
+- We get set of equations where each equation is a hyperplane, and intersection(if exists) of them gives the solution.
+- Its easy to see if system is inconsistent(has no solution) or undertermined(has infinitely many solutions)
+- Row picture is more cluttered than column picture visually.
+
+----
+## Linear Independence
+Let,  
+$[0]$ be a zero vector in $\mathbb{R}^n$,  
+$V_1,V_2,...V_k$ be $k$ vectors $\in \mathbb{R}^n$,  are said to be linearly independent iff  
+$a_1V_1 + a_2V_2 + ... + a_kV_k=[0]$  can only be satisfied by $a_i=0$.
+
+- No vector in the set can be represented by linear combination of others.
+- Property of set of vectors.
+
+
+## Linear dependence
+If there exists $a_1, a_2,...,a_n \in \mathbb{R}$ such that  $a_1V_1 + a_2V_2 + ... + a_kV_k=[0]$  and there is at least one non-zero $a_i$.  
+
+- At least one vector in the set can be represented as linear combination of others.
+- Zero vector is linearly dependent on any set of vectors.
+----
+
