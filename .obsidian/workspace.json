@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "b71014a5eaa06121",
+        "id": "7dc315717cd96a01",
         "type": "tabs",
         "children": [
           {
-            "id": "df57e745fd6498f7",
+            "id": "c490679fc7e0fd2f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Non-Linear models.md",
+                "file": "Linux_BASH_Shell_Scripting/Conditional Statements.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "40bfb0e200df8a82",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux_BASH_Shell_Scripting/Basics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "058813f5a3845db6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux_BASH_Shell_Scripting/Input Output.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Non-Linear models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +126,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML/Non-Linear models.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +147,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ML/Non-Linear models.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -147,12 +168,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "df57e745fd6498f7",
+  "active": "9a97b3aee185a082",
   "lastOpenFiles": [
-    "ML/Loss functions.md",
-    "ML/Linear Models.md",
-    "ML/Non-Linear models.md",
+    "Linux_BASH_Shell_Scripting/Basics.md",
     "ML/Regularization.md",
+    "Linux_BASH_Shell_Scripting/Conditional Statements.md",
+    "Linux_BASH_Shell_Scripting/Array operations.md",
+    "Linux_BASH_Shell_Scripting/Command Line Argument.md",
+    "Linux_BASH_Shell_Scripting/Globbing.md",
+    "Linux_BASH_Shell_Scripting/Input Output.md",
+    "Linux_BASH_Shell_Scripting/Operators.md",
+    "Linux_BASH_Shell_Scripting/Permissions.md",
+    "Linux_BASH_Shell_Scripting/Quoting.md",
+    "ML/Decision Trees.md",
+    "ML/Loss functions.md",
+    "ML/Regularization.md",
+    "ML/Non-Linear models.md",
+    "ML/Linear Models.md",
     "ML/Introduction.md",
     "Images/ML/ML_types.png",
     "Pasted image 20230317131825.png.md",
@@ -172,11 +204,9 @@
     "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
     "Cloud_Computing/Chapter 2 - Principles of Parallel and Distributed Computing.md",
     "Cloud_Computing/Chapter 1 - Foundations.md",
-    "Pasted image 20230314091559.png.md",
     "Images/Cloud Computing/SISD.png",
     "Images/Cloud Computing/SIMD.png",
     "Images/Cloud Computing/RPC.png",
-    "Images/Cloud Computing/MISD.png",
-    "Big Data.md"
+    "Images/Cloud Computing/MISD.png"
   ]
 }

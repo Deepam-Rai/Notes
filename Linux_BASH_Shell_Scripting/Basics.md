@@ -16,3 +16,9 @@ It is a program that acts as an interface between a user and the kernel.
 | cmd | Purpose |
 |--|--|
 | `bash --version` | version, license |
+
+
+## Don't know where to put yet
+| Syntax | Use |
+|--|--|
+| `$?` | Exit status of last command executed. |
