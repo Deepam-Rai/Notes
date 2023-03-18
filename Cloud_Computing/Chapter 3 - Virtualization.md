@@ -84,7 +84,7 @@ Exposes ISA to virtual machines.
 ##### VMM Criteria to efficiently support virtualization
 1. Equivalence:  Execution in VM should exhibit same behaviour as execution on physical host.
 2. Resource Control: Host should be in complete control.
-3. Efficienfy: Statistically dominant fraction of the machine isntructions should be executed withtou intervention from VM managers.
+3. Efficienfy: Statistically dominant fraction of the machine instructions should be executed without intervention from VM managers.
 
 ##### Properties of Hardware instructions to efficient support virtualization.
 Theorems:
