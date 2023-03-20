@@ -11,8 +11,12 @@
             "id": "aa13e7016b758590",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md"
+              }
             }
           }
         ],
@@ -139,8 +147,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aa13e7016b758590",
+  "active": "9a97b3aee185a082",
   "lastOpenFiles": [
+    "Images/Cloud Computing/Cloud_Reference_Model.png",
+    "Pasted image 20230320175303.png",
+    "Pasted image 20230320175250.png",
+    "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
     "ML/Overfit Underfit.md",
     "ML/Decision Trees.md",
     "ML/Introduction.md",
@@ -172,11 +184,7 @@
     "Cloud_Computing/Chapter 3 - Virtualization.md",
     "ML",
     "Cloud_Computing/Differences.md",
-    "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
     "Cloud_Computing/Chapter 2 - Principles of Parallel and Distributed Computing.md",
-    "Images/Cloud Computing/SISD.png",
-    "Images/Cloud Computing/SIMD.png",
-    "Images/Cloud Computing/RPC.png",
-    "Images/Cloud Computing/MISD.png"
+    "Images/Cloud Computing/SISD.png"
   ]
 }
