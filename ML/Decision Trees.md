@@ -1,6 +1,8 @@
 - non-parametric
 - supervised
 
+[ Its very disorganized.]: #
+
 ----
 # Terms
 <dl>
@@ -50,6 +52,7 @@ $$\Large\begin{aligned}
 &= InformationGain(S,a) \\
 &= Entropy(S) - \sum_{v\in a}{\frac{|S_v|}{|S|}Entropy(S_v)}
 \end{aligned}$$
+
 
 - Split on the attribute with highest Information Gain.
 - **Shortcoming: If there is large number of distinct value for an attribute,  it has large Information Gain.**

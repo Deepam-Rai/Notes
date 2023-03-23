@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ff0393a68f4b171f",
+        "id": "94e2f4db60f7cc46",
         "type": "tabs",
         "children": [
           {
-            "id": "aa13e7016b758590",
+            "id": "a9caee27f4f4a548",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -147,14 +139,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9a97b3aee185a082",
+  "active": "a9caee27f4f4a548",
   "lastOpenFiles": [
+    "Inferential Statistics/Central Limit Theorem.md",
+    "Inferential Statistics/Expectation, Variance, Covariance.md",
+    "Inferential Statistics",
+    "ML/Decision Trees.md",
+    "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
     "Images/Cloud Computing/Cloud_Reference_Model.png",
     "Pasted image 20230320175303.png",
     "Pasted image 20230320175250.png",
-    "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
     "ML/Overfit Underfit.md",
-    "ML/Decision Trees.md",
     "ML/Introduction.md",
     "ML/Classification Model Evaluation.md",
     "Linux_BASH_Shell_Scripting/Conditional Statements.md",
@@ -184,7 +179,6 @@
     "Cloud_Computing/Chapter 3 - Virtualization.md",
     "ML",
     "Cloud_Computing/Differences.md",
-    "Cloud_Computing/Chapter 2 - Principles of Parallel and Distributed Computing.md",
     "Images/Cloud Computing/SISD.png"
   ]
 }
