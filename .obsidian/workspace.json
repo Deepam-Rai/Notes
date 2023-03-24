@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "94e2f4db60f7cc46",
+        "id": "0d44c894890cf4d4",
         "type": "tabs",
         "children": [
           {
-            "id": "a9caee27f4f4a548",
+            "id": "a43416b097c69457",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -139,8 +139,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a9caee27f4f4a548",
+  "active": "a43416b097c69457",
   "lastOpenFiles": [
+    "RASA/Domain File.md",
+    "RASA/Entities.md",
+    "RASA/Basics.md",
+    "RASA/Training Data and Rules.md",
+    "RASA/Creating new assistant.md",
+    "RASA_file_structure.png",
+    "RASA",
     "Inferential Statistics/Central Limit Theorem.md",
     "Inferential Statistics/Expectation, Variance, Covariance.md",
     "Inferential Statistics",
@@ -169,16 +176,10 @@
     "Pasted image 20230317131825.png.md",
     "Images/fields.png",
     "Pasted image 20230317131825.png",
-    "Linear Algebra/Matrix Multiplication.md",
-    "Linear Algebra/Vectors.md",
-    "Linear Algebra/README.md.md",
     "Images/ML/confusion_matrix.jpg",
     "Images/ML/ROC.png",
     "Images/ML",
     "Images/ML/AUC_ROC.png",
-    "Cloud_Computing/Chapter 3 - Virtualization.md",
-    "ML",
-    "Cloud_Computing/Differences.md",
-    "Images/Cloud Computing/SISD.png"
+    "ML"
   ]
 }
