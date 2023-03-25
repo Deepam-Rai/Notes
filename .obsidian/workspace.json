@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0d44c894890cf4d4",
+        "id": "f9927e03b215cabc",
         "type": "tabs",
         "children": [
           {
-            "id": "a43416b097c69457",
+            "id": "00fd709b4c0a55c5",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -65,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c0ca6d7eb736b59d",
@@ -126,8 +127,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -139,8 +139,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a43416b097c69457",
+  "active": "00fd709b4c0a55c5",
   "lastOpenFiles": [
+    "Graph_Theory/Definitions.md",
+    "Graph_Theory/Theorems.md",
     "RASA/Domain File.md",
     "RASA/Entities.md",
     "RASA/Basics.md",
@@ -171,9 +173,7 @@
     "Linux_BASH_Shell_Scripting/Quoting.md",
     "ML/Loss functions.md",
     "ML/Non-Linear models.md",
-    "ML/Linear Models.md",
     "Images/ML/ML_types.png",
-    "Pasted image 20230317131825.png.md",
     "Images/fields.png",
     "Pasted image 20230317131825.png",
     "Images/ML/confusion_matrix.jpg",

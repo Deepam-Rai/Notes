@@ -272,6 +272,35 @@ Labelled graphs $G\cong H$ iff $\exists$ one-to-one correspondence $\phi$ from V
 ### Pseudograph
 Where loops are allowed.
 
+----
+## Trees
+Acyclic connected graphs.  
+- Every edge is a bridge.
+- Every two vertices are connected by a unique path.
+- Every non-trivial tree has at least two end-vertices.
+
+### Terms
+1. Root: The node from which all other nodes appears to be descendant of in a particular way of drawing the tree.
+	- Any node can be chosen as root.
+	- Its just the way we draw.
+1. Leaves/End vertices: Vertices with degree 1.
+
+### Special Trees
+1. Trivial Tree
+	- Tree with order 1.
+2. Rooted tree
+	- Tree that has root.
+	- Every tree has root. :)
+3. Double Star
+	- Contains exactly two vertices that are not end-vertices and adjacent.
+4. Caterpillar
+	- Removing its end-vertices results in a path - called **spine.**
+	- Every Path, Star(order>2), Double star is a caterpillar.
+
+## Forest
+Acyclic graphs.
+- Consequently components of forest are trees - forest is collection of trees.
+- Forest can be disconnected.
 
 ----
 ## Points

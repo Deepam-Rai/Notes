@@ -261,7 +261,7 @@ $$\therefore \text{Isomorphism is an equivalence relation}.$$
 $$[Proved!]$$
 
 ----
-> **Theorem 4.1:
+> **Theorem 4.1:  
 > An edge $e$ of graph $G$ is a bridge iff $e$ lies on no cycle of G.**
 
 **Proof:**  
@@ -295,3 +295,176 @@ $$[Proved!]$$
 
 ----
 
+>**Theorem 4.2:
+>A graph G is a tree iff every two vertices of G are connected by a unique path.**
+
+**Proof:**  
+
+**Claim I:** If $G$ is a tree every two vertices are connected by a unique path.  
+A path exists between every two vertices because $G$ is a tree.  
+Now, we show that the path is unique.  
+Assume the contrary, $u,v \in V(G)$ are connected by two distinct path $P_1$ and $P_2$.  
+$\implies$ A cycle is formed by some or all vertices of $P_1$ and $P_2$ in $P_1 + P_2$.  
+$\implies G$ cannot be a tree.
+Hence the contradiction.  
+$\therefore$ Every two vertices is connected by a unique path.
+
+**Claim II:** If every two vertices of $G$ are connected by unique path then $G$ is a tree.  
+$\because$ Every two vertices have a path connecting them $\implies G$ is connected.  
+Now, to show $G$ is acyclic.
+Assume contrary, let $u,v \in V(G)$ be part of a cycle.  
+$\implies \exists$ two $u-v$ paths in $G$.  
+Which is a contradiction.  
+$\therefore G$ is connected and acyclic.  
+$\implies G$ is a tree.
+
+Together from Claim-I and Claim-II, Theorem holds.  
+$$[Proved!]$$
+
+----
+> **Theorem 4.3:
+> Every nontrivial tree has at least two end-vertices.**
+
+Nontrivial tree: Trees with order>1.
+
+**Proof:**  
+Let $u-v$ be longest path in $T$. ($d(u,v)=diam(T)$)  
+$order(T) \gt 1 \implies u \not = v$
+We show that $u$ and $v$ both have degree 1.  
+
+Let $P = (u=p_1, p_2,..., p_k=v)$.  
+
+Take $u$,  
+**Claim-I:** $u$ is  not adjacent to any other vertex other than those in $P$.  
+Assume the contrary, $u$ is connected to $w$ such that $w \notin P$.  
+$\implies w+P =$ longest path in $G$ for $w-v$.  
+Which is contradiction to our base assumption.  
+$\therefore u$ is not adjacent to any other vertex outside $P$.  
+
+**Claim-II:** $u$ is adjacent to only one vertex - $p_2$ in $P$.  
+$\because order(T) \gt 1 \implies$ we can take $p_2 \not = u$.
+Assume the contrary, let $u$ be adjacent to $p_i$ for $2 \lt i \le k$.   
+$\implies \exists$ two distinct $u-p_i$ paths.  
+$\implies T$ is not a tree.  
+Which is a contradiction.  
+$\therefore u$ is connected to only $p_2$.  
+
+$\therefore$ claim-I and claim-II $\implies deg(u)=1 \implies u$ is an end-vertex.  
+$|||^{ly}$  $v$ can also be shown to be an end-vertex.  
+$\therefore \exists$ two end-vertices in every non-trivial tree.  
+$$[Proved!]$$
+
+----
+> **Theorem 4.4:
+> Every tree of order $n$ has size $n-1$.**
+
+**Proof:** (By Induction)
+A tree of order 1 has size 0.  
+$\therefore$ The statement is true for $n=1$.
+
+Assume that statement is true for integer $n \gt 1$.  
+$\implies$ A tree of order $n$ has size $n-1$.  
+
+Now, let $T$ be a tree of order $n+1$.  
+$\because \exists$ two end-vertices for every non-trivial tree.  
+$\because$$n+1 \gt 2 \implies T$ is non-trivial,  
+Let $v$ be an end-vertex of $T$.  
+$\implies$ tree $T-v$ has order $n$.  
+$\because v$ was an end-vertex of $T \implies size(T) = size(T-v)+1$.  
+But by assumption tree $T-v$ of order $n$ has size $(n-1)$.  
+$\implies T$ of order $(n+1)$ has size $(n-1)+1=n$.  
+$\therefore$ Statement is true for $n+1$ whenever its true for $n$.  
+$\because$ Statement is true for $n=1 \implies$ Its true for all integers $n \ge 1$.  
+$$[Proved!]$$
+
+> **Corollary 4.6:  
+> Every forest of order $n$ with $k$ components has size $n-k$.**
+
+**Proof:**  
+Joining the $k$ components by $k-1$ edges gives us a tree, say $T$.
+Order of $T=n$.  
+$\therefore$ size of $T=n-1$.  
+Now,
+$$\begin{aligned}\text{Size of T}
+&= \text{ Sum of sizes of $k$ components} + (k-1) \\
+&= \text{Size of original forest} + (k-1) \\
+\text{or, Size of original forest} &= \text{Size of T} - (k-1) \\
+&= (n-1) - (k-1) \\
+\therefore \text{Size of original forest} &= n-k
+\end{aligned}$$
+
+$$[Proved!]$$
+
+----
+> **Theorem 4.7:  
+> The size of every connected graph of order $n$ is at least $n-1$.**
+
+**Proof:**  (By minimum value)  
+$S_1$: Connected graph of order 1 has size at least 0.  
+(A trivial graph.)  
+$S_2$: Connected graph of order 2 has size at least 1.  
+(A pair graph of order 2.)  
+
+Let, $n \ge 2$ be the least number for which $S_n$ fails.  
+$\therefore S_n$: Connected graph $G$ of order $n$ has size at most $(n-2$).  
+Claim: $G$ has at least one end vertex.  
+Assume the contrary, $G$ has no end vertex.  
+$\implies deg(v) \ge 2 \forall v \in V(G)$  
+$\implies \sum_{v\in V(G)}{deg(v)} \ge 2n$  
+$\implies$ Size of $G \ge n$.   
+Which is a contradiction.  
+$\therefore G$ has at least one end vertex.  
+
+Let, $v$ be that end-vertex.  
+$\therefore G-v$ is graph of order $(n-1)$ and size at most $((n-2)-1)$.  
+Let, $n'=n-1 \implies \exists$ graph $G'$ with order $n'$ and size at most $(n'-2)$.  
+$\implies n$ for $S_n$ is not the least number and $G$ is not smallest graph of order $n$ and size $(n-2)$.  
+Hence the contradiction.  
+$\therefore$ There exists no minimum $n \ge 2$ such that $S_n$ fails.  
+$$[Proved!]$$
+
+Another way to think is,  
+we saw that if  $n \ge 2$ exists such that $S_n$ doesn't hold, then $(n-1)$ also exists for which $S_{n-1}$ does not hold.  
+$\implies S_{n-2}, S_{n-3}, ... , S_3, S_2, S_1$ also doesn't hold.  
+But as we saw in starting of proof  
+$S_1, S_2$ holds for every possible connected graph of order 1 and 2.  
+Hence the contradiction.
+
+----
+**Theorem 4.8:  
+Let G be a graph of order $n$ and size $m$. If $G$ satisfies any two of following properties:  
+1. $G$ is connected.
+2. $G$ is acyclic.
+3. $m=n-1$
+**Then $G$ is a tree.**
+
+**Proof:**
+
+**Case-I: (1) and (2) holds.**  
+Then by definition of tree, $G$ is a tree.  
+
+**Case-II: (1) and (3) holds.**  
+We show that $G$ is acyclic.  
+Assume contrary, $G$ has a cycle.  
+Remove an edge $e$ from the cycle.  
+$G-e$ is still connected.  
+$\implies G$ is a connected graph of order $n$ and size $(n-1)-1)=n-2$.  
+But The size of every connected graph of order $n$ is at least $n-1$.  
+Hence the contradiction.  
+$\implies G$ is acyclic and $\because$ (1) holds $G$ is connected.  
+$\implies G$ is a tree.  
+
+**Case-III: (2) and (3) holds.**  
+$\because G$ is acyclic $\implies G$ is either a tree or a forest.  
+Assume $G$ is a forest of order $n$ with $k$ components.  
+By (3) $G$ has size $(n-1)$.  
+$\because G$ is a forest of order $k$ and order of $G$ is $n$.  
+$\implies$ Size of $G=n-k$  
+or, $n-k=n-1$  
+$\implies k=1$  
+$\therefore G$ contains only one component.  
+$\implies G$ is a tree.
+
+$$[Proved!]$$
+
+----
