@@ -11,8 +11,12 @@
             "id": "00fd709b4c0a55c5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "DL/RNN.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -82,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "DL/RNN.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "DL/RNN.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "DL/RNN.md"
+              }
             }
           }
         ],
@@ -127,7 +135,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -141,6 +150,7 @@
   },
   "active": "00fd709b4c0a55c5",
   "lastOpenFiles": [
+    "DL/RNN.md",
     "Graph_Theory/Definitions.md",
     "Graph_Theory/Theorems.md",
     "RASA/Domain File.md",
@@ -172,7 +182,6 @@
     "Linux_BASH_Shell_Scripting/Permissions.md",
     "Linux_BASH_Shell_Scripting/Quoting.md",
     "ML/Loss functions.md",
-    "ML/Non-Linear models.md",
     "Images/ML/ML_types.png",
     "Images/fields.png",
     "Pasted image 20230317131825.png",
