@@ -144,6 +144,7 @@ $$B_{ij} = \cases{
 
 ----
 ## **Types of Graph**
+
 ### Trivial graph
 A graph with order 1.
 
@@ -208,6 +209,12 @@ A di-graph is an ordered pair of vertex set V and edge set E, denoted by D(V,E),
 #### Oriented Graph
 Digraph with no paralled edges.
 
+### Pseudograph
+Where loops are allowed.
+
+### Weighted Graph
+Where the edges and/or vertices are assigned numbers called cost/weight.
+
 ----
 ## **Common Classes of Graph**
 
@@ -269,8 +276,6 @@ Labelled graphs $G\cong H$ iff $\exists$ one-to-one correspondence $\phi$ from V
 	- Size = $\frac{1}{2}(^n_2)=\frac{n(n-1)}{4} \implies 4|n\ or\ 4|(n-1)$.
 - It is an equivalence relation on set of all graphs - creates equivalence classes.
 
-### Pseudograph
-Where loops are allowed.
 
 ----
 ## Trees
@@ -285,7 +290,19 @@ Acyclic connected graphs.
 	- Its just the way we draw.
 1. Leaves/End vertices: Vertices with degree 1.
 
-### Special Trees
+### Spanning Tree
+A spanning subgraph which is a tree.
+- There can be multiple for a graph.
+#### Minimal Spanning Tree
+Spanning tree with minimum weight among all spanning tree.
+- The sum of all edge weights added is minimum possible.
+- Algorithms to find MST:
+	- [Kruskal's algorithm](./Algorithms#Kruskal's-Algorithm)
+		- Adding edges in increasing weights order, so that cycle is not formed, until connectivity established.
+	- [Prim's Algorithm](./Algorithms#Prim's-Algorithm)
+		- Including single arbitrary vertex first,then adding new vertices incident to outgoing edges from set of included vertices until all vertices are taken. 
+
+### Other Special Trees
 1. Trivial Tree
 	- Tree with order 1.
 2. Rooted tree
@@ -296,6 +313,7 @@ Acyclic connected graphs.
 4. Caterpillar
 	- Removing its end-vertices results in a path - called **spine.**
 	- Every Path, Star(order>2), Double star is a caterpillar.
+ 
 
 ## Forest
 Acyclic graphs.

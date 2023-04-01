@@ -468,3 +468,53 @@ $\implies G$ is a tree.
 $$[Proved!]$$
 
 ----
+> **Theorem 4.9:**  
+> Let $T$ be a tree of order $k$. If $G$ is a graph with $\delta(G) \ge k-1$, then $T$ is isomorphic to some subgraph of $G$.
+
+**Proof:**  (By Induction)  
+For $k=1$,  
+$\because$ every graph contains a vertex.  
+Tree of order $1$ is isomorphic to all $G$ with $\delta(G) \ge 0$.  
+For $k=2$,  
+$\because \exists$ an edge joining two vertices in $G$.  
+Tree of order $2\ (P_2)$  is isomorphic to all $G$ with $\delta(G) \ge 1$.  
+
+Assume the theorem is true for $k \ge 3$.  
+i.e., A tree of order $k$ is isomorphic to a subgraph of $G$ with $\delta(G)\ge k$.  
+
+For $k+1$,  
+Let $T$ be a tree of order $k+1$ and $G$ be a graph with $\delta(G) \ge k$.  
+$\because$ Every non-trivial tree has at-least two end vertices.
+Let $v$ be an end vertex in $T$, such that $u,v \in V(T)$ and $uv \in E(T)$.  
+$\implies T-v$ is a tree of order $(k)$.  
+$\because$ by assumption a tree of order $k$ is isomorphic to a subgraph of $G$.  
+Let $T-v \cong H$ where $H$ is subgraph of  $G$.  
+Now, $deg_{H}(u) \le k-1$.  
+But $deg_G(u) \ge k$.  
+$\implies \exists w \in V(G)$ such that $w \notin V(H)$ and $uw \in E(G)$.  
+$\implies T \cong H\cup \{w,uw\}$, subgraph of $G$.  
+
+$\therefore$ Theorem holds for $k+1$ if it holds for $k$.  
+$\because$ Theorem is true for $k=1,2 \implies$ Theorem is true for integers $k \ge 1$.  
+$$[Proved!]$$ 
+
+----
+> **Theorem 4.10:**  
+> Every connected graph contains a spanning tree.
+
+**Proof:**  (By Construction)  
+$G \gets$ connected graph.  
+**Algorithm-I:** Removing edges.  
+**Case-I:** If $G$ is acyclic then $G$ is spanning tree itself.  
+**Case-II:** If $G$ is cyclic.  
+Remove and edge $e$ from a cycle of $G$.  
+Repeat until no cycle is present.  
+The resultant graph is a spanning tree of $G$.  
+  
+**Algorithm-II:** Adding edges.  
+1. $H \gets$ a graph with $V(H)=V(G), E(H)=\emptyset$.  
+2. While $(H \text{ is not connected})$
+	1. Keep adding edge $e$ from $E(G)$ such that no cycle is formed in $H$.
+3. $H$ is a spanning tree of $G$.  
+$$[Proved!]$$
+----
