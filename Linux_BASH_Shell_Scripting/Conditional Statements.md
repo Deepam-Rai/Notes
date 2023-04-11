@@ -3,21 +3,16 @@
 | `0` | Successfully executed. |
 | `1` | Not successfully executed. |
 
+Testing conditions:
 | Syntax | Purpose |
 |--|--|
 | `test expression` | Evaluating expression. Check exit status. |
 | `[ expression ]` | Evaluating expression. Check exit status. Space around `[`,`]`. |
 
-Special operators for `test` and `[ ]`:
-| Syntax | Purpose |
-|--|--|
-| `[ -z "someString" ]` | Unary operator. True if the string length is 0. |
-| `[ -f "filePath' " ]` | Unary operator. Checks if `filePath` exists, and if the file is a regular file. |
-- Regular files: Files that contains user data - text, image, audio,etc. Folders not counted.
-
 [Operators has another dedicated file](Operators.md)
 
-## `if-elif-else-fi`
+----
+## if-elif-else
 ```bash
 if [ expression ]; then
 	commands
@@ -29,3 +24,49 @@ fi
 ```
 
 - quote string variables if used in conditions.
+
+----
+## case
+```
+case $VARIABLE in
+	match_1) commands
+		;;
+	match_n) 
+		commands
+		;;
+	*) commands_to_execute_by_default;;
+esac
+```
+
+
+----
+## for loop
+Syntax-I:
+```
+for ((initialization; condition; expr))
+do
+	commands
+done
+```
+- - `initialization`: is executed just for first iteration.
+- `condition`: to break the loop.
+- `expr`: some expression.
+- All 3 above are optional. `for ((;;))` is valid.
+
+Syntax-II:
+```
+for variable in sequence/range
+do
+	commands
+done
+```
+
+----
+## while
+```
+while [ condition ]
+do
+	commands
+done
+```
+- `[ 0 ]` does not evaluate to false.

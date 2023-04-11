@@ -1,3 +1,4 @@
+[Click to go to Conditional Statements](Conditional%20Statements.md)
 
 ## Logical operators
 | Syntax | Operator |
@@ -22,4 +23,18 @@
 
 
 ## Operators for strings
-#TODO 
+| Operator Syntax | Purpose |
+|--|--|
+| `"str1" == "str2"` | Equal |
+| `"str1" != "str2"` | Unequal |
+
+## Special operators for `test` and `[ ]`:
+| Syntax | Purpose |
+|--|--|
+| `[ -z "someString" ]` | Unary operator. True if the string length is 0. |
+| `[ -f "filePath' " ]` | Unary operator. Checks if `filePath` exists, and if the file is a regular file. |
+| `[ -s "filePath" ]` | Checks if empty. |
+| `[ -w "filepath" ]` | Check if write permission exists. |
+| `[ $file1 -nt $file2 ]` | Checks if `$file1` is newer than `$file2` |
+| `[ $file1 -ot $file2 ]` | Checks if `$file1` is older than `$file2` |
+ - Regular files: Files that contains user data - text, image, audio,etc. Folders not counted.
