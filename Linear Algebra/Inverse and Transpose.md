@@ -8,6 +8,17 @@
 Properties:
 1. $(AB...Z)^{-1}=Z^{-1}...B^{-1}A^{-1}$
 2. $A$ is invertible iff $A$ has $n$ pivots.
+3. $(A^2)^{-1}=B \implies A^{-1}=AB$
+4. $A^T$ is invertible $\implies A$ is invertible.
+5. $A$ is invertible is $N(A)$ contains zero vector alone.
+	- This means that all the column vectors are independent $\implies$ $n$ pivots exists.
+6. A column/rows of zeroes exists $\implies$ matrix is not invertible.
+
+Square matrices:
+1. Left inverse = Right inverse.
+
+Permutation matrices:
+1. $P^{-1}=P^T$
 
 ----
 ## Finding Inverse
@@ -20,7 +31,7 @@ $$\therefore AX=I$$
 This can be seen as multiple systems of equations to be solved.
 1. $A$ multiplied with a column of $X$ to get a column of $I$. At a time.
 
-We can use [LU factorization](../LU%20Factorization).  
+We can use [LU factorization](./LU%20Factorization.md).  
 1. Factorize $A=LU$.
 2. For every i'th column $b$ of $I$ get i'th column $x$ of $X$ as:
 	1. Solve $Lc=b$
@@ -58,6 +69,10 @@ Properties:
 2. $(AB...Z)^T=Z^T...B^TA^T$
 3. $(A^{-1})^T=(A^T)^{-1}$
 4. $AA^T$ is always symmetric.
+
+For square matrix:
+1. $A+A^T$ is always symmetric.
+2. $A-A^T$ is always skew symmetric.
 
 For symmetric matrix:
 1. $A^T=A$

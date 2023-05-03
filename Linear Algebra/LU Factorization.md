@@ -4,7 +4,7 @@ $A =$ the matrix that is to be decomposed,
 $P =$ permutation matrix denoting row swapping,  
 $L =$ lower triangular matrix formed from elementary matrices of Gaussian elimination,  
 $D =$ diagonal matrix just used to make $U$ look better,  
-$U' =$ Upper triangular matrix such that row-echelon form of $A=U=DU'$.
+$U' =$ Upper triangular matrix such that row-echelon form of $A=U=DU'$.  
 This note explains how we come to above expression.
 
 ----
@@ -32,20 +32,21 @@ $$\begin{aligned}
 \therefore EA &= U \\
 A &= E^{-1}U \\
 A &= LU
-\end{aligned}$$  
+\end{aligned}$$
+
 where $L$ and $U$ are lower and upper triangular matrices respectively.  
 Form of $L$ and $U$:
 
 $$L=\begin{bmatrix}
 1 & 0 & 0 \\
-* & 1 & 0 \\
-* & * & 1
+\ast & 1 & 0 \\
+\ast & \ast & 1
 \end{bmatrix}$$
 
 $$U=\begin{bmatrix}
-* & * & * \\
-0 & * & * \\
-0 & 0 & *
+\ast & \ast & \ast \\
+0 & \ast & \ast \\
+0 & 0 & \ast
 \end{bmatrix}$$
 
 
@@ -73,14 +74,14 @@ Once $c$ is calculated we can use it for other $b$ directly without new $LU$ fac
 $U$ can be further decomposed into $D$ and $U'$ such that:  
 
 $$D=\begin{bmatrix}
-* & 0 & 0 \\
-0 & * & 0 \\
-0 & 0 & *
+\ast & 0 & 0 \\
+0 & \ast & 0 \\
+0 & 0 & \ast
 \end{bmatrix}$$
 
 $$U'=\begin{bmatrix}
-1 & * & * \\
-0 & 1 & * \\
+1 & \ast & \ast \\
+0 & 1 & \ast \\
 0 & 0 & 1
 \end{bmatrix}$$
 
