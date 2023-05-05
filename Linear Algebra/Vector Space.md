@@ -25,13 +25,13 @@ Examples: Line in $R^2$, Plane in $R^3$, Zero in $R^n$, lower triangular matrice
 
 Let $A$ = $m \times n$ matrix.  
 
-> **Column space C(A)**: Set of all linear combinations of column vectors of the matrix.
+> **Column space $C(A)$**: Set of all linear combinations of column vectors of the matrix.
 - subspace of $\mathbb{R}^m$.
 
 
-> **Row space**: Set of all linear combinations of row vectors of the matrix.
+> **Row space $C(A^T)$**: Set of all linear combinations of row vectors of the matrix.
 - subspace of $\mathbb{R}^n$.
 
-> **Null Space N(A):** Set of vectors $x$ such that $Ax=0$.
+> **Null Space $N(A)$:** Set of vectors $x$ such that $Ax=0$.
 - subspace of $\mathbb{R}^n$.
 

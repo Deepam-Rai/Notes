@@ -80,4 +80,43 @@ For symmetric matrix:
 3. If invertible then $A=LDU' \to A=LDL^T$.
 
 ----
+# Pseudo Inverse
+
+Let $A =m \times n$ matrix.  
+$I_k = k \times km$ identity matrix.  
+
+> **Left Inverse:** Matrix $B$ such that $BA=I_n$
+
+> **Right Inverse:** Matrix $C$ such that $AC=I_m$
+- $A^T(AA^T)^{-1}$
+
+Let $m \le n$ and $A$ be full row rank
+$\implies A$ need not be full column rank
+But  $C(A)$ covers entire $\mathbb{R}^m$.  
+$\implies Ax=b$, solution exists for all possible $b \in \mathbb{R}^m$,  
+$\because n \ge m$ there can be multiple solutions also,  
+$\implies$ There is guarantee of EXISTENCE of AT LEAST ONE solution for $Ax=b$.  
+$\implies$ In such case we can find C such that $AC=I_m$,  
+$\implies$ right inverse(or inverses) exists for $A$.  
+
+Let $n \le m$ and $r=n$ meaning $A$ is full column rank,  
+$\implies$ there are $r=n$ independent rows,  
+$\implies C(A)$ is subspace of $\mathbb{R}^m$,  
+and $n$ independent columns forms basis of $C(A)$,  
+$\implies Ax=b$, solution exists for only $b \in C(A)$,  
+But if solution exists then it is UNIQUE.  
+
+> A rectangular matrix cannot have both EXISTENCE and UNIQUENESS guarantee.
+
+Similarly for left inverse:  
+Now, $\because r=n$ rows are independent,  
+$C(A^T)$, row space, covers entire $\mathbb{R}^n$,  (not $\mathbb{R}^m$)  
+$\implies x^TA=b$ solution exists for any $b \in \mathbb{R}^n$,  
+$\because m \ge n$, there can be multiple solutions too,  
+$\implies BA=I_n$ solution exists $\implies$ left inverse exists and there can be multiple.  
+
+----
+
+
+
 
