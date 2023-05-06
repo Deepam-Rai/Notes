@@ -10,7 +10,7 @@ Let $f$ be a continuous function $f:I=(a,b) \to \mathbb{R}$.
 
 > **Global/absolute maximum** of $f$ is said to be at $x_1$ if $$f(x_1) \ge f(x) \forall x \in I$$
 
-> **Local/relative minimum** of $f$ is said to be at $x_1 \in I$ if $\exists$ a real number $\delta \gt 0$ such that, $$f(x_1) \ge f(x) \forall x \in (x-\delta, x+\delta)$$
+> **Local/relative minimum** of $f$ is said to be at $x_1 \in I$ if $\exists$ a real number $\delta \gt 0$ such that, $$f(x_1) \le f(x) \forall x \in (x-\delta, x+\delta)$$
 
 > **Local/relative maximum** of $f$ is said to be at $x_1\in I$ if $\exists$ a real number $\delta \gt 0$ such that, $$f(x_1) \ge f(x) \forall x \in (x-\delta, x+\delta)$$
 
@@ -49,7 +49,11 @@ $X \in S$ is n-dimensional vector $[x_1,x_2,...,x_n]^T$.
 
 
 ### Necessary and Sufficient Condition for Local Extrema
-> If $\large \frac{\partial f(X)}{\partial x_j}$ exists for all $X \in S$ and for all $j=1,2,...,n$ and if $f$ has a local extremum at $X^*$ in the interior of $S$, then  $$\large \nabla f(X^*)=\frac{\partial f(X^*)}{\partial x_j}=0, j=1,2,...,n$$
+> If $\large \frac{\partial f(X)}{\partial x_j}$ exists for all $X \in S$ and for all $j=1,2,...,n$ and if $f$ has a local extremum at $X'$ in the interior of $S$, then  
+ 
+
+$$\large \nabla f(X')=\frac{\partial f(X')}{\partial x_j}=0, j=1,2,...,n$$
+
 
 ### Hessian Matrix
 #TODO move to separate misc concepts note
@@ -57,6 +61,7 @@ It is a square matrix of second-order partial derivatives of scalar valued funct
 It gives information like local curvature of a function at a particular point thus immensely helpful in finding maxima/minima.  
 
 Hessian matrix is defined as:  
+
 $$\Large H(X)=\begin{bmatrix}
 \frac{\partial ^2 f}{\partial x_1^2} & \frac{\partial^2 f}{\partial x_1 \partial x_2} & ... & \frac{\partial^2 f}{\partial x_1 \partial x_n} \\
 \frac{\partial^2 f}{\partial x_2 \partial x_1} & \frac{\partial ^2 f}{\partial x_2^2} & ... & \frac{\partial^2 f}{\partial x_2 \partial x_n} \\
@@ -64,6 +69,7 @@ $$\Large H(X)=\begin{bmatrix}
 . &  & . & .\\
 \frac{\partial^2 f}{\partial x_n \partial x_1} & \frac{\partial ^2 f}{\partial x_n \partial x_2} & ... & \frac{\partial^2 f}{\partial x_n^2}
 \end{bmatrix}$$
+
 Usage:  
 If $f$ has local extremum at $X^*$, then
 1. $f$ has local maximum at $X^*$ if $H(X^*)$ is negative definite.
@@ -79,6 +85,7 @@ If $f$ has local extremum at $X^*$, then
 Let $f: \mathbb{R}^n \to \mathbb{R}^m$, then Jacobian of $f$.  
 
 Jacobian matrix is a matrix of first-order partial dervatives of a vector-valued function with respect to its variables.  
+
 $$\Large J=\begin{bmatrix}
 \frac{\partial g_1}{\partial x_1} & \frac{\partial g_1}{\partial x_2} & ... & \frac{\partial g_1}{\partial x_n} \\
 \frac{\partial g_2}{\partial x_1} & \frac{\partial g_2}{\partial x_2} & ... & \frac{\partial g_2}{\partial x_n} \\
@@ -110,6 +117,7 @@ g_2(X_k) \\
 g_m(X_k)
 \end{bmatrix}$$
 
+
 ----
 # Convex and Concave functions
 #TODO move to misc concepts.
@@ -133,3 +141,59 @@ Intuitive understanding:
 Convex/concave function has only one minimum/maximum, means finding local minima/maxima is equivalent to finding global minima/maxima.  
 
 ## Determining convexity
+For a single variable function $f(x)$
+1. We can see the graph :)
+2. If $f(x)$ is twice differentiable on an interval $I$, then $f(x)$ is convex on $I$ iff $f''(x) \ge 0$ on $I$.
+
+Similarly it can be extended to multi-variable functions.  
+Owing to some theorem #TODO  we get:  
+Let, $f:S \to \mathbb{R}$ be a twice continuously differentiable function on $S$ where $S \subset \mathbb{R}^n$, then
+1. $f$ is convex on $S$ if Hessian matrix $H(X)$ of $f$ is positive semi-definite.
+2. $f$ is strictly convex on $S$, if $H(A)$ of $f$ is positive definite.
+
+----
+# Constrained Functions
+
+General optimization problem with constraints:  
+
+$$\begin{aligned}
+\text{Maximize or Minimize } z &= f(x) \\
+\text{ subject to } \\
+g_i(X) &\le 0, i=1,2,...,r \\
+g_i(X) &\ge 0, i=r+1,...,p \\
+g_i(X) &=0, i=p+1,...,m
+\end{aligned}$$
+
+$z =$ objective function,  
+$g() =$ constraints,  
+$X =  [x_1,x_2,...,x_n]^T \in \mathbb{R}^n$,   
+$m =$ total number of constraints.  
+
+> **Feasible:** $X$ is said to be feasible if $X$ satisfies all constraints.
+
+## Optimization of equality constraints
+General optimization problem with just equality constraints:  
+
+$$\begin{aligned}
+\text{Maximize or Minimize } z &= f(x) \\
+\text{ subject to } \\
+g_i(X) &=0, i=1,2,...,m
+\end{aligned}$$
+
+### Substitution
+Sometimes its possible to substitute the variable among constraints and objective function and reduce the variables. But often its not.  
+By substituting we mean:
+1. From constraint get a variable in terms of another variabe: like $x_i = f(x_j)$
+2. substitute $x_i$ with $f(x_j$) at other places.
+3. thus effective we have reduced a variable $x_i$.
+
+### Jacobian Method
+#TODO 
+
+### Method of Lagrange
+Preferred method.
+- introduces additional variables: Lagrange's multipliers
+- converts the problem to unconstrained optimization problem.
+
+Steps:  
+1. 
