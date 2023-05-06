@@ -35,3 +35,6 @@ Let $A$ = $m \times n$ matrix.
 > **Null Space $N(A)$:** Set of vectors $x$ such that $Ax=0$.
 - subspace of $\mathbb{R}^n$.
 
+> **$N(A^T):** Null space of row space of $A$, which is set of vectors such that $x^TA=A^Tx=0$.
+
+

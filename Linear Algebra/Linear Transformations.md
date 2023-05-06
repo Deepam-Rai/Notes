@@ -35,13 +35,15 @@ sin\theta & cos\theta
 
 
 Projection onto x-axis in $\mathbb{R}^2$:
- $$\begin{bmatrix}
+
+$$\begin{bmatrix}
 1 & 0 \\
 0 & 0
 \end{bmatrix}$$
 
 Projection onto any line with angle $\theta\ in\ \mathbb{R}^2$:  
- $$\begin{bmatrix}
+
+$$\begin{bmatrix}
 cos^2\theta & sin\theta cos\theta \\
 sin\theta cos\theta & sin^2\theta
 \end{bmatrix}$$
@@ -101,7 +103,7 @@ $$\begin{bmatrix}
 
 where each of $n+1$ basis vectors($1,t^1,t^2,...,t^n$) $\in \mathbb{R}^{n+1}$.  
 
-Example: Transformation matrix to multiply a degree 3 polynomial by $t$:  
+**Multiplication:** Transformation matrix to multiply a degree 3 polynomial by $t$:  
 
 $$\begin{bmatrix}
 0 & 0 & 0 \\
@@ -119,7 +121,8 @@ $$\begin{bmatrix}
 
 **Integration:**  
 Transformation matrix to integrate 3rd degree polynomial:  
- $$\large \begin{bmatrix}
+
+$$\large \begin{bmatrix}
 0 & 0 & 0 \\
 1 & 0 & 0 \\
 0 & \frac{1}{2} & 0 \\

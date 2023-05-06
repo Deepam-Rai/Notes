@@ -48,7 +48,7 @@ Steps:
 	2. $U \to I$. Identity matrix.
 3. The transformed columns of augmented $I$ is $A^{-1}$.
 
-### Why this method works?  
+### Why Gauss-Jordan method works?  
 $\because A=LU \implies U^{-1}L^{-1}=A^{-1}$.  
 
 First to transform $A$ to $U$ we indirectly/unknowingly/via some other method multiplied it with $L^{-1}$ thus we multiplied augmented $I$ also with $L^{-1}$.  
@@ -57,6 +57,15 @@ $\therefore$ we get $[A|I] \to [U|L^{-1}]$.
 Now to get $I$ from $U$ we indirectly/unknowingly/via some other method multiplied it with $U^{-1}$ thus we multiplied augmented part also with $U^{-1}$.  
 $\therefore$ we get $[U|L^{-1}] \to [I|U^{-1}L^{-1}]$.  
 Thus augmented part is transformed to $A^{-1}$.  
+
+## LU vs Gauss Jordan
+| | LU | Gauss-Jordan |
+|--|--|--|
+| Time complexity: | $O(n^3)$ | $O(n^3)$ |
+| Parallelization: | Easily. | Difficult. |
+| Practicality: | Faster than GS due to parallelization. | Comparatively slower. |
+| Uses: | Can be used to solve for other linear systems. | Finds only inverse. |
+
 
 ----
 # Transpose
