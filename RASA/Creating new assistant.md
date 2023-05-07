@@ -4,7 +4,8 @@ python -m rasa init
 ```
 
 ## File structure
-![[RASA_file_structure.png]]
+![RASA file structure](../Images/RASA/RASA_file_structure.png)
+
 - `domain.yml` everything comes together.
 - `config.yml` for machine learning models.
 - `data` to train assistant.

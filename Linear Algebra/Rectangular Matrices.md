@@ -6,7 +6,7 @@ $A \to U\text{(row echelon form)} \to R\text{(reduced row echelon form)}$
 ---
 # Solving simultaneous system of equations
 for rectangular matrix.
-1. Convert $A$ to upper triangulr.(all operations are applied on RHS $b$b also)
+1. Convert $A$ to upper triangular.(all operations are applied on RHS $b$ also)
 2. Do backward substitution to solve for $x$.
 $Ax=b \to Ux=c$  
 

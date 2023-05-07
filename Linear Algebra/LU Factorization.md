@@ -67,7 +67,7 @@ Steps:
 3. Solve for $x$ using $Ux=c$. Backward substitution can be used.
 Time complexity $O(n^2)$. ($n^2$ each for forward and backward substitution).
 
-Once $c$ is calculated we can use it for other $b$ directly without new $LU$ factorization.  
+Once $LU$ factorization is done we can discard $A$ and use same $LU$ for other $b$ directly without new $LU$ factorization.  
 
 ----
 # A=LDU'

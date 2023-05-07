@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "f9927e03b215cabc",
+        "id": "cf22edc191f696f2",
         "type": "tabs",
         "children": [
           {
-            "id": "00fd709b4c0a55c5",
+            "id": "ada9b74a3c620116",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DL/RNN.md",
+                "file": "Linear Algebra/Inverse, Transpose and Determinant.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6ae2091067cd5ebe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linear Algebra/README.md.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,13 +76,20 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "811a4897882daf04",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c0ca6d7eb736b59d",
@@ -86,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DL/RNN.md",
+                "file": "Linear Algebra/Inverse, Transpose and Determinant.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DL/RNN.md",
+                "file": "Linear Algebra/Inverse, Transpose and Determinant.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DL/RNN.md"
+                "file": "Linear Algebra/Inverse, Transpose and Determinant.md"
               }
             }
           }
@@ -148,47 +167,52 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "00fd709b4c0a55c5",
+  "active": "ada9b74a3c620116",
   "lastOpenFiles": [
-    "DL/RNN.md",
-    "Graph_Theory/Definitions.md",
-    "Graph_Theory/Theorems.md",
-    "RASA/Domain File.md",
-    "RASA/Entities.md",
-    "RASA/Basics.md",
-    "RASA/Training Data and Rules.md",
-    "RASA/Creating new assistant.md",
-    "RASA_file_structure.png",
-    "RASA",
-    "Inferential Statistics/Central Limit Theorem.md",
-    "Inferential Statistics/Expectation, Variance, Covariance.md",
-    "Inferential Statistics",
-    "ML/Decision Trees.md",
+    "Linear Algebra/Orthogonality.md",
+    "Linear Algebra/README.md.md",
+    "Linear Algebra/Least Squares.md",
+    "Optimization Techniques/Sensitivity Analysis.md",
+    "Optimization Techniques/Classical OT.md",
+    "Optimization Techniques/README.md.md",
+    "Linear Algebra/LU Factorization.md",
+    "Linear Algebra/Basis.md",
+    "Linear Algebra/Inverse, Transpose and Determinant.md",
+    "Linear Algebra/Matrix Multiplication.md",
+    "Linear Algebra/Vector Space.md",
+    "Linear Algebra/Solving Ax=b.md",
+    "Linear Algebra/Rectangular Matrices.md",
+    "Linear Algebra/Four Fundamental Subspaces.md",
+    "Linear Algebra/Linear Transformations.md",
+    "Linear Algebra/Vectors.md",
+    "Stochastic Process/Markov Chains.md",
+    "Stochastic Process/README.md.md",
+    "Stochastic Process",
+    "README.md",
+    "Markdown cheatsheet.md",
+    "Images/fields.png",
     "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
+    "Images/Linear Algebra",
+    "Images/Linear Algebra/fundamental_subspaces.png",
+    "Latex.md",
+    "Regression Methods/OLS(Ordinary Least Squares).md",
+    "RASA/Basics.md",
+    "Regression Methods/Parameter Estimation.md",
+    "Regression Methods/Assumptions.md",
+    "Regression Methods",
+    "Vedas",
+    "Images/RASA",
+    "Images/RASA/RASA_file_structure.png",
+    "RASA",
+    "Inferential Statistics",
     "Images/Cloud Computing/Cloud_Reference_Model.png",
     "Pasted image 20230320175303.png",
     "Pasted image 20230320175250.png",
-    "ML/Overfit Underfit.md",
-    "ML/Introduction.md",
-    "ML/Classification Model Evaluation.md",
-    "Linux_BASH_Shell_Scripting/Conditional Statements.md",
-    "Linux_BASH_Shell_Scripting/Basics.md",
-    "ML/Regularization.md",
-    "Linux_BASH_Shell_Scripting/Array operations.md",
-    "Linux_BASH_Shell_Scripting/Command Line Argument.md",
-    "Linux_BASH_Shell_Scripting/Globbing.md",
-    "Linux_BASH_Shell_Scripting/Input Output.md",
-    "Linux_BASH_Shell_Scripting/Operators.md",
-    "Linux_BASH_Shell_Scripting/Permissions.md",
-    "Linux_BASH_Shell_Scripting/Quoting.md",
-    "ML/Loss functions.md",
     "Images/ML/ML_types.png",
-    "Images/fields.png",
     "Pasted image 20230317131825.png",
     "Images/ML/confusion_matrix.jpg",
     "Images/ML/ROC.png",
     "Images/ML",
-    "Images/ML/AUC_ROC.png",
     "ML"
   ]
 }

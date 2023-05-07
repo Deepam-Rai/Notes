@@ -171,7 +171,7 @@ $m =$ total number of constraints.
 
 > **Feasible:** $X$ is said to be feasible if $X$ satisfies all constraints.
 
-## Optimization of equality constraints
+## Equality constraints
 General optimization problem with just equality constraints:  
 
 $$\begin{aligned}
@@ -196,4 +196,74 @@ Preferred method.
 - converts the problem to unconstrained optimization problem.
 
 Steps:  
-1. 
+1. Get all constraints into form:
+
+$$g_i(X)=0, i=1,2,...,m$$
+
+2. Change objective function to Lagrangian function as:
+
+$$\large L = f(X) + \lambda_1(g_1(X)) + \lambda_2(g_2(X))+ ...  + \lambda_m(g_m(X)) = f(X) + \sum_{i=1}^m\lambda_i(g_i(X))$$
+
+3. Differentiate $L$ w.r.t. $x_1,x_2,...,x_n$ and $\lambda_1,\lambda_2,...,\lambda_m$ to get:
+
+$$\large \begin{aligned}
+\frac{\partial L}{\partial x_1} = 0 \\
+\frac{\partial L}{\partial x_2} = 0 \\
+. \\
+. \\
+\frac{\partial L}{\partial x_n} = 0 \\
+\frac{\partial L}{\partial \lambda_1} = 0 \\
+\frac{\partial L}{\partial \lambda_2} = 0 \\
+. \\
+. \\
+\frac{\partial L}{\partial \lambda_m} = 0
+\end{aligned}$$
+
+
+4. Solve above equations to get $X$ and $\lambda$s.
+5. Check it's optimality using Hessian matrix $H(X)$ of $f$.
+	1. If $H(X)$ is positive definite, then $X$ is strictly local minimum.
+	2. If $H(X)$ is positive semi-definite, then $X$ is local minimum but not strictly.
+		1. There may exist other local minimum points in neighborhood.
+	3. If $H(X)$ is indefinite then we need more information to determine whether it is local maxima or minima or saddle point.
+	4. If $H(X)$ is negative definite, then $X$ is strictly local maximum.
+	5. If $H(X)$ is negative semi-definite, then $X$ is local maximum but not strictly.
+		1. There may exist other local maxima in neighborhood.
+
+Lagrange's method can be taken as special case of KKT method that deals with inequality constraints too.
+
+## Inequality Constraints
+
+### Karush-Kuhn-Tucker (KKT) method
+It develops upon Lagrange's method, for inequality it adds slacks or subtracts surplus as necessary.  
+
+General form of optimization problem:  
+
+$$\begin{aligned}
+\text{Maximize or Minimize } z &= f(x) \\
+\text{ subject to } \\
+g_i(X) &\le 0, i=1,2,...,r \\
+g_i(X) &\ge 0, i=r+1,...,p \\
+g_i(X) &=0, i=p+1,...,m
+\end{aligned}$$
+
+1. Convert all constraints to "=" type.  
+
+$$\begin{aligned}
+\text{Maximize or Minimize } z &= f(x) \\
+\text{ subject to } \\
+g_i(X) + s_i &= 0, i=1,2,...,r \\
+g_i(X) - s_i &= 0, i=r+1,...,p \\
+g_i(X) &=0, i=p+1,...,m
+\end{aligned}$$
+
+2. Follow normal Method of Lagrange. Construct Lagrangean function.
+
+$$L(X,S,\lambda)=f(X)- \sum_{i=1}^r\lambda_i[g_i(X)+s_i] - \sum_{i=r+1}^p\lambda_i[g_i(X)-s_i] - \sum_{i=p+1}^m\lambda_ig_i(X)$$
+
+$\lambda =$ generalized Lagrange multipliers,  
+modified constraints = KKT conditions.
+
+3. Follow normal method of Lagrange.
+
+----

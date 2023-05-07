@@ -71,6 +71,22 @@ $$\Large \begin{aligned}
 w(M[j],k,\beta) &= \text{weight of j'th location} \\
 &= \frac{\exp \left[ \beta Sim(M[j],k) \right]}{\sum_{i=0}^N{ \exp\left[ \beta Sim(M[i],k) \right]}}
 \end{aligned}$$
+
 - It is normalized softmax distribution over similarity scores.
 - **$\beta$:** When similarity ~uniform for all memory locations attention weights also becomes similar. $\beta$ attenuates the weight such that the difference in weights becomes significant and attention can be focused on few locations only.
 	- e.g., To give intuition: $[0.0011, 0.0059, 0.0099]$ difference in weights is small. for $\beta =100$ weights become $[0.11, 0.59, 0.99]$ the difference now increases by several decimals. In actual computation softmax is calculated.
+
+ **Interpolation gating:** $g_t$ controls whether to focus on current location or the addressing given by content based lookup.  
+ $g_t =$ interpolation gate,  
+ $w^c_t =$ Content based addressing,  
+  $w_{t-1} =$ current location,  
+  $w^g_t =$ gated weighting,  
+  $$\large w^g_t =g_tw^c_t +(1-g_t)w_{t-1}$$
+
+- $g_t =0 \implies$ more weight to current location. Helps in consecutive memory accessing.
+- $g_t =1 \implies$ more weight to content based addressing.
+
+ **shift weighting:** Shifts the focus from one location to another using current gated weighting.
+ - $s_t =$ normalized attention vector of size n+1.
+ - It applies convolution on the gated weighting.
+ - Instead of applying padding at the ends it uses rotational convolutional operator.

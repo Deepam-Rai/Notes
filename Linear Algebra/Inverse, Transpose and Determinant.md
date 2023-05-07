@@ -92,7 +92,7 @@ For symmetric matrix:
 # Pseudo Inverse
 
 Let $A =m \times n$ matrix.  
-$I_k = k \times km$ identity matrix.  
+$I_k = k \times k$ identity matrix.  
 
 > **Left Inverse:** Matrix $B$ such that $BA=I_n$
 
@@ -125,7 +125,24 @@ $\because m \ge n$, there can be multiple solutions too,
 $\implies BA=I_n$ solution exists $\implies$ left inverse exists and there can be multiple.  
 
 ----
+# Determinant
 
+Properties:
+1. $det(I)=1$
+2. $det(B)=-det(A)$ if $B$ is obtained by one row exchange of $A$
+3. it depends linearly on first row
+	1. $det(kA) \not = k\ det(A)$ but $k$ just multiplies first row.
+4. $det(A+B) \not = det(A)+det(B)$
+	1. only first rows we can separate like this.
+5. If two rows are equal then det is 0.
+6. If row of zeroes exist, then det is 0
+7. If $A$ is triangular, $det(A)=$ product of its diagonal elements
+8. If $A$ is singular, $det(A)-0$
+9. $det(AB)=det(A)det(B)$
+10. $det(A^T)=det(A)$
+11. 
+
+#TODO write with more clarity
 
 
 

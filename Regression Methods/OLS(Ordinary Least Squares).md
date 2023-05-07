@@ -38,6 +38,7 @@ $$\large \begin{aligned}
 \hat\beta_0 &= \bar Y - \hat\beta_1 \bar X \\
 \hat \beta_1 &= \frac{\sum_{i=1}^n{X_iY_i} - n\bar X \bar Y}{\sum_{i=1}^n X_i^2 - n \bar X} = \frac{\sum_{i=1}^nY_i(X_i-\bar X)}{\sum_{i=1}^n(X_i-\bar X)^2} = \frac{S_{xy}}{S_{xx}}
 \end{aligned}$$
+
 ----
 ### Statistical Properties of OLS estimators
 
