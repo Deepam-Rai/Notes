@@ -126,10 +126,12 @@ $\implies BA=I_n$ solution exists $\implies$ left inverse exists and there can b
 
 ----
 # Determinant
+$detA$ tells about the volume of the box formed by row vectors.  
 
 Properties:
 1. $det(I)=1$
 2. $det(B)=-det(A)$ if $B$ is obtained by one row exchange of $A$
+	1. row exchange changes the determinant sign
 3. it depends linearly on first row
 	1. $det(kA) \not = k\ det(A)$ but $k$ just multiplies first row.
 4. $det(A+B) \not = det(A)+det(B)$
@@ -140,9 +142,32 @@ Properties:
 8. If $A$ is singular, $det(A)-0$
 9. $det(AB)=det(A)det(B)$
 10. $det(A^T)=det(A)$
-11. 
+11. $det(A_k)=det(D_k)=d_1d_2...d_k$ (Use A=LDU)
+12. 
+
+$$det(A) = \sum_{i=1}^n a_{ij}C_{ij}$$
+
+where $C_{ij} = (-1)^{i+j}det(M_{ij})$ = cofactor of $a_{ij}$,  
+where $M_{ij} =$ minor of $a_ij$.  
 
 #TODO write with more clarity
 
+### Finding inverse
+
+$$A^{-1}=\frac{C^T}{detA}$$
+
+### Cramer's rule
+$Ax=b$  
+
+$$\large x_j = \frac{B_j}{detA}$$
+
+where $B_j =$ same as $A$ but j'th column replaced with $b$.  
 
 
+### Finding pivots
+
+$$\large d_k = \frac{detA_k}{detA_{k-1}}$$
+
+where $d_k =$ k'th pivot.  
+
+----
