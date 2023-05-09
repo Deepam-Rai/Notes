@@ -8,7 +8,7 @@ General Tips:
 - Better to put an empty line before and after `$$ $$` block.
 - Avoid using characters like `*` to denote something in mathematical expression if possible. Use alternatives list `\ast`.
 
-Equations
+Equations:
 ```latex
 
 $$\begin{aligned}
