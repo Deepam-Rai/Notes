@@ -1,4 +1,4 @@
-[Click to go to Conditional Statements](Conditional%20Statements.md)
+[Click to go to Conditional Statements](./Conditional%20Statements.md)
 
 ## Logical operators
 | Syntax | Operator |

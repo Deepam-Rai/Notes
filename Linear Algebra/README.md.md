@@ -1,4 +1,5 @@
-Book: **Introduction To Linear Algebra _by Gilbert Strang_**  
+Book: 
+>_Introduction To Linear Algebra by Gilbert Strang_  
 
 1. Vectors
 2. Matrix multiplication
@@ -12,8 +13,4 @@ Book: **Introduction To Linear Algebra _by Gilbert Strang_**
 12. Linear transformations
 13. Solving Ax=b
 14. Least squares
-
-Decompositions:
-1. $A=LU$, $A=LDU'$, $PA=LDU'$
-2. $A=QR$
-3. 
+#TODO revise and add

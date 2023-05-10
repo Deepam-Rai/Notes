@@ -36,6 +36,27 @@ $V_i = \begin{pmatrix}v_{i,1} \\ v_{i,2} \\ ... \\ v_{i,n}\end{pmatrix}$
 Their linear combination is given as,  
 $Y = a_1V_1 + a_2V_2 + ... + a_kV_k$ where $a_1, a_2, ..., a_k \in \mathbb{R}$   
 
+----
+## Linear Independence
+Let,  
+$[0]$ be a zero vector in $\mathbb{R}^n$,  
+$V_1,V_2,...V_k$ be $k$ vectors $\in \mathbb{R}^n$,  are said to be linearly independent iff  
+$a_1V_1 + a_2V_2 + ... + a_kV_k=[0]$  can only be satisfied by $a_i=0$.
+
+- No vector in the set can be represented by linear combination of others.
+- Property of set of vectors.
+
+If we take all $V's$ as a column vector and form a matrix $A$, then checking linear independence is alike to checking $N(A)$, such that  
+$N(A) = \set{x | Ax=0}$  
+They are linearly independent if $N(A)$ contains only zero vector else they are linearly dependent.
+
+## Linear dependence
+If there exists $a_1, a_2,...,a_n \in \mathbb{R}$ such that  $a_1V_1 + a_2V_2 + ... + a_kV_k=[0]$  and there is at least one non-zero $a_i$.  
+
+- At least one vector in the set can be represented as linear combination of others.
+- Zero vector is linearly dependent on any set of vectors.
+
+----
 ## Pictures: Visual representations
 Let,  
 $X,Y,Z,V \in \mathbb{R}^n$ and $a,b,c \in \mathbb{R}$  
@@ -65,23 +86,3 @@ Which we can view as $n$ planes in $\mathbb{R}^3$ euclidean space graph.
 - Row picture is more cluttered than column picture visually.
 
 ----
-## Linear Independence
-Let,  
-$[0]$ be a zero vector in $\mathbb{R}^n$,  
-$V_1,V_2,...V_k$ be $k$ vectors $\in \mathbb{R}^n$,  are said to be linearly independent iff  
-$a_1V_1 + a_2V_2 + ... + a_kV_k=[0]$  can only be satisfied by $a_i=0$.
-
-- No vector in the set can be represented by linear combination of others.
-- Property of set of vectors.
-
-If we take all $V's$ as a column vector and form a matrix $A$, then checking linear independence is alike to checking $N(A)$, such that  
-$N(A) = \set{x | Ax=0}$  
-They are linearly independent if $N(A)$ contains only zero vector else they are linearly dependent.
-
-## Linear dependence
-If there exists $a_1, a_2,...,a_n \in \mathbb{R}$ such that  $a_1V_1 + a_2V_2 + ... + a_kV_k=[0]$  and there is at least one non-zero $a_i$.  
-
-- At least one vector in the set can be represented as linear combination of others.
-- Zero vector is linearly dependent on any set of vectors.
-----
-

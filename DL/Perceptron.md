@@ -145,6 +145,7 @@ Not linearly separable.
 # Multi-layer Perceptron
 > Any boolean function of $n$ inputs can be modelled **exactly** by a multi-layer perceptron with 1 hidden layer of 2<sup>n</sup> perceptron and output layer with 1 perceptron.
 
+[Feed forward neural network](./Feed%20Forward%20Neural%20Network.md) is a multilayer perceptron. Other architectures(CNN,RNN,etc) can be expressed as special cases of this.
 
 # Universal Approximation theorem
 > A multilayer network of sigmoid neurons with a single hidden layer can **approximate** any continuous function to any desired precision.

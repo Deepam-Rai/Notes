@@ -13,6 +13,8 @@ Github: https://github.com/tomwhite/hadoop-book/
 > Additional book information: http://bit.ly/hadoop_tdg_4e
 
 <br><br><br>
+
+----
 # Chapter 1: Meet Hadoop
 
 <!-- #TODO verify -->
@@ -105,10 +107,9 @@ Github: https://github.com/tomwhite/hadoop-book/
 1. 2008 Nov - Google announced that its MapReduce implementation sorted 1 TB of data in 68secs.
 1. 2009 Apr - Hadoop team at Yahoo! sorted 1TB data in 62 secs.
 
-<hr>
-<br>
-<hr>
 
+
+----
 # Chapter 2: MapReduce
 
 #TODODefinition:

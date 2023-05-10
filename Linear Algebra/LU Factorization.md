@@ -50,24 +50,7 @@ $$U=\begin{bmatrix}
 \end{bmatrix}$$
 
 
-----
-## Solving Linear Equations
-We can use $LU$ factorization to solve simultaneous linear equations.
-$$\large \begin{aligned}
-Ax &= b \\
-or\ LUx &= b \\
-or\ Lc &= b \\
-\end{aligned}$$
-
-where $c=Ux$.
-
-Steps:
-1. LU Factorize A using Gaussian elimination. Thus get $A=LU$.
-2. Solve for $c$ using $Lc=b$. Forward substitution can be used.
-3. Solve for $x$ using $Ux=c$. Backward substitution can be used.
-Time complexity $O(n^2)$. ($n^2$ each for forward and backward substitution).
-
-Once $LU$ factorization is done we can discard $A$ and use same $LU$ for other $b$ directly without new $LU$ factorization.  
+LU factorization can be used for [solving linear equations](./Solving%20Ax=b.md).
 
 ----
 # A=LDU'

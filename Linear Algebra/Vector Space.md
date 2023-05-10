@@ -1,3 +1,6 @@
+Prerequisite:
+1. [Vectors](./Vectors.md)
+
 > **Vector space:** a set of vectors that is closed under vector addition and scalar multiplication.
 
 Let,  

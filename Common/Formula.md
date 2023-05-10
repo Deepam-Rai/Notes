@@ -1,6 +1,9 @@
+----
 # Calculus
 ## Limits
 - $\displaystyle{e = \lim_{x\to\infty}(1+\frac{1}{x})^x}$
+
+----
 # Counting
 ## Basic Principle of Counting/Multiplication of choices
 - If an operation consists of $step_1$ with $n_1$ choices, $step_2$ with $n_2$ choices,..., $step_k$ with $n_k$ choices, then that operation can be done in $n_1 * n_2 *...*n_k$ number of ways.
@@ -19,6 +22,7 @@
     - $\Large ^nC_r = \frac{^nP_r}{r!} = \frac{n!}{r!(n-r)!}$
 
 
+----
 # Probability
 ## Random Variable
 ### Univariate
@@ -54,12 +58,17 @@
 - $\large \rho_{X,Y}=\frac{\sum((x_i-\bar x)(y_i-\bar y))}{\sqrt{(\sum(x_i-\bar x)^2)(\sum(y_i-\bar y)^2)}}$
 - $-1\le\rho\lt1$
 
+----
 # Sequence and Series
+
 ## Arithmetic Progression
 - $\large a+(a+d)+(a+2d)+...+(a+(n-1)d)=\frac{n}{2}(2a+(n-1)d)$
 - $\large 1+2+3+...+n=\frac{n(n-1)}{2}$
+
 ## Geometric Progression
+
 ## Harmonic Progression
+
 ## Series
 - $\Large e^x =1+\frac{x}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+...$
 - $\large log(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-...$
@@ -67,3 +76,5 @@
 - $\large log(x)=log(1-(1-x))=-(1-x)-\frac{(1-x)^2}{2}-\frac{(1-x)^3}{3}-...$
 - $\large sin(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+...$
 - $\large cos(x)=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+...$
+
+----

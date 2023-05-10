@@ -64,7 +64,7 @@ $\sigma (x) \in (0,1)$
 - It behaves like linear when x->0.
 ----
 # tanh/hyperbolic tangent
-$\Large tanh(x) = 2\sigma(2x)-1 = \frac{e^x - e^{-x} }{ e^x + e^{-x}}$  
+$tanh(x) = 2\sigma(2x)-1 =\Large \frac{e^x - e^{-x} }{ e^x + e^{-x}}$  
 $tanh(x)\in (-1,1)$  
 
 - Its outputs are zero centered.
@@ -75,12 +75,14 @@ $tanh(x)\in (-1,1)$
 # Softmax
 Input: $X=[x_1,x_2,...,x_n]^T$   
 
-$\LARGE a(x_i) = \frac{e^{x_i}}{\sum _{j=1}^n e^{x_j}} = o_i$
+$a(x_i) =\LARGE \frac{e^{x_i}}{\sum _{j=1}^n e^{x_j}} = o_i$
 
 Output: $O=[o_1,o_2,...,o_n]^T$ such that $\sum _{i=1}^n = 1.0$.  
 
 - Useful in multiclass classification: it gives the probability of each target class over all target classes. 
 - This is a layer-wise activation function/fold function: calculation of i'th value requires all n values of the layer as input.
+- Doing just $\large \frac{x_i}{\sum_{j=1}^nx_j}$ gives linear graph.
+
 ----
 # Swish
 $\Large a(x) = x\sigma (x) = \frac{x}{1+e^{-x}}$  

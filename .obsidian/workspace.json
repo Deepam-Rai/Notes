@@ -4,43 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "cf22edc191f696f2",
+        "id": "a177b17c9349fbb2",
         "type": "tabs",
         "children": [
           {
-            "id": "ada9b74a3c620116",
+            "id": "f4a44a70fa531977",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linear Algebra/Eigen vectors.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "aa6fcce37de05f7f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linear Algebra/Inverse, Transpose and Determinant.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6ae2091067cd5ebe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linear Algebra/README.md.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -117,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linear Algebra/Eigen vectors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linear Algebra/Eigen vectors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Linear Algebra/Eigen vectors.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -166,8 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -179,38 +146,43 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ada9b74a3c620116",
+  "active": "f4a44a70fa531977",
   "lastOpenFiles": [
-    "Linear Algebra/Inverse, Transpose and Determinant.md",
-    "Linear Algebra/Eigen vectors.md",
-    "Linear Algebra/Orthogonality.md",
+    "Big Data/Hadoop.md",
+    "Big Data/Map Reduce.md",
+    "Index.md",
+    "Common/Formula.md",
+    "Big Data/Finding Similar Items.md",
+    "Common/Distances.md",
+    "Big Data/Introduction.md",
+    "Big Data/README.md.md",
+    "Big Data/Big Data.md",
+    "Common",
+    "Linux_BASH_Shell_Scripting/Variables.md",
+    "Big Data",
+    "Linux_BASH_Shell_Scripting/Quoting.md",
+    "Linux_BASH_Shell_Scripting/Permissions.md",
+    "Linux_BASH_Shell_Scripting/Operators.md",
+    "Linux_BASH_Shell_Scripting/Input Output.md",
+    "Linux_BASH_Shell_Scripting/Globbing.md",
+    "Linux_BASH_Shell_Scripting/Conditional Statements.md",
+    "Linux_BASH_Shell_Scripting/Command Line Argument.md",
+    "Linux_BASH_Shell_Scripting/Basics.md",
+    "Linux_BASH_Shell_Scripting/Array operations.md",
     "Linear Algebra/README.md.md",
-    "Linear Algebra/Least Squares.md",
-    "Optimization Techniques/Sensitivity Analysis.md",
-    "Optimization Techniques/Classical OT.md",
-    "Optimization Techniques/README.md.md",
-    "Linear Algebra/LU Factorization.md",
-    "Linear Algebra/Basis.md",
-    "Linear Algebra/Matrix Multiplication.md",
+    "Linear Algebra/Rectangular Matrices.md",
+    "Linear Algebra/Decompositions.md",
+    "Linear Algebra/Vectors.md",
     "Linear Algebra/Vector Space.md",
     "Linear Algebra/Solving Ax=b.md",
-    "Linear Algebra/Rectangular Matrices.md",
-    "Linear Algebra/Four Fundamental Subspaces.md",
-    "Linear Algebra/Linear Transformations.md",
-    "Linear Algebra/Vectors.md",
-    "Stochastic Process/Markov Chains.md",
-    "Stochastic Process/README.md.md",
+    "Linear Algebra/Orthogonality.md",
+    "Images/DL/dropout.png",
+    "Images/DL/training.png",
+    "Images/DL",
     "Stochastic Process",
-    "README.md",
-    "Markdown cheatsheet.md",
     "Images/fields.png",
-    "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
     "Images/Linear Algebra",
     "Images/Linear Algebra/fundamental_subspaces.png",
-    "Latex.md",
-    "Regression Methods/OLS(Ordinary Least Squares).md",
-    "RASA/Basics.md",
-    "Regression Methods/Parameter Estimation.md",
     "Regression Methods",
     "Vedas",
     "Images/RASA",
@@ -221,10 +193,6 @@
     "Pasted image 20230320175303.png",
     "Pasted image 20230320175250.png",
     "Images/ML/ML_types.png",
-    "Pasted image 20230317131825.png",
-    "Images/ML/confusion_matrix.jpg",
-    "Images/ML/ROC.png",
-    "Images/ML",
-    "ML"
+    "Pasted image 20230317131825.png"
   ]
 }

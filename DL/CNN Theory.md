@@ -3,15 +3,21 @@ Convolution is an operation on two functions of real valued arguments, and is de
 Let,  
 $I$ = Input,  $K$ = Kernel  
 In 1D:  
-$$ (I*K)(c)=\sum _{a+b=c}I(a)K(b) = \sum _a I(a)K(c-a)$$  
+
+$$ (I*K)(c)=\sum _{a+b=c}I(a)K(b) = \sum _a I(a)K(c-a)$$
+
 In 2D:  
+
 $$\Large (I*K)(c_1,c_2)=\sum _{a_1}\sum _{a_2}I(a_1,a_2)K(c_1-a_1, c_2-a_2) = \sum_{a_1}\sum_{a_2}I(c_1-a_1, c_2-a_2)K(a_1,a_2)$$
+
 - It is equivalent to flipping the kernal and performing normally perceived DL convolution operation.
 - It is commutative.
 
 # Cross Correlation (Referred as Convolution in DL)
 Cross-correlation is an operation on two functions of real valued arguments and is defined as,  
+
 $$\Large (I*K)(c_1, c_2) = \sum_{a_1}\sum_{a_2}I(c_1+a_1, c2_+a_2)K(a_1, a_2)$$
+
 - Normally perceived DL convolution: It is equivalent to sliding the kernel over the input and performing element wise product and summing to get an output value.
 
 ----
@@ -31,7 +37,9 @@ $k_1$ = kernel height,
 $k_2$ = kernel width,  
 $s$ = kernel stride,  
 then output dimension is:  
-$$\Large (m',n')= (\frac{(m+2p - k_1)}{s} + 1,  \frac{m+2p - k_2}{s}+1 )$$ 
+
+$$\Large (m',n')= (\frac{(m+2p - k_1)}{s} + 1,  \frac{m+2p - k_2}{s}+1 )$$
+
 ## Padding required for "same padding"
 Input dimension = output dimension  
 
@@ -46,37 +54,40 @@ $\large p=\frac{k-1}{2}$
 # Examples of 2D kernels
 
 # Gaussian Blur
-$\frac{1}{16}\begin{pmatrix}
+
+$$\frac{1}{16}\begin{pmatrix}
 1 & 2 & 1 \\
 2 & 4 & 2 \\
 1 & 2 & 1 \\
-\end{pmatrix}$
+\end{pmatrix}$$
 
 ## Sharpness
-$\begin{pmatrix}
+
+$$\begin{pmatrix}
 0 & -1 & 0 \\
 -1 & 5 & -1 \\
 0 & -1 & 0 \\
-\end{pmatrix}$
+\end{pmatrix}$$
 
 ## Edge Detection
-$\begin{pmatrix}
+
+$$\begin{pmatrix}
 -1 & -1 & -1 \\
 -1 & 8 & -1 \\
 -1 & -1 & -1 \\
-\end{pmatrix}$  
+\end{pmatrix}$$  
 
-$Vertical Edges\begin{pmatrix}
+$$Vertical Edges\begin{pmatrix}
 -1 & 0 & 1 \\
 -1 & 0 & 1 \\
 -1 & 0 & 1 \\
-\end{pmatrix}$
+\end{pmatrix}$$
 
-$Horizontal Edges\begin{pmatrix}
+$$Horizontal Edges\begin{pmatrix}
 -1 & -1 & -1 \\
 0 & 0 & 0 \\
 1 & 1 & 1 \\
-\end{pmatrix}$  
+\end{pmatrix}$$
 
 ----
 

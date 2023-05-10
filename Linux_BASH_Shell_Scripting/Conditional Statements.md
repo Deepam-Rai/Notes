@@ -9,7 +9,7 @@ Testing conditions:
 | `test expression` | Evaluating expression. Check exit status. |
 | `[ expression ]` | Evaluating expression. Check exit status. Space around `[`,`]`. |
 
-[Operators has another dedicated file](Operators.md)
+[Operators has another dedicated file](./Operators.md)
 
 ----
 ## if-elif-else
