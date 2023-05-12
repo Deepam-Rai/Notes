@@ -518,3 +518,90 @@ The resultant graph is a spanning tree of $G$.
 3. $H$ is a spanning tree of $G$.  
 $$[Proved!]$$
 ----
+## Planar Graphs
+
+> **Theorem 9.1: Euler Identity  
+> If $G$ is a connected graph of order $n$, size $m$ and having $r$ regions, then $n-m+r=2$.**
+
+**Proof: (By contradiction)**  
+Firstly, the theorem holds for every tree.  
+If $G$ is a tree of order $n$, thus size $n-1$ and has only one region(exterior) thus $r=1$.  
+$\therefore n-m+r = (n)-(n-1)+(1)=2$, the theorem holds.  
+
+Thus, we need only be concerned with connected graphs that are not trees.  
+Let, $G$ be a connected graph of smallest size for which theorem does not hold.  
+Let $G$ be having order $n$, size $m$ and $r$ regions such that $n-m+r \not =2$.
+$\because$ $G$ is not a tree $\implies \exists$ and edge $e$ that is not a bridge.  
+$\implies G-e$ is connected and has one less region.  
+$\because G-e$ has size less than $m \implies G-e$  adheres to the theorem.  
+$\therefore (n)-(m-1)+(r-1)=2$  
+$\implies n-m+r=2$  
+Which is a contradiction.  
+$\therefore$ There exists no such $G$ for which theorem doesnt hold.  
+
+$$[Proved!]$$
+
+> **Corollary:** If $G$ is a connected plane graph with at least three edges, then the boundary of every region of $G$ has at least three edges.
+
+**Proof:** #TODO 
+
+----
+> **Theorem 9.2:  
+> If $G$ is a planar graph of order $n \ge 3$ and size $m$, then  $m \le 3n-6$.**
+
+**Proof:**  
+Let, $G$ be a plane graph with order $n$, size $m$ and having $r$ regions.  
+
+**Case-I:** $G$ is connected.  
+The theorem holds for $G=P_2$ and $G=P_3$. Thus, we need only be concerned with connected $G$ having $m \ge 3$.  
+$\because m \ge 3 \implies$ each region has at least 3 edges in the boundary. (corollary) 
+Let $m_i =$ number of edges in the boundary of i'th region.
+$\implies M=\sum_{i=1}^r m_i \ge 3r$  
+Since every edge can be counted at most 2 times.  
+$2m \ge M \implies 2m \ge 3r$  
+$\therefore r \le \frac{2}{3}m$  
+
+From Euler identity: $n-m+r=2$  
+$\therefore r=2+m-n$  
+$\therefore 2+m-n \le \frac{2}{3}m$  
+$6+3m-3n \le 2m$  
+$\therefore m\le 3n-6$  
+
+**Case-II:** $G$ is disconnected.  
+Let there be $k$ components. Correspondingly for each component we have  
+$$\begin{aligned}
+m_1 &\le 3n_1 - 6 \\
+m_2 &\le 3n_2 - 6 \\
+.\\
+.\\
+m_k &\le 3n_k - 6 \\
+\text{Adding all we get}\\
+\therefore m &\le 3n - k6 \text{ (which is a tighter bound)}\\
+\implies m &\le 3n - 6
+\end{aligned}$$
+
+$$[Proved!]$$
+
+> **Contrapositive:** If $G$ is a graph of order $n \ge 3$, size $m$ such that $m \ge 3n-6$, then $G$ is nonplanar.
+
+> **Corollary 9.3:** Every planar graph contains a vertex of degree 5 or less.
+
+**Proof:** Let, $G$ be a planar graph with $\delta(G) \ge 6$ and order $n$.  
+$\therefore n \ge 7$  
+$\implies \sum_{v\in V(G)} deg(v) \ge 6n$  
+$\implies 2m \ge 6n$  
+$\implies m \ge 3n$  
+$\implies m \ge 3n-6$  
+$\therefore$ By theorem $G$ is not planar.  
+
+$$[Proved!]$$
+
+> **Corollary 9.4: $K_5$ is nonplanar.** 
+
+**Proof:** $n=5, m=10$  
+$\therefore m\gt 3n-6$  
+$\therefore K_5$ is nonplanar.  
+
+$$[Proved!]$$
+
+----

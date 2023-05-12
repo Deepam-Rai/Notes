@@ -276,6 +276,24 @@ Labelled graphs $G\cong H$ iff $\exists$ one-to-one correspondence $\phi$ from V
 	- Size = $\frac{1}{2}(^n_2)=\frac{n(n-1)}{4} \implies 4|n\ or\ 4|(n-1)$.
 - It is an equivalence relation on set of all graphs - creates equivalence classes.
 
+### Planar graphs
+If G can be drawn in a planse so that no two of it's edges cross each other.
+- Nonplanar: Graph that is not planar.
+- Plane graph: Graph that is drawn so that no two edges of it cross each other.
+- Every cycle, path, star,tree are planar.
+- **Regions**: The areas of the plane divided by the edges of the planar graphs.
+	- Exterior region: The unbounded region that exists in every plane graph.
+	- **Boundary of region:** The subgraph of plane graph whose vertices and edges are incident with the given region.
+		- A boundary need not divide the region. Example a bridge of plane graph is boundary for exterior region.
+		- A bridge is always on the boundary of exactly one region(not necessarily exterior region).
+		- An edge that is not a bridge lies on the boundary of two regions.
+	- Planar graph G can be drawn in many ways, but the region count doesnt change.
+- **Eular Identity:** If G is a connected plane graph of order n, size m and having r regions, then n-m+r=2.
+- When $m\ge 3$, then boundary of every region has at least 3 edges. $2m \ge 3r$.
+- $m \le 3n-6$ for $n \ge 3$.
+- Every planar graph contains a vertex of degree 5 or less.
+- $K_5$ is nonplanar.
+
 
 ----
 ## Trees

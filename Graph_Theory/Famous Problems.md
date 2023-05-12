@@ -1,3 +1,7 @@
+----
+## Four Color Problem
+
+Relating to graph coloring.  
 ### Mathematical statement
 > For loopless planar graph $G$, its chromatic number is $\chi(G) \le 4$.
 - **Loopless:** that has no loop
@@ -56,3 +60,13 @@ Complete proof:
 2. The proof actually didn't explain why it is so, but proved that it is so.
 3. Thus proof was also taken controversially at the time.
 
+----
+## Three Houses and Three Utilities Problem
+
+Relating to planar graphs.  
+
+> There are three utilities(gas,water and electricity) that need to be connected to three houses by gas lines, water mains and electrical lines. Can this be done without any of the lines or mains crossing each other?
+
+No, because the resulting graph $K_{3,3}$ is not planar.
+
+----
