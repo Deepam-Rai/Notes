@@ -11,8 +11,12 @@
             "id": "f4a44a70fa531977",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "DL/Reinforcement Learning.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c0ca6d7eb736b59d",
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "DL/Reinforcement Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "DL/Reinforcement Learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "DL/Reinforcement Learning.md"
+              }
             }
           }
         ],
@@ -134,7 +143,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,34 +158,35 @@
   },
   "active": "f4a44a70fa531977",
   "lastOpenFiles": [
+    "Images/DL/RL.png",
+    "Images/DL/RL_MDP.png",
     "Big Data/Hadoop.md",
+    "DL/Reinforcement Learning.md",
+    "DL/Memory Augmented Models.md",
+    "DL/RNN.md",
+    "DL/CNN Theory.md",
+    "DL/Activation Functions.md",
+    "Cloud_Computing/Chapter 2 - Principles of Parallel and Distributed Computing.md",
+    "Cloud_Computing/Chapter 1 - Foundations.md",
+    "Graph_Theory/Theorems.md",
+    "Graph_Theory/Four Color Problem.md",
+    "Graph_Theory/Extras.md",
+    "Graph_Theory/Definitions.md",
+    "Graph_Theory/Algorithms.md",
+    "DL/Training.md",
+    "DL/Special Architectures.md",
+    "DL/Preventing overfitting.md",
+    "DL/Perceptron.md",
+    "DL/Feed Forward Neural Network.md",
+    "DL/Definitions.md",
+    "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
+    "Cloud_Computing/Chapter 3 - Virtualization.md",
     "Big Data/Map Reduce.md",
     "Index.md",
     "Common/Formula.md",
     "Big Data/Finding Similar Items.md",
-    "Common/Distances.md",
-    "Big Data/Introduction.md",
-    "Big Data/README.md.md",
-    "Big Data/Big Data.md",
     "Common",
-    "Linux_BASH_Shell_Scripting/Variables.md",
     "Big Data",
-    "Linux_BASH_Shell_Scripting/Quoting.md",
-    "Linux_BASH_Shell_Scripting/Permissions.md",
-    "Linux_BASH_Shell_Scripting/Operators.md",
-    "Linux_BASH_Shell_Scripting/Input Output.md",
-    "Linux_BASH_Shell_Scripting/Globbing.md",
-    "Linux_BASH_Shell_Scripting/Conditional Statements.md",
-    "Linux_BASH_Shell_Scripting/Command Line Argument.md",
-    "Linux_BASH_Shell_Scripting/Basics.md",
-    "Linux_BASH_Shell_Scripting/Array operations.md",
-    "Linear Algebra/README.md.md",
-    "Linear Algebra/Rectangular Matrices.md",
-    "Linear Algebra/Decompositions.md",
-    "Linear Algebra/Vectors.md",
-    "Linear Algebra/Vector Space.md",
-    "Linear Algebra/Solving Ax=b.md",
-    "Linear Algebra/Orthogonality.md",
     "Images/DL/dropout.png",
     "Images/DL/training.png",
     "Images/DL",
@@ -192,7 +203,6 @@
     "Images/Cloud Computing/Cloud_Reference_Model.png",
     "Pasted image 20230320175303.png",
     "Pasted image 20230320175250.png",
-    "Images/ML/ML_types.png",
-    "Pasted image 20230317131825.png"
+    "Images/ML/ML_types.png"
   ]
 }
