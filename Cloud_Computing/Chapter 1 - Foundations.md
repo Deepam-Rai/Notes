@@ -66,7 +66,7 @@ Core technologies for realization of cloud computing
 3. Web 2.0
 4. Service orientation
 5. Utility computing
-![XaaS](../Images/Cloud%20Computing/Cloud%20Computing%20History.png)
+![History](../Images/Cloud%20Computing/Cloud%20Computing%20History.png)
 
 ## Distributed systems
 >Clouds are basically large distributed computing facilities that make their services available to third parties on demand.
