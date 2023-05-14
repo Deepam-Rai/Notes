@@ -38,7 +38,7 @@ $k_2$ = kernel width,
 $s$ = kernel stride,  
 then output dimension is:  
 
-$$\Large (m',n')= (\frac{(m+2p - k_1)}{s} + 1,  \frac{m+2p - k_2}{s}+1 )$$
+$$\Large (m',n')= (\frac{(m+2p - k_1)}{s} + 1,  \frac{n+2p - k_2}{s}+1 )$$
 
 ## Padding required for "same padding"
 Input dimension = output dimension  

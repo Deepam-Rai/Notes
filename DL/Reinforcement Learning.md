@@ -214,3 +214,5 @@ UNREAL aims to learn a useful world representation in an unsupervised manner usi
 
 1. Learning how it's actions affect the environment.
 2. Learning reward prediction: Given sequence states the agent predicts the value of next reward received.
+
+----
