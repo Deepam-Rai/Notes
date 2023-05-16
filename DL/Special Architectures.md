@@ -1,4 +1,5 @@
-# AlexNet
+## AlexNet
+In 2012 by Alex Krizhevsky for ImageNet Large Scale Visual Recognition Challenge(ILSVRC).
 
 | Block | Layer | Kernel | Stride | Padding | In-Feature | Out-Feature Map |Learnable Parameters|
 |-------|-------|--------|--------|---------|------------|-----------------|--------------------|
@@ -6,7 +7,7 @@
 | 1     | CNN   | 11x11  | 4      | 0       | 3          | 55x55x96        | 34944 |
 |       |MaxPool| 3x3    | 2      | 0       | 96         | 27x27x96        | - |
 | 2     | CNN   | 5x5    | 1      | 2       | 96         | 27x27x256       | 614656 |
-|       |MaxPool| 3x3    | 2      | 0       | 256        | 13x13256        | - |
+|       |MaxPool| 3x3    | 2      | 0       | 256        | 13x13x256        | - |
 | 3     | CNN   | 3x3    | 1      | 1       | 256        | 13x13x384       | 885120 |
 | 4     | CNN   | 3x3    | 1      | 1       | 384        | 13x13x384       | 1327488|
 | 5     | CNN   | 3x3    | 1      | 1       | 384        | 13x13x256       | 884992 |
@@ -14,10 +15,26 @@
 
 | Block | Layer | Input | Output | Weights | Biases | Dropout Rate| Learnable Parameters |
 |-------|-------|-------|--------|---------|--------|-------------|----------------------|
-| 6     | FC    |6x6x256| 4096   |4096x9216| 4096   | 0.5         | 37752832 |
+| 6     | FC    |6x6x256| 4096   |9216x4096| 4096   | 0.5         | 37752832 |
 | 7     | FC    | 4096  | 4096   |4096x4096| 4096   | 0.5         | 16781312 |
 | 8     | FC    | 4096  | 1000   |4096x1000| 1000   | -           | 4097000 |
 
 Total Learnable Parameters = 62,378344
+
+Architecture:
+![AlexNet](../Images/DL/AlexNet.png)
+
+----
+## VGG16
+2014, proposed by Karen Simonyan and Andrew Zisserman from University of Oxford for ImageNet challenge.  
+
+Architecture:  
+![VGG16](../Images/DL/VGG16.png)
+
+----
+## VGG19
+
+Architecture:  
+![VGG19](../Images/DL/VGG19.png)
 
 ----

@@ -19,7 +19,8 @@ L1 or Lasso and L2 or Ridge are well known regularizations. The penalizing term 
 |Model: | Tends to create sparse model. | Tends to create model with smaller weights. |
 | w.r.t input: | Since many weights are zero model ends up using small part of input. And also becomes robust to noise.| Since the weights are small and diffused all inputs are used with little weight given to each. 
 
-### Dropout
+----
+## Dropout
 Sets the neurons as inactive with some random probability during each minibatch of the training.  
 $p=$ probability of keeping neuron active.  
 

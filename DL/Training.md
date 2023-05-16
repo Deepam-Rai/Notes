@@ -1,12 +1,5 @@
-Neural network model is trained to get optimal parameters $\theta$ such that it's performance on the task is optimum.  
 
-Basic training steps:
-1. Give input training data to the model.
-2. Get prediction/output from the model.
-3. Find loss: how much different is model's output from ground truth(what it's supposed to be).
-4. Depending upon the loss optimize the parameters, to minimize this loss.
-5. Follow this steps iteratively.
-
+Basic training flow:
 ![training flow from opeanai authors book](../Images/DL/training.png)
 
 $H=$ the model,  
@@ -20,9 +13,7 @@ $L(y,\hat y)=$ loss, the difference measure between ground truth and model's out
 
 We have to minimize this loss w.r.t. $\theta$.  
 This we can do because,  
-$L(y,\hat y)$ is function of model's output $H(x,\theta)$ which is the function of $\theta$. We would need to apply chain rule.  
-
-Typically gradient-descent algorithm with modifications are used.  
+$L(y,\hat y)$ is function of model's output $H(x,\theta)$ which is the function of $\theta$.  
 
 ----
 # Backpropagation
@@ -66,6 +57,39 @@ $$\large \begin{aligned}
 
 #TODO 
 
-# Overfitting
-The model when exposed to an unrepresentative training data starts to fit too much to the training data, even it's noise aside from the feature dependencies. And if training data is not representative of the whole dataset then model cannot generalize to the whole dataset. This is called overfitting.  
-There are certain methods to prevent overfitting discussed in [Preventing overfitting](./Preventing%20overfitting.md).
+# Overfitting and Underfitting
+
+### Overfitting
+>**Overfitting:** A hypothesis $h$ is said to have overfit when there exists an alternative hypothesis $h'$ such that the error of $h$ on train data is lower than error of $h'$ but $h'$ has lower error on test data.  
+
+The model starts to fit too much to the training data, even it's noise aside from the feature dependencies.  
+
+Possible causes:
+1. Training data is not representative of the whole data distribution.
+2. Too complex model.
+3. Too many epochs run.
+
+Methods to prevent overfitting:
+1. Data augmentation: Make the training data representative of total data distribution.
+2. Early stopping: Using validation set.
+3. [Regularization](./Preventing%20overfitting.md): Decrease model complexity.
+3. [Dropout](./Preventing%20overfitting.md).
+
+### Underfitting
+The model doesnt perform well, both train and test data.
+
+Possible causes:
+1. Too simple model.
+2. The search space is too vast.
+3. Ran less number of epochs.
+
+Methods to prevent:
+1. Increase the complexity of the model.
+2. Change the architecture.
+3. Run for more number of epochs.
+
+## Bias variance tradeoff
+![](../Images/DL/bias_variance_tradeoff.png)
+
+
+
