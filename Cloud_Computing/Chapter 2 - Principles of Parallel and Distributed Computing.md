@@ -12,12 +12,28 @@ Key Elements of computing:
 Every aspect of an era went through _Research And Development, Commercialization, Commoditization_.
 
 
-# 2.2 Parallel vs. distributed computing
-| Parallel Computing | Distributed Computing |
-| -- | -- |
-|Tightly coupled systems. | Wider class of systems including tightly coupled.|
-| Computation divided into several processors with shared memory. | Computation broken into units and executed concurrently on different computing elements. |
-| Typically homogenous computing elements. | Typically implies heterogeneous computing elements. |
+----
+## Paradigms/Architectural models
+1. Message Based Communication
+	1. e.g., MPI Programming, JMS,MSMQ, MQS
+		1. MSMQ(Message Queuing) allows time decoupled applications in heterogeneous networks and systems to communicate.
+		2. MPI(Message Passingn Interface) is a standardized means of exchanging messages between multiple computers running a parallel program.
+2. Client Server
+	1. RPC/Specific tasks
+3. Peer-to-Peer
+	1. Applications: Instant Messaging, Video conferencing, etc
+4. Distributed Agents
+	1. e.g., Mobile agents
+5. RPC, Distributed Objects
+	1. Implementations: Java RMI, CORBA, etc
+6. Object Sphere
+	1. Implementation: Java Spaces
+		1. java spaces provides services and tools for building sophisticated distributed applications.
+
+
+# 2.2 Comparisions
+Sequential vs Parallel processing [here](./Differences.md).  
+Parallel processing vs Distributed Computing [here](./Differences.md).  
 
 
 ----
@@ -38,11 +54,20 @@ Factors influencing development of parallel processing:
 
 ## 2.3.2 Hardware architectures for parallel processing
 Based upon the number of instruction and data streams that can be computed simultaenously, computing systems are categorized as:
-1. Single Instruction, Single Data systems (SISD): aka sequential. Eg, IBM PC, Macintosh.
-2. Single Instruction, Multiple Data (SIMD): Eg, Cray's vector processing machine and Thinking Machines' cm
-3. Multiple Instructions, Single Data (MISD): Useful where different computation is done on same data
+1. Single Instruction, Single Data systems (SISD): aka sequential.
+	1. Eg, IBM PC, Macintosh, older generation computers.
+	2. Instructions are decoded by CU(Control Unit) and sent to PE(Processing Units) for execution.
+2. Single Instruction, Multiple Data (SIMD):
+	1. Eg, Cray's vector processing machine and Thinking Machines' cm. 
+	2. Many PE are under supervision of common CU.
+	3. All processors receive same instructions from CU but operate on different items of data.
+	4. The shared memory unit must be accessible to all processors simultaenously.
+3. Multiple Instructions, Single Data (MISD): Useful where different computation is done on same data.
+	1. Example to solve: $f(x)=\sin(x)+\cos(x)+\tan(x)$.
+	2. Multiple PE operates on a single data stream.
+	3. Each PE operates on data independently via separate CU.
 4. Multiple Instructions, Multiple Data (MIMD): 
-	- Each PE(Processing Element) has its own data streams.
+	- Each PE(Processing Element) has its own data stream and is guided by it's own CU.
 	- PEs work asynchronously.
 	- Types: Shared Memory MIMD - tightly coupled  Distributed memory MIMD - loosely coupled - uses IPC.
 
@@ -230,6 +255,8 @@ Classes of architectural styles:
 - Object lifetime: lease based, one instance at a time.
 - Examples: via base library in C# and JAVA
 	- CORBA(Common Object Request Broker Architecture)
+		- Its an standard architecture that allows a distributed, heterogeneous collections of objects to interoperate.
+		- This standard is defined by OMG(Object Management Group). It describes architecture, interfaces and protocols.
 		- ORB(Object Request Bus): Central object bus; objects registers with ORB the interface its exposing;
 		- Interfaces defined in IDL(Interface Definition Language); IDL specification translated to stub-skeleton pair.
 		- Communication: lowest level - IIOP(Internet Inter-ORB Protocol). Portable Object Adapter(POA) - runtime environment where skeletons are hosted and managed.
@@ -239,12 +266,15 @@ Classes of architectural styles:
 	- Java Remote Method Invocation(RMI)
 		- Enables invocation of methods on objects located at different JVMs.
 		- stub-skeleton based concept
+		- RMI architecture: ![RMI architecture](../Images/Cloud%20Computing/RMI.png)
 		- External component RMI registry locates the remote objects.
 		- Only interfaces are published.
 	- .NET Remoting
 		- Client/Server model.
+		- Microsoft API for interprocess communication, allows objects to interact that can be hosted in different application domain within the same process or different process over net.
 		- The Remoting infrastructure automatically provides proxy generation information on client application domain.
 		- supports many different protocols unlike Web Services that work over SOAP/HTTP.
+		- Can work with TCP, provides speed, better for large data transfer. 
 
 Distributed Object Framework:
 ![DOF](../Images/Cloud%20Computing/DOA.png)
@@ -282,7 +312,10 @@ Guiding features:
 - Based upon well known and vendor independent standards HTTP, SOAP, XML, WSDL.
 - Enables quick composition of services in distributed environment.
 - Provides features required by enterprise business applications.
-  
+
+Technology stack:
+![](../Images/Cloud%20Computing/WebServices_technology_stack.png)
+
 - XML: backbone
 - SOAP(Simple Object Access Protocol): low level interaction for web services; XML-based language for exchanging structured information in a platform-independent manner.
 - WSDL(Web Service Definition Language): providing metadata
@@ -292,42 +325,5 @@ RESTful system (Representational State Transfer)
 - client sends requests over HTTP using standard HTTP methods(PUT,GET,POST,DELETE)
 - server issues response that includes representation of the resource.
 - lightweight alternative to SOAP.
-
-----
-# Migration to Cloud
-
-7 steps:
-1. Assess
-	1. application level
-	2. code level
-	3. design level
-	4. architecture/usage levels
-	5. tools
-	6. functionality
-	7. test cases and configuration
-2. Isolation
-	1. of environmental and systemic dependencies
-3. Map
-	1. separate the components that shoould reside in captive(your) data center and the ones that go to the cloud
-4. Re-Architect
-	1. Some functionalities might be lost, some might be added.
-5. Augment
-	1. Enhance with the cloud computing service.
-6. Test
-7. Optimize
-
-Risks:
-1. General
-	1. performance monitoring
-	2. business continuity and disaster recovery
-	3. legal compliance and issues
-	4. IP licensing issues
-	5. QoS parameters
-	6. Ownership, transfer and storage of data
-	7. Portability and interoperability
-2. Security
-	1. Trust and privacy
-	2. legal compliances
-	3. multi-tenance, impact of IT data leakage
 
 ----

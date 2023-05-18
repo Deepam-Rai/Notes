@@ -13,7 +13,7 @@
 		3. one-to-many: naturally multitenant
 		4. delivered on contract
 	- Product Type: Web applications and services.
-	- 	- Elastic scaling is automatic.
+	- Elastic scaling is automatic.
 	- e.g., salesforce.com, google apps, QuickBooks,etc
 	- Concerns:
 		- Data residing in cloud - legality.
@@ -63,13 +63,10 @@
 	- Elastic scaling is done using APIs.
 	- e.g., Amazon EC2 and S3, GoGrid,...
 
+![XaaS](../Images/Cloud%20Computing/XaaS.png)
+
 ----
 # Types of Clouds
-
-
-
-
-
 
 ## Cloud deployment models
 1. Private cloud

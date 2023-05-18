@@ -92,7 +92,7 @@ Disadvantages:
 	2. Unlike grid computers, computer clusters have each node set to perform same task. ![Cluster Computing](../../Images/Cloud%20Computing/cluster_computing.png)
 3. Distributed computing
 	1. Distributed systems: is a software system in which the components located at the network nodes communicate and coordinate their actions by passing messages.
-	2. Distributed computing is the study of distributed systems.
+	2. Distributed computing: where the computation can be broken down into units and executed on heterogeneous elements concurrently.
 4. Utility computing
 	1. It is a service provisioning model in which computing resources and infrastructure is availed to customers as needed and charged for specific usage rather than a flat rate.
 5. Cloud computing
@@ -108,6 +108,8 @@ Examples:
 - SaaS: salesforce.com, google docs, facebook, instagram, reddit, stackoverflow, etc.
 - PaaS: Heroku, Windows Azure, Google app engine, force.com, etc.
 - IaaS: AWS, IBMSmartCloud, Eucylaptus, Windows Server Hyper V, etc.
+
+More detail [here](../Chapter%204%20-%20Cloud%20Computing%20Architecture.md).  
 
 ----
 ## Hosting Models

@@ -1,5 +1,6 @@
-> Definition: Abstraction of computer resources.
+> **Definition**: Abstraction of computer resources.
 
+> **Virtual Machine:** An isolated runtime environment.
 
 **Server consodilation:** Technique for aggregating multiple services and applications originally deployed on different servers on one physical server.
 
@@ -12,8 +13,8 @@ Advantages
 1. Sharing and efficient use of resources.
 2. Portability and self-containment - enabling migration - moving instances from one VMM to another.
 3. Recovery: Can save the instances states backups.
-4. Isolation: sandbox environments.
-5. Encapsulation
+4. Isolation: sandbox environments; isolated from each other.
+5. Encapsulation: Encapsulate complete computing environment.
 6. Hardware Independence
 7. Managed execution and isolation - secure and controllable environments.
 8. Easy allocation and partitioning of resources.
@@ -26,6 +27,8 @@ Disadvantages:
 3. Implications for security -phishing.
 4. Not all applications are well suited.
 5. Added overhead makes performance slower.
+
+![](../Images/Cloud%20Computing/virtualization_characteristics.png)
 
 
 ----
@@ -150,11 +153,20 @@ some shit didnt understand.
 ## Pros and Cons of virtualization
 Given at the starting.
 
+----
 # Virtualization security requirements
 1. Secure interface: Network interface - Transport Layer Security(TLS).
 2. secure secondary storage: Network File System(NFS)
 3. secure execution environment
 
-Detailed examples of technology implementations - Xen, VMware, Hyper-V.
+
+## Virtualization security challenges
+
+1. TCB(Trusted Computing Base) is too large.
+	1. TCB: A small amount of software or hardware that security depends upon and that can be distinguished from a much larger amount that can misbehave without affecting security.
+2. Hypervisor vulnerabilities.
 
 ----
+
+Detailed examples of technology implementations - Xen, VMware, Hyper-V.
+

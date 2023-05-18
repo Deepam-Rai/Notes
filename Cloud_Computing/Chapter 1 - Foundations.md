@@ -95,6 +95,7 @@ Properties of distributed systems:
 	- aggregation of heterogeneous computing nodes.
 
 
+----
 ## Virtualization
 - Confers degree of customization and control with minor impact on performance.
 - Creates virtual environments.

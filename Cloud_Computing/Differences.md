@@ -27,16 +27,18 @@
 |Coupling: | Tightly coupled. | Loosely Coupled |
 |Components: | Computation on homogeneous components. | Computation on heterogeneous components. |
 |Resource sharing: | Within a single system. | Among computers in the network. |
+| Communication: | Bus | Message passing. |
+| Main Memory: | Shared. | Each node has its own. |
 |Scalability: | Limited. | More scalable. |
 |Fault tolerant: | Less. | More. Has independent failures. |
-
+| Example: | Java threading. | Hadoop, spark. |
 
 
 ----
 ## Decentralized vs Distributed Computing
 |  | Decentralized Computing | Distributed Computing |
 |---|---|---|
-|Control: | No single pointn of control. | Can have single point of control. |
+|Control: | No single point of control. | Can have single point of control. |
 |Architecture: | P2P | Client-Server or P2P |
 | Scalability: | More scalable. | Depends upon control architecture set up. |
 | Fault tolerance: | More fault tolerant - has independent failures. | Depends upon architecture. Client-server means SPOF exists else has independent failures. |
@@ -56,11 +58,11 @@
 ## Simulation vs Emulation
 |  | Simulation | Emulation |
 |--|--|--|
-| Purpose: | Used to study or predict the behaviour of the system under different conditions. | Used to test or replicate the behaviour of the system in the controlled environment. |
+| Purpose: | Used to study or predict the behaviour of the system under different conditions. | Used to test or replicate the behaviour of the system in a controlled environment. |
 | Level of abstraction: | Typically implements high level abstractions. Only as much as required for modelling. | Typically implements low-level abstractions. |
-|Accuracy: | Depends upon quality of model/abstraction used. | Typically high as asbtraction is of low level. |
+|Accuracy: | Depends upon quality of model/abstraction used. | Typically high, as abstraction is of low level. |
 | Resources: | Needs comparatively less. | Needs comparatively more. |
-| Use Case: | To test the interaction of a model with environment. | Testing how model interacts with environment. |
+| Use Case: | To test how model interacts with the environment. | Utilizing the model running on abstracted environment. |
 
 
 ----
@@ -71,6 +73,7 @@
 |Awareness: | Guest is aware of virtualization. | Guest is not aware of virtualization. |
 |Modification: | Requires guest modification. | Doesnt require guest modification. |
 |Access: | Guests can access VMM using predefined hypercalls. | Guests cannot access VMM. |
-|Proprietary guests: | Only the guest program ownser themselves can provide support for paravirtualiation. | Proprietary or not it doesnt matter. |
+|Proprietary guests: | Only the guest program owner themselves can provide support for paravirtualiation. | Proprietary or not it doesnt matter. |
+
 
 ----
