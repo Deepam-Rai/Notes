@@ -605,3 +605,106 @@ $\therefore K_5$ is nonplanar.
 $$[Proved!]$$
 
 ----
+>**Theorem 9.5:  
+>The graph $K_{3,3}$ is nonplanar.
+
+**Proof:**(By contradiction)  
+$\therefore n=6, m=9$  
+Assume that $K_{3,3}$ is a planar graph.  
+$\therefore n-m+r =2 \implies r=5$  
+
+Let, $m_i$ be the number of edges on the boundary of region $R_i$ for $1 \le i \le 5$.  
+
+$\because K_{3,3}$ contains no triangle.  
+$\implies m_i \ge 4$  
+$\because K_{3,3}$ contains no bridges.  
+$\implies \sum_{i=1}^5 m_i \ge 20$  
+$\implies 2m \ge 20 \implies m \ge 10$  
+Which is a contradiction.  
+
+$$[Proved!]$$
+
+----
+>**Theorem 9.7: Kuratowski Theorem  
+>A graph $G$ is planar iff $G$ contains no subdivision of $K_5$ or $K_{3,3}$ as a subgraph.**  
+
+(A necessary and sufficient condition.)
+
+> **Corollary:**  If $G$ contains  
+> 1. at most 4 vertices of degree 4 or more and 
+> 2. $G$ contains at most 5 vertices of degree 3 or more,  
+> then $G$ is planar.
+
+----
+> **Theorem 9.9:  
+> Let $G$ be a graph that is 2-cell embedded on a surface of genus $k \ge 0$. If $G$ has order $n$, size $m$ and $r$ regions, then  
+> $n-m+r =2 -2k$**
+
+**Proof:**  (by induction)  
+For $k=0$:  
+then $G$ is a planar graph, thus follows Euler Identity.  
+$\therefore n-m+r=2$  
+$\implies n-m+r =2 -2k$ holds as $k=0$.  
+Hence, theorem holds for $k=0$.  
+
+For some k:
+Assume it holds for every connected graph $G'$ of order $n'$, size $m'$ that is a 2-cell embedding on $S_k$, resulting in $r'$ regions, such that  
+$n'-m'+r'=2-2k$  
+
+$\therefore$ for $k+1$:  
+Let, $G$ be a connected graph of order $n$, size $m$  2-cell embedded on $S_{k+1}$, resulting in $r$ regions.  
+Let $H$ be one of the $k+1$ handles of $S_{k+1}$.  
+Draw a closed curve on $H$.  
+This closed curve $C$ would intersect $t \ge 1$ edges.  
+Make the intersections vertex.  
+$\therefore t$ vertices has been added and $t$ new edges has been created(each of previous $t$ edges on handle has been partitioned by new vertices)  
+Similarly, also $t$ new regions has been created.  
+Further add 2 more vertices of degree 2 on $C$.  
+Thus, this further adds 2 edges but no new regions.  
+$\therefore$ total vertices= $n+t+2$ and total edges=$m+t+t+2$, total regions=$r+t$.  
+
+Next, cut the handle $H$ along $C$, creating two copies of vertices and edges along $C$.  
+Patch the two resulting holes, thus creating 2 new regions(1 on each half of handle).  
+$\therefore$ The resulting embedding is in $S_k$.  
+$\therefore$  
+total vertices $n_1=n + 2(t+2)$,  
+total edges $m_1=m+t+2(t+2)$,  
+total regions $r_1=r+t+2$,  
+
+By induction hypothesis,
+
+$$\begin{aligned}
+n_1 -m_1 + r_1 &= 2-2k \\  
+(n+2(t+2)) - (m +t +2(t+1)) + (r+t+2) &= 2-2k \\
+n-m+r+2 &= 2-2k \\
+n-m+r &= 2-2(k+1)
+\end{aligned}$$
+
+$\therefore$ theorem holds for $k+1$ whenever it holds for $k$.  
+$\because$ theorem holds for $k=0 \implies$ it holds for all $k\ge 0$.  
+
+$$[Proved!]$$
+
+----
+> **Corollary 9.10:** If $G$ is a connected graph of order $n$, size $m$ embedded on surface of genus $\gamma(G)$, resulting in $r$ regions, then  
+> $n-m+r=2-2\gamma(G)$
+
+> **Corollay 9.11:** If $G$ is a connected graph of order $n \ge 3$ and size $m$, then  
+> $\gamma(G) \ge \large \frac{m}{6} - \frac{n}{2}+1$
+
+**Proof:**  
+$\because n-m+r = 2-2\gamma(G)$  
+$\implies r = m-n +2 -2\gamma(G)$  
+or $3r = 3m-3n + 6 - 6\gamma(G)$  
+$\therefore 3m-3n+6-6\gamma(G) \le 2m$. $[\because 3r \le 2m]$  
+$\implies m - 3n +6 \le 6\gamma(G)$  
+$\therefore \large \frac{m}{6} - \frac{n}{2} +1 \le \gamma(G)$  
+
+$$[Proved!]$$
+
+----
+>**Theorem 9.12:**
+
+$$\gamma(K_n)= \large \ceil{\frac{(n-3)(n-4)}{12}}$$
+
+----

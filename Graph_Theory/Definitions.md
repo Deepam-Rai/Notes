@@ -288,11 +288,30 @@ If G can be drawn in a planse so that no two of it's edges cross each other.
 		- A bridge is always on the boundary of exactly one region(not necessarily exterior region).
 		- An edge that is not a bridge lies on the boundary of two regions.
 	- Planar graph G can be drawn in many ways, but the region count doesnt change.
-- **Eular Identity:** If G is a connected plane graph of order n, size m and having r regions, then n-m+r=2.
+- **[Eular Identity](./Theorems.md):** If G is a connected plane graph of order n, size m and having r regions, then n-m+r=2.
 - When $m\ge 3$, then boundary of every region has at least 3 edges. $2m \ge 3r$.
 - $m \le 3n-6$ for $n \ge 3$.
 - Every planar graph contains a vertex of degree 5 or less.
 - $K_5$ is nonplanar.
+- $K_{3,3}$ is nonplanar.
+
+#### Embeddings
+A graph drawn on a surface such that no two edges cross each other.
+- Non-planar graphs cannot be embedded on a plane.
+- **Surface of genus k $S_k$:** A sphere with $k$ handles.
+	- $S_0$: Sphere
+	- $S_1$: Torus
+- **Genus of $G$, $\gamma(G)$:** Smallest $k$ such that $G$ can be embedded on $S_k$.
+	- $\gamma(G) \ge \large \frac{m}{6}-\frac{n}{2}+1$, general form for $m \le 3n-6$.
+	- $\gamma(K_n) = \Large \ceil{ \frac{(n-1)(n-4)}{12}}$, for $n\ge 3$.
+- **2-cell:** A region where any closed curve that is drawn on that region can be  continuously shrunk to a point.
+	- **2-cell embedding:** An embedding, every region of which is a 2-cell.
+		- $n-m+r=2 -2k$, $k=$genus.
+		- $n-m+r = 2-2\gamma(G)$
+
+### Subdivision
+A graph $G'$ is called subdivision of graph $G$ if $G'=G$ or one or more vertices of degree 2 is inserted into one or more edges of $G$ to get $G'$.
+- **[Kuratowski Theorem](./Theorems.md):** A graph $G$ is planar iff $G$ does not contain subdivision of $K_5$ or $K_{3,3}$ as subgraph.
 
 
 ----
