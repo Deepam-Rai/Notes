@@ -169,6 +169,10 @@ $H(V',E')$ such that $V'\subseteq V(G)\ and\ E'\subseteq E(G)$
 A subgraph $H\subseteq G$ such that either $V(H)\subset V(G)$ or $E(H)\subset E(G)$.
 - Drop some vertices or edges to get H from G.
 
+#### Clique
+Clique is a complete subgraph of $G$.
+- **Clique number $\omega(G)$:** Order of the largest clique in $G$.
+
 ### Spanning subgraph of G
 A subgraph $H\subseteq G$ such that $V(H)=V(G)$ and $E(H)\subset E(G)$.
 - Drop some edges from G to get H.

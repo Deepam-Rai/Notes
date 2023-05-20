@@ -708,3 +708,11 @@ $$[Proved!]$$
 $$\gamma(K_n)= \large \ceil{\frac{(n-3)(n-4)}{12}}$$
 
 ----
+>**Theorem 10.1: The Four Color Theorem  
+>Every planar graph has chromatic number at most 4.**
+
+
+----
+>**Theorem 10.2:  
+>A graph $G$ has chromatic number 2 iff $G$ is a nonempty bipartite graph.**
+

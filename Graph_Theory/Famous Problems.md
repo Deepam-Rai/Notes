@@ -61,6 +61,19 @@ Complete proof:
 3. Thus proof was also taken controversially at the time.
 
 ----
+## The Problem of Five Princes
+> There once was a king who had five sons. In his well he stated that on his death his kingdom should be divided into five regions for his sons in such a way that each region should have a common boundary with the other four. How can this be done?
+
+The corresponding [dual graph](./Graph%20Coloring.md) is non-planar. Thus it is not possible to divide regions as described.
+
+----
+## The Problem of Five Palaces
+>The king required each of his sons to build a palace in his region and the sons should link each pair of palaces by roads so that no two roads cross. How can this be done?
+
+The corresponding [dual graph](./Graph%20Coloring.md) is non-planar: $K_5$. Thus it is not possible.
+
+
+----
 ## Three Houses and Three Utilities Problem
 
 Relating to planar graphs.  
