@@ -83,3 +83,14 @@ Relating to planar graphs.
 No, because the resulting graph $K_{3,3}$ is not planar.
 
 ----
+## Königsberg Bridge Problem
+Konigsberg:
+![kkonigsberg_bridge_problem](../Images/Graph_Theory/konigsberg_bridge_problem.png)
+> Is it possible to pass through every bridge exactly once?
+
+Solution: No, because it's corresponding graph doesnt contain eulerian circuit or a trail.  
+Konigsberg multigraph:
+![konigsberg_multigraph](../Images/Graph_Theory/konigsberg_multigraph.png)
+
+----
+

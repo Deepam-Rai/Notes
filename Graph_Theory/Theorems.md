@@ -516,7 +516,411 @@ The resultant graph is a spanning tree of $G$.
 2. While $(H \text{ is not connected})$
 	1. Keep adding edge $e$ from $E(G)$ such that no cycle is formed in $H$.
 3. $H$ is a spanning tree of $G$.  
+
 $$[Proved!]$$
+
+----
+>**Theorem 4.11:  
+>Kruskal's algorithm produces a minimal spanning tree in a connected weighted graph.**
+
+**Proof:**  
+Let $G$ be a connected weighted graph of order $n$.  
+Let $T$ be spanning tree obtained by Kruskal's algorithm.  
+Assume, T's edges are selected in order $e_1,e_2,...,e_{n-1}$, such that $w(e_1)\le w(e_2)\le ... \le w(e_{n-1})$.  
+$\therefore$ weight of $T$ = $w(T)=\sum_{i=1}^{n-1}w(e_i)$.  
+
+Assume that $T$ is not a MST and among all MST let $H$ be the one sharing maximum common edges with $T$.  
+
+Let $e_i$ be first edge in $T$ that is not there in $H$.  
+$\implies$ edges $e_1,e_2,...,e_{i-1}$ are common to both $T$ and $H$.  
+Let $G_0 = H + e_i$.  
+$\therefore G_0$ contains a cycle $C$.  
+$\because T$ is a tree. $\exists$ an edge $e_0$ in cycle $C$ such that $e_0 \notin E(T)$.  
+Let $G_1 = G_0 - e_0$.  
+or $G_1 = H + e_i -e_0$.  
+
+$\because H$ is a MST $\implies w(H) \le w(G_1)$.  
+$\implies w(H) \le w(H) +w(e_i)-w(e_0) \implies w(e_0) \le w(e_i)$.  
+And by Kruskal's algorithm $e_i$ was the the minimum weight edge that could be added to edges $e_1,e_2,...,e_{i-1}$ withoout producing a cycle.  
+But $e_0$ also could have been added.  
+$\implies w(e_i)\le w(e_0)$  
+$\therefore w(e_i) = w(e_0)$  
+
+$\implies w(G_1)=w(H)$  
+$\therefore G_1$ is a MST.  
+And $G_1$ has more common edges with $T$ than $H$.  
+Which contradicts our assumption.
+
+$$[Proved!]$$
+
+----
+>**Theorem 4.12:  
+>Prim's Algorithm produces a minimum spanning tree in a connected weighted graph.**
+
+**Proof:**  
+Let $T$ of order $n$ be a spanning tree obtained by Prim's algorithm.  
+The edges of $T$ are selected in order $e_1,e_2,...,e_{n-1}$ where $e_1$ is incident with vertex $u$.  
+$\therefore w(T)=\sum_{i=1}^{n-1}w(e_i)$  
+
+Assume to contrary that $T$ is not a MST and $H$ be the set of all MST of $G$ having a maximum number of edges in common with $T$.  
+$k=$ numbe of common edges between $T$ and MST in $H$.  
+If there are no common edges then $k=0$ and $H'$ be any tree in $H$.  
+Otherwise, $k=$ maximum positive integer, such that $\exists H' \in H$ containing $e_1,e_2,...,e_k$.  
+$\therefore$ no tree in $H$ contains all of the edges $e_1,e_2,...,e_k,e_{k+1}$.  
+$\because H'$ is a MST that does not contain $e_{k+1}$.  
+$\implies H'+e_{k+1}$ forms a cycle $C$.  
+Necessarily $C$ contains an edge $e_0$ distinct from $e_{k+1}$ such that $e_0 \notin T$.  
+Let $T' = H' - e_{k+1}+e_0$.  
+$\therefore w(T')=w(H')-w(e_{k+1})+w(e_0)$  
+$\because H'$ is a MST $\implies w(H') \le w(T')$  
+$\implies w(e_0) \le w(e_{k+1})$  
+And by the contruction of $T$ from Prim's algorithm, $w(e_{k+1}) \le w(e_0)$.  
+$\implies w(e_0)=w(e_{k+1})$  
+$\implies w(T')=w(H') \implies T'$ is a MST with $k+1$ edges common with $T$.  
+$\implies T' \in H$ with $k+1$ common edges.  
+Which contradicts assumption that $H' \in H$ is MST with max common edges with $T$.  
+
+$$[Proved!]$$
+
+----
+## Connectivity
+
+> **Theorem 5.1:  
+> A vertex $v$ incident with a bridge in a connected graph $G$ is cut vertex iff $deg(v)\ge 2$.**
+
+**Proof:**  
+Let $uv \in E(G)$ be the bridge incident to $v$.  
+
+**Claim I:** If $v$ is a cut vertex incident with a bridge then $deg(v)\ge 2$.  
+Assume to contrary that $deg(v)=1$.  
+$\implies v$ is an end-vertex $\implies G-v$ is connected.  
+$\implies v$ cannot be a cut vertex.  
+
+**Claim II:** If $deg(v) \ge 2$ and $v$ is incident with a bridge then $v$ is a cut vertex.  
+$\therefore \exists w \in V(G)$ distinct from $u$ such that $vw \in E(G)$.  
+Assume to contrary that $v$ is not a cut vertex.  
+$\implies G-v$ is connected $\implies P=u-w$ path exists in $G-v$.  
+$\implies P+uv$ forms a cycle in $G \implies uv$ is part of a cycle.  
+But $uv$ is a bridge, and bridges cannot be part of a cycle.  
+Hence, contradiction.  
+
+$$[Proved!]$$
+
+>**Corollary 5.2:  If $G$ contains a bridge then $G$ contains a cut vertex.**
+
+----
+>**Theorem 5.3:  
+>Let $v$ be a cut-vertex in a connected graph $G$ and let $u$ and $w$ be vertices in distinct components of $G-v$. Then $v$ lies on every $u-w$ path in $G$.**
+
+**Proof:**  
+Assume to contrary that $v$ doesnt lie on every $u-w$ path.  
+$\implies \exists$ path $P$ such that $v$ doesnt lie in $P$.  
+$\implies P$ exists in $G-v \implies u$ and $w$ are connected in $G-v$.  
+$\implies u$ and $w$ lie in the same component of $G$.  
+which is a contradiction as $u$ and $w$ comes from distinct components of $G-v$.  
+
+$$[Proved!]$$
+
+>**Corollary 5.4: A vertex $v$ of a connected graph $G$ is a cut vertex of $G$ iff there exist vertices $u$ and $w$ distinct from $v$ such that $v$ lies on every $u-w$ path of $G$.**
+
+**Proof:**  
+**Claim I:** If $v$ is a cut vertex of a connected graph $G$, then there exists $u$ and $w$ such that $v$ lies in every path of $u-w$.  
+Take, $u$ and $w$ from different components of $G-v$.  
+$\therefore$ by theorem $v$ lies in every path of $u-w$.  
+
+**Claim II:** If there exists vertices $u$ and $w$ distinct from $v$ such that $v$ lies in every $u-w$ path then $v$ is a cut vertex.  
+$\implies$ there exists no path connecting $u$ and $w$ in $G-v$.  
+$\implies G-v$ is disconnected.  
+$\implies v$ is a cut vertex.  
+
+$$[Proved!]$$
+
+----
+>**Theorem 5.5:  
+>Let $G$ be a nontrivial connected graph and let $u \in V(G)$.  
+>If $v$ is a vertex that is farthest from $u$ in $G$, then $v$ is not a cut vertex of $G$.**
+
+**Proof:** (Contrapositive)
+Contrapositive: If $v$ is cut vertex of $G$, then $v$ is not the farthest vertex from $u$.  
+$\because v$ is a cut vertex, let $w$ belong to component in $G-v$ that doesnt contain $u$.  
+$\implies$ all $u-w$ path contains $v$.  
+$\implies d(u,w) \gt d(u,v)$ in $G$.  
+$\therefore v$ cannot be the farthest vertex from $u$ in $G$.  
+
+$$[Proved!]$$
+
+
+> **Corollary 5.6:** Every nontrivial connected graph contains at least two vertices that are not cut-vertices.
+
+**Proof:**  
+Let $G$ be a nontrivial connected graph.  
+Let, $u,v \in V(G)$ such that $d(u,v)=diam(G)$.  
+$\implies u,v$ are farthest vertices from each other.  
+$\implies u,v$ are not cut vertices.  
+
+$$[Proved!]$$
+
+----
+>**Theorem 5.7:  
+>A graph of order $n\ge 3$ is nonseparable iff every two vertices lie on a common cycle.**
+
+**Proof:**  
+**Claim I:** If every two vertices lie on a common cycle, then $G$ is nonseparable.  
+We show that there exist no cut-vertex.  
+Assume to the contrary that there exists a cut vertex $v$.  
+Let $u,w \in V(G)$ be from different components in $G-v$.  
+As per assumption $u$ and $w$ also lie in a common cycle say $C$.  
+$\implies C$ determines two paths connecting $u$ and $w$, one of which does not contain $v$.  
+$\implies \exists$ a $u-w$ path in $G-v$.  
+which is a contradiction.  
+$\therefore$ cut vertex cannot exist, or $G$ is non-separable.  
+
+**Claim II:** If $G$ is nonseparable, then every two vertices lie on a common cycle.  
+Assume to contrary that $\exists u,v \in V(G)$ such that they dont lie on a common cycle.  
+**Case I:** $d(u,v)=1$  
+This is not possible because it means $uv \in E(G)$ and there exist no other $u-v$ path.  
+$\implies uv$ is a bridge $\implies G$ is separable.  
+
+**Case II:** $d(u,v) \ge 2$  
+Let $P=(u=v_0,v_1,...,v_{k-1},v_k=v)$.  
+Now, $u,v_{k-1}$ lies on a common cycle say $C$, which doesnt contain $v$.  
+$\because v_{k-1}$ is a not a cut vertex, and $u,v$ are distinct from $v_{k-1}$,  
+$\exists v-u$ path, say $Q$, that doesnt contain $v_{k-1}$.  
+$\because u\in C$ and $u\in Q$, there exist a first vertex $x$ of $Q$ that is on $C$.  
+Let $C'$ be $v_{k-1}-x$ subpath of $C$, which would contain $u$.  
+And $Q'$ be $v-x$ subpath of $Q$.  
+
+$\therefore v_kv_{k-1} + C' + Q'$ forms a cycle that contains $v$ and $u$.  
+which is a contradiction.  
+
+$$[Proved!]$$
+
+----
+>**Theorem 5.8:  
+>Let $R$ be the relation defined on the edge set of a nontrivial connected graph $G$ by $eRf$ where $e,f \in E(G)$ if $e=f$ or $e,f$ lie on the common cycle. Then $R$ is an equivalence relation.**
+
+**Proof:**  
+**(i) Reflexive:**  $R$ is reflexive. $eRe$ as $e=e$.  
+
+**(ii)Symmetric:** If $e$ and $f$ lie on the common cycle or $e=f$, then $eRf$ and $fRe$.  
+Thus, $R$ is symmetric.  
+
+**(iii)Transitive:**  
+Let $e,f,g \in E(G)$ such that $eRf$ and $fRg$.  
+
+**Case I:** $e=f$ or $f=g$.  
+Then, it follows that $eRg$.  
+
+**Case II:** $e,f$ lie on cycle $C$ and $f,g$ lie on cycle $Q$.  
+If $e$ lies on $Q$ or $g$ lies on $C$, then $eRg$ follows.  
+
+When they do not:  
+Let $e=uv$.  
+Let, $P=u-v$ path that does not contain $e$.  
+Let, $x$ be the first vertex of $P$ common with $Q$.  
+and let $y$ be the last vertex of $P$ common with $Q$.  
+Let $P'$ be $x-y$ path in $Q$ that contains $g$.  
+$\therefore P$ and $P'$ produces a cycle containing $e$ and $g$.  
+$\implies eRg$  
+
+$$[Proved!]$$
+
+>**Corollary 5.9: Every two distinct blocks $B_1$ and $B_2$ in a nontrivial connected graph $G$ have the following properties:**
+1. The blocks are edge disjoint.
+2. The blocks have at most one vertex in common.
+3. If they have a common vertex, then it is a cut vertex of $G$.
+
+**Property 1:**  
+The equivalence relation of theorem 5.8 creates equivalence classes.  
+Each edge induced subgraph created from those equivalence classes of edges is a block.  
+$\because$ equivalence classes have no common element.  
+$\therefore$ thus created equivalence classes doesnt share common edges.  
+$\implies$ corresponding blocks dont share edges.  
+
+**Property 2:**  
+Assume to contrary that, $B_1$ and $B_2$ have vertices $u$ and $v$ in common.  
+$\because B_1$ is connceted $\implies u-v$ path, say $P_1$ exists in $B_1$.  
+$\because B_2$ is connceted $\implies u-v$ path, say $P_2$ exists in $B_2$.  
+$\implies P_1$ and $P_2$ forms a cycle in $B_1 \cup B_2$.  
+$\implies B_1 \cup B_2$ has no cut vertex.  
+$\implies B_1 \cup B_2$ is itself a nonseparable subgraph of $G$.  
+This contradicts the definition of block for $B_1,B_2$.   
+
+**Property 3:**  
+Let $v$ be the common vertex with edge $e_1=vv_1$ incident in $B_1$ and edge $e_2=vv_2$ in $B_2$.  
+Assume to the contrary that $v$ is not a cut vertex.  
+$\implies \exists v_1-v_2$ path $P$ that doesnt contain $v$, hence $vv_1,vv_2$.  
+$\therefore P,e_1,e_2$ creates a cycle containing $e_1$ and $e_2$.  
+Which is not possible becaise they belong to different blocks.  
+Hence, contradiction.  
+
+$$[Proved!]$$
+
+----
+>**Theorem 5.10:  
+>For every positive integer $n$, $\lambda(K_n) =n-1$.**
+
+**Proof:**  
+By definition $\lambda(K_1)=0$.  
+Now for $n \ge 2$:  
+$\because$ every vertex has degree $n-1$  
+$\therefore$ removing $n-1$ edges incident with a vertex results in a disconnected graph.  
+$\implies \lambda(G) \le n-1$.  
+Let $X$ be minimum vertex cut that separates $G$ into $G_1$ and $G_2$.  
+Suppose $G_1$ has order $k$. Thus $G_2$ has order $n-k$.  
+$\because X$ contains all edges joining $G_1$ and $G_2$. And $G$ is a complete graph.  
+$\therefore |X|= k^\ast (n-k)$  
+
+Now, $\because k\ge 1$ and $n-k \ge 1$  
+$\therefore (k-1)(n-k-1) \ge 0$  
+$\implies k(n-k)-n+1 \ge 0$  
+$\implies k(n-k) \ge n-1$  
+$\implies \lambda(G) \ge n-1$  
+
+$\therefore \lambda(G) = n-1$  
+
+$$[Proved!]$$
+
+----
+>**Theorem 5.11:  
+>For every graph $G$, $\kappa(G) \le \lambda(G) \le \delta(G)$.**
+
+**Proof:**  
+**Case I:** If $G$ is disconnected.  
+$\kappa(G) = \lambda(G) =0$ and inequalities hold.  
+
+**Case II:** If $G=K_n$.   
+$\implies \delta(G)=n-1$  
+and by theorem 5.10, $\lambda(G)=n-1$.  
+and $\kappa(G)=n-1$.  
+$\therefore \kappa(G) =\lambda(G) = \delta(G)$  
+
+**Case III:** $G$ is connected and not complete.  
+$\implies \lambda(G) \le n-2$  
+Let $v \in V(G)$ such that $deg(v)= \delta(G)$.  
+$\therefore$ removing all incident edges from $v$ makes $G$ disconnected.  
+$\therefore \lambda(G) \le \delta(G)$  
+
+Now, to show that $\kappa(G) \le \lambda(G)$.  
+Let $X$ be a minimum edge-cut, that divides $G$ into $G_1$ and $G_2$.  
+Suppose order of $G_1=k$, hence order of $G_2=n-k$.  
+Every edge in $X$ joins vertex in $G_1$ to vertex in $G_2$.  
+
+**Sub-case I:** Every vertex in $G_1$ is connected to every vertex in $G_2$.  
+$\implies |X|=k(n-k)$  
+$\because k\ge 1, (n-k) \ge 1 \therefore (k-1)(n-k-1) \ge 0$  
+$\implies n(n-k) \ge n-1$  
+$\implies \lambda(G) \ge n-1$  
+But $\lambda(G) \le n-2$, thus this case is not possible.  
+
+**Sub-case II:** $\exists u \in G_1,v \in G_2$ such that $u$ and $v$ are not adjacent in $G$.  
+Creat set $U$ of vertices as follows:  
+1. For each $e \in X$:
+	1. If $u$ is incident with $e$ then choose another vertex in $G_2$, else choose vertex $\in G_1$ that is incident with $e$ as element of $U$.
+$\implies |U| \le |X|$  
+$\because u,v \notin U$ and $u-v$ path doesnt exist in $G-U$  
+$\implies U$ is a vertex-cut of $G$.  
+$\therefore \kappa(G) \le |U| \le |X| = \lambda(G)$  
+
+$$[Proved!]$$
+
+----
+>**Theorem 5.12  
+>If $G$ is a cubic graph, then $\kappa(G)=\lambda(G)$.**
+
+**Proof:**  
+A cubic graph is a 3-regular graph.  
+$\implies \kappa(G) = \set{0,1,2,3}$  
+
+$\kappa(G)=0$:  
+If $G$ is disconnected then $\kappa(G) = \lambda(G) =0$.  
+
+$\kappa(G)=3$:  
+$\because G$ is 3-regular, $\lambda(G) \le 3$.  
+And $\kappa(G) \le \lambda(G)$.  
+$\therefore \kappa(G)=3 \implies \lambda(G)=3$.  
+
+$\kappa(G)=1$:  
+Let $U$ be minimum vertex-cut, $|U|=1$.  
+Or, $U$ contains exactly one cut vertex, say $u$.  
+And $deg(u)=3$.  
+$\implies$ some component of $G$ contains exactly one neighbour of $u$ say $w$.  
+$\implies uw$ is a bridge.  
+$\implies \lambda(G) = 1 = \kappa(G)$  
+
+$\kappa(G)=2$:  
+Let $U=\set{u,v}$ is vertex cut, $|U|=2$.  
+Let $u,v$ be joined to $u',v'$ respectively.  
+Case I: $u',v'$ are present in the same component of $G-U$.  
+$\therefore X=\set{uu', vv'}$ is a edge-cut $\implies $\lambda(G)=2$.  
+Case II: $u',v'$ belongs to different components of $G-U$.  
+$u$ and $v$ cannot be joined because, if they were then we go to case I.  
+$\because uv \notin E(G)$  
+$\therefore X= \set{uu',vv'}$ is an edge-cut.  
+$\implies \lambda(G)=2$.  
+
+$$[Proved!]$$
+
+----
+> **Theorem 5.13:  
+> If $G$ is a graph of order $n$ and size $m \ge n-1$, then**
+
+$$\large \kappa(G) \le \floor{\frac{2m}{n}}$$
+
+**Proof:**  
+Average vertex degree = $\large \frac{2m}{n}$.  
+$\implies \delta(G) \le \large \frac{2m}{n}$  
+$\because \kappa(G) \le \delta(G)$  
+$\therefore \kappa(G) \le \large \floor{\frac{2m}{n}}$  (floor because it's an integer value)
+
+$$[Proved!]$$
+
+----
+>**Theorem 5.14:  
+>If $G$ of ordern $n\ge 3$ is connected, then it's square $G^2$ is 2-connected.**
+
+----
+> **Theorem 5.15:  
+> For every two integers $r$ and $n$ with $2 \le r \lt n$, $\kappa(H_{r,n})=r$.**
+
+#TODO verify thorem statement
+
+**Proof:**  
+**Case I:** $r$ is even or $r$ is odd and $n$ is even.  
+$H_{r,n}$ is a r-regular graph.  
+$\therefore m=\large \frac{nr}{2}$  
+$\implies \large \frac{2m}{n}=r$  
+$\therefore \kappa(G) \le \large \floor{\frac{2m}{n}} = r$  
+
+**Case II:** $r$ and $n$ are both odd.  
+$H_{r,n}$ contains $n-1$ vertices with degree $r$ and one vertex with degree $r+1$.  
+$\therefore m= \large \frac{(n-1)r + (r+1)}{2} = \large \frac{nr+1}{2}$  
+$\implies \large \floor{\frac{2m}{n}} = r$  
+$\therefore \kappa(G) = r$  
+
+$$[Proved!]$$
+
+----
+## Traversability
+
+### Eulerian Graphs
+
+>**Theorem 6.1:  
+>A nontrivial connected graph $G$ is Eulerian iff every vertex of $G$ has even degree.**
+
+**Proof:**  
+**Claim-I:** If $G$ is Eulerian, then every vertex of $G$ has even degree.  
+Let $C$ be the Eulerian circuit in $G$.  
+Suppose $C$ begins, and thus ends at $u$.  
+Now for all $v \in V(G)$ and $v \not = u$, each time $v$ is encountered in $C$ two edges are accounted - one to enter $v$ and another to exit.  
+Thus, $v$ has even degree.  
+Similary, for $u$, one edge is accounted when $C$ begins from $u$ and another one when $C$ ends at $u$.  
+Other times when $u$ is encountered two edges are accounted similarly as $v$.  
+$\therefore$ All vertices has even degree.  
+
+**Claim-II:** If every vertex of $G$ has even degree, then $G$ is Eulerian.  
+
+
 ----
 ## Planar Graphs
 
