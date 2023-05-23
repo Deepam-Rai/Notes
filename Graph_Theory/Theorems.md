@@ -919,6 +919,212 @@ Other times when $u$ is encountered two edges are accounted similarly as $v$.
 $\therefore$ All vertices has even degree.  
 
 **Claim-II:** If every vertex of $G$ has even degree, then $G$ is Eulerian.  
+Let $T$ be the trail with maximum length in $G$ starting at $u$ and ending at $v$.  
+Suppose $u \not = v$, then $T$ ends at $v$ dictinct from $u$.  
+Now, before ending every previous encounter of $T$ with $v$ would account 2 degrees.  
+And finally to end, $T$ accounted one more degree to enter $v$.  
+Thus $T$ used odd number of degrees of $v$.  
+But $v$ has even degree, thus a degree is unused.  
+$\implies T$ and that unused degree creates a trail that has longer length than $T$.  
+But this is contradiction to our assumption.  
+$\therefore u=v \implies C=T$ is a circuit.  
+
+Now we show that $C$ contains all edges of $G$.  
+Assume $C$ doesnt contain all edges of $G$.  
+Let $xy \in E(G)$ be not in $C$ such that $x \in V(G)$ is in $C$.  
+Let $H= G - E(C)$.  
+Since $C$ used even number of degrees from the vertices  
+$\implies$ Every vertex of  $H$ has even degree.  
+$H$ can be disconnected.  
+But $H$ has at least one nontrivial component $H_1$ containing $xy$.  
+$H_1$ is connected and every vertex of it has even degree.  
+Consider a trail, $C'$ of maximum length in $H_1$ beginining at $x$.  
+Following previous proof, this trail must end at $x$.  
+Now, $C'$ attached tyo $C$ creates a circuit of greater length thatn $C$ in $G$.  
+Which is a contradiction.  
+$\therefore C$ contains all edges of $G$.  
+
+$\therefore C$ is an Eulerian circuit and thus $G$ is an Eulerian graph.  
+
+$$[Proved!]$$
+
+> Hold for multigraph also.
+
+
+>**Corollary 6.2: A connected graph $G$ contains an Eulerian trail iff exactly two vertices of $G$ has odd degree. Furthermore, each Eulerian trail of $G$ begins at one of these odd vertices and ends at the other.**
+
+**Proof:**  
+**Claim-I:** If $G$ contains an Eulerian trail, then exactly two vertices of $G$ has odd degree.  
+Let $T$ be a $u-v$ Eulerian trail for $u \not = v$.  
+Construct graph $H$ from $G$ by adding a vertex $x$ of degree 2, joined with $u$ and $v$.  
+$\therefore T,vx,xu$ forms an Eulerian circuit $C$.  
+$\implies$ All the vertices of $H$ has even degrees.  
+$\implies u,v$ in $H$ has even degrees.  
+$\implies u,v$ in $H-x$ has odd degrees.  
+
+**Claim-II:** If exactly two vertices of $G$ has odd degree, then $G$ contains an Eulerian trail.  
+Let, $u$ and $v$ be vertices having odd degrees.  
+Construct $H$ from $G$ by adding a vertex $x$ of degree 2, joined with $u$ and $v$.  
+$\implies$ All vertices of $H$ has even degree.  
+$\implies H$ contains an Eulerian circuit $C$.  
+Since it's irrelevant which vertec of $H$ is initial(and terminal) vertex, assume $C$ is an $x-x$ circuit.  
+$\because x$ is adjacent to only $u$ and $v$.  
+$\implies H-x =G$ contains an $u-v$ Eulerian trail.  
+
+$$[Proved!]$$
+
+
+----
+>**Let $G$ and $H$ be nontrivial connected graphs. Then $G\times H$ (cartesian product) is Eulerian iff both $G$ and $H$ are Eulerian or every vertex of $G$ and $H$ are odd.**
+
+----
+### Hamiltonian Graphs
+
+>**Theorem 6.4:  
+>Petersen graph is non-Hamiltonian.**
+
+Petersen graph:
+![petersen graph](../Images/Graph_Theory/petersen_graph.png)
+**Proof:**  
+Let $G$ be Petersen graph.  
+Assume to contrary that $G$ contains Hamiltonian cycle $C$.  
+Let $C'=(u_1,u_2,u_3,u_4,u_5)$ be  outer cycle.  
+and $C''=(v_1,v_2,v_3,v_4,v_5)$ be  inner cycle.  
+For each vertex $\in V(G)$ two of the three incident edges necessarily belongs to $C$.  
+
+Now, $C$ contains either none, or some, or all of $u_iv_i$ for $1\le i\le 5$.  
+$\implies$ at least 5 edges of $C$ belongs to either $C'$ or $C''$.  
+$\therefore$ Either $C'$ or $C''$ contains at least three edges of $C$.  
+Without loss of generality, assume $C'$ contain at least three edges of $C$.  
+
+Case-I: All 5 edges of $C'$ belongs to $C$.  
+$\implies C$, which is a cycle, would contain a cycle $C'$ as subgraph.  
+which is not possible.  
+Thus this case is not valid.  
+
+Case-II: 4 consecutive edges of $C'$ belongs to $C$.  
+Without loss of generality, suppose $C$ contains $(u_4u_5,u_5u_1,u_1u_2,u_2u_3)$.  
+$\implies C$ should also contain $u_4v_4$ and $u_3v_3$ in order to reach inner vertices.  
+But then $C$ can be a cycle if:  
+Sub-case-I: $C$ also contains $(v_4v_1,v_1v_3)$  
+Sub-case-II: $C$ also contains $(v_4v_2,v_2v_5, v_5v_3)$  
+But in either case $C$ doesnt contain all vertices of $G$.  
+Thus this case is also not feasible.  
+
+Case-III: $C$ contains 3 edges from $C'$.  
+![Case-III](../Images/Graph_Theory/petersen_graph_nonhamiltonian_proof.png)
+Sub-case-I: All 3 edges are consecutive.  Fig(a)  
+But in such case $C$ can access one remaining vertex $u_i$ in $C'$ by means of only one edge $u_iv_i$.  
+Thus degree of $u_i$ in $C$ = 1, which is not possible.
+
+Sub-case-II: 2 edges are consecutive and one edge stands alone.  Fig(b)  
+Without loss of generality we can take case in fig(b).  
+$\implies C$ would also contain $(u_4v_4,u_3v_3)$.  
+And the only way to join this two ends is adding further $(v_4v_1,v-1v_3)$ in $C$.  
+$\implies C$ contains a cycle, that doesnt contain all vertices of $G$, as a subgraph.  
+which is not possible.
+
+$\therefore$ All possible cases are invalid, thus Petersen graph is a non-Hamiltonian graph.  
+
+$$[Proved!]$$
+
+----
+>**Theorem 6.5:  
+>If $G$ is a Hamiltonian graph, then for every nonempty proper subset $S$ of vertex set of $G$, $k(G-S)\le |S|$.**
+
+**Proof:**  
+Let $S$ be a nonempty proper subset of $V(G)$.  
+Assume $k(G-S)=k$, with corresponding components $G_1,G_2,...,G_k$.  
+$\because G$ is Hamiltonian, let $C$ be Hamiltonian path of $G$.  
+
+Now, everytime $C$ encounters a vertex of $G_i$ for the last time, the next vertex should be from $S$.  
+$\implies k=k(G-S) \le |S|$.  
+
+$$[Proved!]$$
+
+>**Corollary: Let $G$ be a graph. If $k(G-S) \gt |S|$ for some nonempty proper subset $S$ of $V(G)$, then $G$ is non-Hamiltonian.**
+
+Contrapositive statement of the theorem.  
+
+>**Corollary: If $G$ contains cut vertex, then $G$ is non-Hamiltonian.**
+
+----
+>**Theorem 6.6:  
+>Let $G$ be a graph of order $n\ge 3$. If $deg(u) + deg(v) \ge n$ for each non-adjacent pair $u,v \in V(G)$, then $G$ is Hamiltonian.**
+
+**Proof:** (by contradiction)  
+Assume to contrary that $\exists G$ such that $G$ is not Hamiltonian and $deg(u)+deg(v) \ge n$ for each nonadjacent pair of vertices in $G$.  
+Construct $H$ from $G$ by adding more edges to $G$ such that, $H$ is not Hamiltonian but addition of one more edge would make it Hamiltonian.  
+$\because H$ is not complete, $\exists x,y \in V(H)$ such that $xy \notin E(H)$.  
+$\implies deg(x)+deg(y) \ge n$  
+$\implies H+xy$ is Hamiltonian.  
+$\implies H$ contains a Hamiltonian path $x-y$, say $P$.  
+Let $P=(x=x_1,x_2,...,x_n=y)$.  
+We claim that whenever $x_1x_i$ is an edge in $H$, $x_{i-1}x_n$ is not edge in $H$.  
+Because if not, then there would exist a Hamiltonian cycle in $G$: $(x-1,x_i,x_{i+1},...,x_n,x_{i-1},x_{i-2},...,x_1)$.  
+which is impossible.  
+$\therefore$ For each vertex in $x_2,...,x_n$ that is adjacent to $x_1$, $\exists$ a vertex in $x_1,...,x_{n-1}$ that is not adjacent to $x_n$.  
+$\implies deg(x_n) \le (n-1)-deg(x_1)$  
+$\implies deg(x_1)+ deg(x_n) \le n-1$  
+which is a contradiction.  
+
+$$[Proved!]$$
+
+>**Corollary 6.7: Let $G$ be a graph of order $n \ge 3$. If $deg(v) \ge \frac{n}{2}$ for each vertex $v \in V(G)$, then $G$ is Hamiltonian.**
+
+**Proof:**  
+$\therefore$ For any two non-adjacent vertices $x,y \in V(G)$  
+$deg(x) + deg(y) \ge \large \frac{n}{2} + \frac{n}{2} \ge n$,  
+$\therefore$ By theorem $G$ is Hamiltonian.
+
+$$[Proved!]$$
+
+----
+>**Theorem 6.8:  
+>Let $u$ and $v$ be nonadjacent vertices in a graph $G$ of order $n$ such that $deg(u)+deg(v) \ge n$. Then $G+uv$ is Hamiltonian iff $G$ is Hamiltonian.**
+
+**Proof:**  
+**Claim-I:** If $G+uv$ is Hamiltonian, then $G$ is Hamiltonian.  
+Assume to contrary that $G$ is not Hamiltonian.  
+$\because G+uv$ is Hamiltonian, $G$ contains a Hamiltonian path $u-v$.  
+$\because deg_G(u)+deg_G(v) \ge n$, according to theorem 6.6, $G$ should contain a Hamiltonian cycle.  
+which is a contradiction.  
+
+**Claim-II:** If $G$ is Hamiltonian, then $G+uv$ is Hamiltonian.  
+Let, $C$ be the Hamiltonian cycle in $G$.  
+$\because C$ exists in $G+uv$, and $V(G+uv)=V(G)$  
+$\implies G+uv$ is also Hamiltonian.  
+
+$$[Proved!]$$
+
+----
+>**Theorem 6.9:  
+>A graph is Hamiltonian iff it's closure is Hamiltonian.**
+
+----
+>**Theorem 6.11:  
+>Let $G$ be a graph of order $n\ge 3$. If for every integer $j$ with $1\le j \le \frac{n}{2}$, the number of vertices of $G$ with degree at most $j$ is less that $j$, then $j$ is Hamiltonian.**
+
+**Proof:**  
+We show $C(G)$ is Hamiltonian.  
+Assume to contrary that its not so.  
+Let $u,v \in V(C(G))$ be non-adjacent vertices such that their degree sum is maximum.  
+And we know, $\deg_{C(G)}(u) + \deg_{C(G)}(v) \le n-1$.  
+Further, without loss of generality assume that $k=\deg_{C(G)}(u) \le \deg_{C(G)}(v)$.  
+$\therefore k \le \large \frac{n-1}{2}$  
+Also, $\deg_{C(G)}(v) \le n-k-1$  ------(a)
+Let $W$ be set of all vertices distinct from $v$ that are non-adjacent to $v$.  
+$\therefore u \in W$.  
+Note that $\forall x \in W$ $\deg_{C(G)}(x) \le k$, if not then  
+$\deg_{C(G)}(x) + \deg_{C(G)}(v) \ge \deg_{C(G)}(u) + \deg_{C(G)}(v)$  
+which would contradict our basic assumption.  
+
+$\therefore$ Every vertex of $W$ has degree atmost $k$.  
+And by hypothesis(in theorem) $|W| \le k-1$,  
+$\implies \deg_{C(G)}(v) \ge (n-1)-(k-1) = n-k$  
+which is a contradiction to (a).
+
+$$[Proved!]$$
 
 
 ----
@@ -1120,3 +1326,67 @@ $$\gamma(K_n)= \large \ceil{\frac{(n-3)(n-4)}{12}}$$
 >**Theorem 10.2:  
 >A graph $G$ has chromatic number 2 iff $G$ is a nonempty bipartite graph.**
 
+----
+>**Theorem 10.5:  
+>For every graph $G$ of order $n$,  
+
+$$\chi(G) \ge \omega(G) \text{ and } \chi(G) \ge \frac{n}{\alpha(G)}$$
+
+**Proof:**  
+Let $H$ be a clique of $G$ having order $\omega(G)$.  
+$\implies \chi(H) = \omega(G)$  
+$\because \chi(H) \le \chi(G) \implies \omega(G) \le \chi(G)$  
+
+Now, let $k= \chi(G) \implies$ $G$ can be partitioned into $k$ independent sets $V_1,V_2,...,V_k$.  
+$\therefore n = |V(G)| = |V_1 \cup V_2 \cup ... \cup V_k| = \sum_{i=1}^k V_i \le k\alpha(G)$  
+$\implies k \ge \frac{n}{\alpha(G)}$  
+$\therefore \chi(G) \ge \large \frac{n}{\alpha(G)}$  
+
+$$[Proved!]$$
+
+----
+>**Theorem 10.7:  
+>For every graph $G$,  
+>$\chi(G) \le 1 + \Delta(G)$**
+
+**Proof:**  
+Let $V(G) = \set{v_1,v_2,...,v_n}$.  
+Define coloring $c: V(G) \to N$ recursively as follows:
+$c(v_1)=1$  
+For $1\le i \le n$, once $c(v_i)$ has been defined, define $c(v_{i+1})$ as the positive smallest integer not already used to color any of the neighbours of $v_{i+1}$.  
+$\because v_{i+1}$ has $\deg(v_{i+1})$ neighbours,  
+$\therefore 1,2,...,1+\deg(v_{i+1})$ is available for $c(v_{i+1})$.  
+$\implies c(v_{i+1}) \le \deg(v_{i+1}) +1$  
+If maximum color assigned to vertices is $v_j$, then  
+$\chi(G) \le c(v_j) \le 1 + \deg(v_j) \le 1 + \Delta(G)$  
+
+$$[Proved!]$$
+
+----
+>**Theorem 10.8: Brooks' Theorem  
+>For every connected graph $G$ that is not an odd cycle or a complete graph,  
+>$\chi(G) \le \Delta(G)$.**
+
+----
+>**Theorem 10.9:  
+>For every graph $G$,  $\chi(G) \le 1 + \max\set{\delta(H)}$,  
+>where the maximum is taken over all the induced subgraph $H$ of $G$.**
+
+**Proof:**  
+Let $k$ be the maximum of minimum degrees in all the induced subgraphs of $G$.    
+Let $G_n = G$, and let $\deg(v_n)=\delta(G)$ for $v_n \in V(G_n)$. Note $\deg(v_n) \le k$.  
+Let $G_{n-1} = G- v_n$. $G_{n-1}$ also contains a vertex, say $v_{n-1}$ such that $deg_{G_{n_1}}(v_{n-1}) \le k$.  
+Continuing in this manner construct sequence $v_1,v_2,...,v_n$ of all vertices of $G$ and corresponding sequence of induced subgraphs $G_1,G_2,...,G_n$.  
+
+Now, define coloring $c: V(G) \to N$ recursively as follows:  
+$c(v_1)=1$  
+For $1 \le i \le n$, once $c(v_i)$ is defined, define $c(v_{i+1})$ as smallest positive integer not already used to color any of the neighbours of $v_{i+1}$.  
+
+$\because v_{i+1}$ has $\deg_{G_{i+1}}(v_{i+1})$ neighbours among $v_1,v_2,...,v_i$,  
+and $\deg_{G_{i+1}}(v_{i+1}) \le k$, at least one of the integers $1,2,...,k+1$ is available for $c(v_{i+1})$.  
+$\implies$ Every vertex of $G$ is assigned one of the colors $1,2,...,1+k$.  
+$\therefore \chi(G) \le 1+ k = 1 + max\set{\delta(H)}$  
+
+$$[Proved!]$$
+
+----

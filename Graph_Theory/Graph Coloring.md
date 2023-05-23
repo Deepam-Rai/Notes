@@ -25,4 +25,6 @@
 
 - If $G$ contains odd-cycle $\chi(G)\ge 3$.
 - If $G$ contains even-cycle $\chi(G)\ge 2$.
-	
+- $\chi(G) \ge \omega(G) \text{ and } \chi(G) \ge \frac{n}{\alpha(G)}$
+- 
+
