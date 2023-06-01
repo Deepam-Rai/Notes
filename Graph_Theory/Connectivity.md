@@ -43,7 +43,7 @@ Relationships:
 
 >**Harary graphs $H_{r,n}$:** A graph, for integers $2 \le r \lt n$, with order $n$, is *nearly* r-regular, has size $m$ and $\large \kappa(H_{r,n}) = r = \floor{\frac{2m}{n}}$.  
 
->**k'th power:** A graph $G^k$ is said to be $k'th$ power of $G$ with $V(G^k)=V(G)$, such that $uv \in V(G^k)$ if $1\le d_G(u,v) \le k$.
+>**k'th power:** A graph $G^k$ is said to be $k'th$ power of $G$ with $V(G^k)=V(G)$, such that $uv \in E(G^k)$ if $1\le d_G(u,v) \le k$.
 - $G^2, G^3$ are called square and cube of G, respectively.
 - [Theorem:](./Theorems.md) If $G$ of order $n \ge 3$ is connected, then $G^2$ is 2-connected.
 - 

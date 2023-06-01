@@ -1,7 +1,7 @@
 # ONLY SIMPLE GRAPHS
 ----
 ### Graphs
-A graph G is an ordered pair of vertex nonempty set V and edge set E, denoted as G(V,E),   where  
+A graph G is an ordered pair of vertex set V and edge set E, denoted as G(V,E),   where  
 	V is a finite non-empty set of objects.  
 	E is a two element subset of V.  
 
@@ -41,7 +41,7 @@ Vertices $u,v\in V$ are said to be adjacent to each other if edge  $uv\in E$.
 For $a,b\in V(D)$,  "a is adjacent to b" or "b is adjacent from a" if $(a,b)\in E(G)$.
 
 ### Eccentricity of the vertex
-Eccentricity of vertex $u=max\set{length(Path(u,v)) \forall v\in V(G)\ and\ u\not = v}$
+Eccentricity of vertex $u=\max\set{length(Path(u,v)) \forall v\in V(G)\ and\ u\not = v}$
 
 ### Incident
 If an edge $e\in E$ pairs vertex $v\in V$ with some other vertex then e and v are said to be incident with each other.
@@ -154,10 +154,10 @@ A graph with order greater than 1.
 
 ### Labelled graph
 A graph with vertices labelled.
-- Used when we are interested with just the structure of the graph.
 
 ### Unlabelled graph
 A graph with no labelling.
+- Used when we are interested with just the structure of the graph.
 
 
 ### Subgraph of graph G
@@ -174,7 +174,7 @@ Clique is a complete subgraph of $G$.
 - **Clique number $\omega(G)$:** Order of the largest clique in $G$.
 
 ### Spanning subgraph of G
-A subgraph $H\subseteq G$ such that $V(H)=V(G)$ and $E(H)\subset E(G)$.
+A subgraph $H\subseteq G$ such that $V(H)=V(G)$ and $E(H)\subseteq E(G)$.
 - Drop some edges from G to get H.
 - G is a spanning subgraph of G+e, for some new edge e.
 
@@ -211,7 +211,7 @@ A di-graph is an ordered pair of vertex set V and edge set E, denoted by D(V,E),
 	E $\subseteq V\times V$ , an ordered two element subset.
 
 #### Oriented Graph
-Digraph with no paralled edges.
+Digraph with no parallel edges.
 
 ### Pseudograph
 Where loops are allowed.
@@ -247,10 +247,12 @@ All vertices have degree k.
 - There can be no odd-regular graph with odd vertices.
 #### 3-Regular graph
 Also known as cubic graph.
-#### Peterson Graph
-3-Regular graph with 10 vertices.
+#### Petersen Graph
+A unique 3-Regular graph with 10 vertices.  
+Petersen graph:
+![pertersen graph](../Images/Graph_Theory/petersen_graph.png)
 #### $H_{r,n}$ Harary Graphs
-r-regular graph with n vertices such that:
+*nearly* r-regular graph with n vertices such that:
 - we can arrange the nodes in a circle such that
 	- for even n: each node is joined to $\frac{r}{2}$ nodes on each side.
 	- for odd n: each node joined to $\frac{r-1}{2}$ on each side and to the node opposite to it.
@@ -271,7 +273,7 @@ $x,y\in V_i(G) \Leftrightarrow xy\notin E(G)$ for i=1,2.
 If every two vertex in different partites are joined by an edge.  
 
 ### Star graph
-If order of either U or V is 1.
+$K_{s,t}$ such that either $s$ or $t$ is 1.  
 
 ### Isomorphic Graphs $G\cong H$
 Labelled graphs $G\cong H$ iff $\exists$ one-to-one correspondence $\phi$ from V(G) to V(H) such that  $uv\in E(G) \iff \phi(u)\phi(v)\in E(H)$.
@@ -365,7 +367,7 @@ Acyclic graphs.
 ## Points
 - V and E are also represented as V(G) and E(G) respectively.
 - $V\not=\phi$  => Order of every graphs is at least 1.
-- Graphs G and H are equal if $V(G)=V(H) and E(G)=E(H).
+- Graphs G and H are equal if $V(G)=V(H)$ and $E(G)=E(H)$.
 - Word graph of the Set of Words: is a graph model G whose vertices are the words and two words are adjacent if they can be transformed into each other by any of following rules:
 	1.  Interchanging two letters.
 	2. Replacing a letter by another letter.

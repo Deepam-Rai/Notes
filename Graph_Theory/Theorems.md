@@ -1,4 +1,7 @@
 ----
+## Degrees
+
+
 > **Theorem 2.1 (The First Theorem of Graph Theory)  
 > If G is a graph of size $m$ then,**  
 > $$\large \sum_{v\in V(G)}{deg(v_i)}=2m$$
@@ -145,6 +148,9 @@ $\implies s_1$ is graphical.
 $$[Proved!]$$
 
 ----
+## Isomorphic Graphs
+
+
 > **Theorem 3.1**
 > $$G\cong H \iff \bar G \cong \bar H$$
 
@@ -218,7 +224,7 @@ $\implies$ If all vertices in $G$ are connected by a path, then corresponding ve
 $\implies$ If G is connected H is also connected.
 
 Now, $\exists \phi^{-1}: V(H) \to V(G)$, since  $\phi$ is a bijective function.  
-Similaryly, we can show that  
+Similarly, we can show that  
 If $H$ is connected, then $G$ is also connected.  
 $$[Proved!]$$
 
@@ -261,6 +267,10 @@ $$\therefore \text{Isomorphism is an equivalence relation}.$$
 $$[Proved!]$$
 
 ----
+## Bridges
+
+
+
 > **Theorem 4.1:  
 > An edge $e$ of graph $G$ is a bridge iff $e$ lies on no cycle of G.**
 
@@ -290,10 +300,12 @@ $\implies G$ also contains $Path(u,v)$ that is distinct from $e$.
 Now, joining $Path(u,v)$ and $e$ will form a cycle containing $e$.  
 $\therefore e$ lies in a cycle in G.  
 
-Thus, combining claim-I and claim-II,  
 $$[Proved!]$$
 
 ----
+## Trees
+
+
 
 >**Theorem 4.2:
 >A graph G is a tree iff every two vertices of G are connected by a unique path.**
@@ -304,10 +316,9 @@ $$[Proved!]$$
 A path exists between every two vertices because $G$ is a tree.  
 Now, we show that the path is unique.  
 Assume the contrary, $u,v \in V(G)$ are connected by two distinct path $P_1$ and $P_2$.  
-$\implies$ A cycle is formed by some or all vertices of $P_1$ and $P_2$ in $P_1 + P_2$.  
+$\implies$ A cycle is formed by some or all vertices of $P_1$ and $P_2$.  
 $\implies G$ cannot be a tree.
 Hence the contradiction.  
-$\therefore$ Every two vertices is connected by a unique path.
 
 **Claim II:** If every two vertices of $G$ are connected by unique path then $G$ is a tree.  
 $\because$ Every two vertices have a path connecting them $\implies G$ is connected.  
@@ -318,7 +329,6 @@ Which is a contradiction.
 $\therefore G$ is connected and acyclic.  
 $\implies G$ is a tree.
 
-Together from Claim-I and Claim-II, Theorem holds.  
 $$[Proved!]$$
 
 ----
@@ -432,7 +442,7 @@ Hence the contradiction.
 
 ----
 **Theorem 4.8:  
-Let G be a graph of order $n$ and size $m$. If $G$ satisfies any two of following properties:  
+Let G be a graph of order $n$ and size $m$. If $G$ satisfies any two of following properties:**  
 1. $G$ is connected.
 2. $G$ is acyclic.
 3. $m=n-1$
@@ -476,17 +486,17 @@ For $k=1$,
 $\because$ every graph contains a vertex.  
 Tree of order $1$ is isomorphic to all $G$ with $\delta(G) \ge 0$.  
 For $k=2$,  
-$\because \exists$ an edge joining two vertices in $G$.  
+$\because \exists$ an edge joining two vertices in $G$ with $\delta(G) \ge 1$.  
 Tree of order $2\ (P_2)$  is isomorphic to all $G$ with $\delta(G) \ge 1$.  
 
 Assume the theorem is true for $k \ge 3$.  
-i.e., A tree of order $k$ is isomorphic to a subgraph of $G$ with $\delta(G)\ge k$.  
+i.e., A tree of order $k$ is isomorphic to a subgraph of $G$ with $\delta(G)\ge k-1$.  
 
 For $k+1$,  
 Let $T$ be a tree of order $k+1$ and $G$ be a graph with $\delta(G) \ge k$.  
 $\because$ Every non-trivial tree has at-least two end vertices.
 Let $v$ be an end vertex in $T$, such that $u,v \in V(T)$ and $uv \in E(T)$.  
-$\implies T-v$ is a tree of order $(k)$.  
+$\implies T-v$ is a tree of order $k$.  
 $\because$ by assumption a tree of order $k$ is isomorphic to a subgraph of $G$.  
 Let $T-v \cong H$ where $H$ is subgraph of  $G$.  
 Now, $deg_{H}(u) \le k-1$.  
@@ -499,6 +509,9 @@ $\because$ Theorem is true for $k=1,2 \implies$ Theorem is true for integers $k 
 $$[Proved!]$$ 
 
 ----
+## Minimum Spanning Tree
+
+
 > **Theorem 4.10:**  
 > Every connected graph contains a spanning tree.
 
@@ -583,7 +596,8 @@ Which contradicts assumption that $H' \in H$ is MST with max common edges with $
 $$[Proved!]$$
 
 ----
-## Connectivity
+## Cut-Vertices
+
 
 > **Theorem 5.1:  
 > A vertex $v$ incident with a bridge in a connected graph $G$ is cut vertex iff $deg(v)\ge 2$.**
@@ -661,6 +675,9 @@ $\implies u,v$ are not cut vertices.
 $$[Proved!]$$
 
 ----
+## Blocks
+
+
 >**Theorem 5.7:  
 >A graph of order $n\ge 3$ is nonseparable iff every two vertices lie on a common cycle.**
 
@@ -678,8 +695,9 @@ $\therefore$ cut vertex cannot exist, or $G$ is non-separable.
 **Claim II:** If $G$ is nonseparable, then every two vertices lie on a common cycle.  
 Assume to contrary that $\exists u,v \in V(G)$ such that they dont lie on a common cycle.  
 **Case I:** $d(u,v)=1$  
-This is not possible because it means $uv \in E(G)$ and there exist no other $u-v$ path.  
+$\implies$ $uv \in E(G)$ and there exist no other $u-v$ path.  
 $\implies uv$ is a bridge $\implies G$ is separable.  
+which is a contradiction.  
 
 **Case II:** $d(u,v) \ge 2$  
 Let $P=(u=v_0,v_1,...,v_{k-1},v_k=v)$.  
@@ -689,7 +707,6 @@ $\exists v-u$ path, say $Q$, that doesnt contain $v_{k-1}$.
 $\because u\in C$ and $u\in Q$, there exist a first vertex $x$ of $Q$ that is on $C$.  
 Let $C'$ be $v_{k-1}-x$ subpath of $C$, which would contain $u$.  
 And $Q'$ be $v-x$ subpath of $Q$.  
-
 $\therefore v_kv_{k-1} + C' + Q'$ forms a cycle that contains $v$ and $u$.  
 which is a contradiction.  
 
@@ -720,7 +737,7 @@ Let, $P=u-v$ path that does not contain $e$.
 Let, $x$ be the first vertex of $P$ common with $Q$.  
 and let $y$ be the last vertex of $P$ common with $Q$.  
 Let $P'$ be $x-y$ path in $Q$ that contains $g$.  
-$\therefore P$ and $P'$ produces a cycle containing $e$ and $g$.  
+$\therefore e, P$ and $P'$ produces a cycle containing $e$ and $g$.  
 $\implies eRg$  
 
 $$[Proved!]$$
@@ -757,6 +774,9 @@ Hence, contradiction.
 $$[Proved!]$$
 
 ----
+## Connectivity
+
+
 >**Theorem 5.10:  
 >For every positive integer $n$, $\lambda(K_n) =n-1$.**
 
@@ -852,7 +872,7 @@ $\kappa(G)=2$:
 Let $U=\set{u,v}$ is vertex cut, $|U|=2$.  
 Let $u,v$ be joined to $u',v'$ respectively.  
 Case I: $u',v'$ are present in the same component of $G-U$.  
-$\therefore X=\set{uu', vv'}$ is a edge-cut $\implies $\lambda(G)=2$.  
+$\therefore X=\set{uu', vv'}$ is a edge-cut $\implies \lambda(G)=2$.  
 Case II: $u',v'$ belongs to different components of $G-U$.  
 $u$ and $v$ cannot be joined because, if they were then we go to case I.  
 $\because uv \notin E(G)$  
@@ -882,8 +902,7 @@ $$[Proved!]$$
 ----
 > **Theorem 5.15:  
 > For every two integers $r$ and $n$ with $2 \le r \lt n$, $\kappa(H_{r,n})=r$.**
-
-#TODO verify thorem statement
+#TODO check statement
 
 **Proof:**  
 **Case I:** $r$ is even or $r$ is odd and $n$ is even.  
@@ -948,7 +967,7 @@ $\therefore C$ is an Eulerian circuit and thus $G$ is an Eulerian graph.
 
 $$[Proved!]$$
 
-> Hold for multigraph also.
+> Holds for multigraph also.
 
 
 >**Corollary 6.2: A connected graph $G$ contains an Eulerian trail iff exactly two vertices of $G$ has odd degree. Furthermore, each Eulerian trail of $G$ begins at one of these odd vertices and ends at the other.**
@@ -990,7 +1009,6 @@ Let $G$ be Petersen graph.
 Assume to contrary that $G$ contains Hamiltonian cycle $C$.  
 Let $C'=(u_1,u_2,u_3,u_4,u_5)$ be  outer cycle.  
 and $C''=(v_1,v_2,v_3,v_4,v_5)$ be  inner cycle.  
-For each vertex $\in V(G)$ two of the three incident edges necessarily belongs to $C$.  
 
 Now, $C$ contains either none, or some, or all of $u_iv_i$ for $1\le i\le 5$.  
 $\implies$ at least 5 edges of $C$ belongs to either $C'$ or $C''$.  
@@ -1141,7 +1159,7 @@ $\therefore n-m+r = (n)-(n-1)+(1)=2$, the theorem holds.
 Thus, we need only be concerned with connected graphs that are not trees.  
 Let, $G$ be a connected graph of smallest size for which theorem does not hold.  
 Let $G$ be having order $n$, size $m$ and $r$ regions such that $n-m+r \not =2$.
-$\because$ $G$ is not a tree $\implies \exists$ and edge $e$ that is not a bridge.  
+$\because$ $G$ is not a tree $\implies \exists$ an edge $e$ that is not a bridge.  
 $\implies G-e$ is connected and has one less region.  
 $\because G-e$ has size less than $m \implies G-e$  adheres to the theorem.  
 $\therefore (n)-(m-1)+(r-1)=2$  
@@ -1216,7 +1234,7 @@ $$[Proved!]$$
 
 ----
 >**Theorem 9.5:  
->The graph $K_{3,3}$ is nonplanar.
+>The graph $K_{3,3}$ is nonplanar.**
 
 **Proof:**(By contradiction)  
 $\therefore n=6, m=9$  
@@ -1240,10 +1258,9 @@ $$[Proved!]$$
 
 (A necessary and sufficient condition.)
 
-> **Corollary:**  If $G$ contains  
+> **Corollary:**  $G$ is planar if $G$ contains  
 > 1. at most 4 vertices of degree 4 or more and 
-> 2. $G$ contains at most 5 vertices of degree 3 or more,  
-> then $G$ is planar.
+> 2. $G$ contains at most 5 vertices of degree 3 or more. 
 
 ----
 > **Theorem 9.9:  
@@ -1328,7 +1345,7 @@ $$\gamma(K_n)= \large \ceil{\frac{(n-3)(n-4)}{12}}$$
 
 ----
 >**Theorem 10.5:  
->For every graph $G$ of order $n$,  
+>For every graph $G$ of order $n$,**  
 
 $$\chi(G) \ge \omega(G) \text{ and } \chi(G) \ge \frac{n}{\alpha(G)}$$
 
@@ -1375,7 +1392,7 @@ $$[Proved!]$$
 **Proof:**  
 Let $k$ be the maximum of minimum degrees in all the induced subgraphs of $G$.    
 Let $G_n = G$, and let $\deg(v_n)=\delta(G)$ for $v_n \in V(G_n)$. Note $\deg(v_n) \le k$.  
-Let $G_{n-1} = G- v_n$. $G_{n-1}$ also contains a vertex, say $v_{n-1}$ such that $deg_{G_{n_1}}(v_{n-1}) \le k$.  
+Let $G_{n-1} = G- v_n$. $G_{n-1}$ also contains a vertex, say $v_{n-1}$ such that $deg_{G_{n-1}}(v_{n-1}) \le k$.  
 Continuing in this manner construct sequence $v_1,v_2,...,v_n$ of all vertices of $G$ and corresponding sequence of induced subgraphs $G_1,G_2,...,G_n$.  
 
 Now, define coloring $c: V(G) \to N$ recursively as follows:  
