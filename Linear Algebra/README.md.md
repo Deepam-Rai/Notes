@@ -1,16 +1,17 @@
 Book: 
 >_Introduction To Linear Algebra by Gilbert Strang_  
 
-1. Vectors
-2. Matrix multiplication
-3. Vector space
-4. LU factorization
-7. Inverse and transpose
-8. Basis
-9. Orthogonality
-10. Four fundamental subspaces
-11. Rectangular matrices
-12. Linear transformations
-13. Solving Ax=b
-14. Least squares
+1. [Basics of vectors](./Vectors%20Basics.md)
+2. Vectors
+3. Matrix multiplication
+4. Vector space
+5. LU factorization
+6. Inverse and transpose
+7. Basis
+8. Orthogonality
+9. Four fundamental subspaces
+10. Rectangular matrices
+11. Linear transformations
+12. Solving Ax=b
+13. Least squares
 #TODO revise and add

@@ -1,9 +1,5 @@
 {
   "spellcheck": true,
-  "spellcheckLanguages": [
-    "en-GB",
-    "en-GB-oxendict",
-    "en-US"
-  ],
+  "spellcheckLanguages": null,
   "alwaysUpdateLinks": true
 }

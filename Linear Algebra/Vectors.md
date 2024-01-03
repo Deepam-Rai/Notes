@@ -1,3 +1,5 @@
+Basics of vectors: [Basics of vectors](./Vectors%20Basics.md)
+
 A quantity that has **magnitude** and **direction**.  
 A vector $v$ in $\mathbb{R}^n$  is denoted as $v=[v_1, v_2,...,v_n]^T$
 

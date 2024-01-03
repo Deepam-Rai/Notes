@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "a177b17c9349fbb2",
+        "id": "9f710b16eb2d9c3f",
         "type": "tabs",
         "children": [
           {
-            "id": "f4a44a70fa531977",
+            "id": "e44b4237a0488da1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DL/Reinforcement Learning.md",
+                "file": "Offensive Programming/Kits.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a0bc301120b8caa7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Latex.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c0ca6d7eb736b59d",
@@ -94,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DL/Reinforcement Learning.md",
+                "file": "Offensive Programming/Kits.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DL/Reinforcement Learning.md",
+                "file": "Offensive Programming/Kits.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DL/Reinforcement Learning.md"
+                "file": "Offensive Programming/Kits.md"
               }
             }
           }
@@ -156,35 +167,41 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f4a44a70fa531977",
+  "active": "e44b4237a0488da1",
   "lastOpenFiles": [
+    "Offensive Programming/Cracking WPA and WPA2.md",
+    "Offensive Programming/nmap.md",
+    "Offensive Programming/README.md.md",
+    "Linear Algebra/Vectors Basics.md",
+    "Markdown cheatsheet.md",
+    "Images/Linear Algebra/divide_internal_section_vector.png",
+    "Latex.md",
+    "Offensive Programming/Packages installed.md",
+    "Offensive Programming/Basic commands.md",
+    "Linear Algebra/README.md.md",
+    "Linear Algebra/Orthogonality.md",
+    "Linear Algebra/Vectors.md",
+    "Linear Algebra/Solving Ax=b.md",
+    "README.md",
+    "Offensive Programming/Basic notes.md",
+    "Prompt Engineering/README.md.md",
+    "Offensive Programming/Kits.md",
+    "Prompt Engineering/Chatbots.md",
+    "Offensive Programming",
+    "Prompt Engineering/Guidelines.md",
+    "Prompt Engineering/Expanding.md",
+    "Prompt Engineering/Transforming.md",
+    "Prompt Engineering/Inferring.md",
+    "Prompt Engineering/Summarize.md",
+    "Prompt Engineering/l2-guidelines.ipynb",
+    "Prompt Engineering/Unconfirmed 334364.crdownload",
+    "Prompt Engineering",
+    "DL/Reinforcement Learning.md",
     "Images/DL/RL.png",
     "Images/DL/RL_MDP.png",
     "Big Data/Hadoop.md",
-    "DL/Reinforcement Learning.md",
     "DL/Memory Augmented Models.md",
     "DL/RNN.md",
-    "DL/CNN Theory.md",
-    "DL/Activation Functions.md",
-    "Cloud_Computing/Chapter 2 - Principles of Parallel and Distributed Computing.md",
-    "Cloud_Computing/Chapter 1 - Foundations.md",
-    "Graph_Theory/Theorems.md",
-    "Graph_Theory/Four Color Problem.md",
-    "Graph_Theory/Extras.md",
-    "Graph_Theory/Definitions.md",
-    "Graph_Theory/Algorithms.md",
-    "DL/Training.md",
-    "DL/Special Architectures.md",
-    "DL/Preventing overfitting.md",
-    "DL/Perceptron.md",
-    "DL/Feed Forward Neural Network.md",
-    "DL/Definitions.md",
-    "Cloud_Computing/Chapter 4 - Cloud Computing Architecture.md",
-    "Cloud_Computing/Chapter 3 - Virtualization.md",
-    "Big Data/Map Reduce.md",
-    "Index.md",
-    "Common/Formula.md",
-    "Big Data/Finding Similar Items.md",
     "Common",
     "Big Data",
     "Images/DL/dropout.png",
@@ -195,14 +212,8 @@
     "Images/Linear Algebra",
     "Images/Linear Algebra/fundamental_subspaces.png",
     "Regression Methods",
-    "Vedas",
-    "Images/RASA",
     "Images/RASA/RASA_file_structure.png",
-    "RASA",
-    "Inferential Statistics",
     "Images/Cloud Computing/Cloud_Reference_Model.png",
-    "Pasted image 20230320175303.png",
-    "Pasted image 20230320175250.png",
-    "Images/ML/ML_types.png"
+    "Pasted image 20230320175303.png"
   ]
 }
