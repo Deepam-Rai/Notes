@@ -1,6 +1,6 @@
 Official doc: https://kubernetes.io/docs/reference/kubectl/  
 
-Commonly used commands:  
+## Commonly used commands:  
 
 | **Command** | **Purpose** |
 | ---- | ---- |
@@ -23,4 +23,12 @@ Commonly used commands:
 | `kubectl delete service <name>` | Delete deployed service |
 | `kubectl delete deployment <deployment name>` | Delete deployment |
 | `minikube stop` | Stop minikube cluster |
-|  `minikube delete` | Delete the minikube VM |
+| `minikube delete` | Delete the minikube VM |
+
+
+Others:
+
+|  |  |
+| ---- | ---- |
+| `kubectl get pods -o wide` | Show IP, Gates etc. |
+| `kubectl describe svc <service name>` | Description of the services. |

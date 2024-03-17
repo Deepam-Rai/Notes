@@ -15,7 +15,7 @@ Consists of resources:
 # Practice in localhost
 
 ## Minikube
-Minikube is lightweight implementation of kubernetes that creates VM on local machine and deploys a simple cluster containing only one node.
+Minikube is lightweight implementation of kubernetes that creates VM on local machine and deploys a simple cluster.
 ## [Hello Minikube](https://kubernetes.io/docs/tutorials/hello-minikube/)
 
 Tutorial: https://kubernetes.io/docs/tutorials/hello-minikube/  
