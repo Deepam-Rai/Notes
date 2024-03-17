@@ -1,0 +1,43 @@
+
+### Setting to monitor mode
+#### Checking available network interfaces
+```shell
+sudo airmon-ng
+```
+
+#### Put the interface in monitor mode
+```shell
+sudo airmon-ng start <interface>
+```
+Renames interface. Use the new name further ahead.
+
+## Start dump
+```shell
+sudo airodump-ng <interface>
+```
+
+## Common airodump flags
+
+### Flags while starting airodump
+```shell
+sudo airodump-ng <interface> ...flags and values...
+```
+
+| Flags       | Use                          |
+| ----------- | ---------------------------- |
+| `-c`        | Specify channel              |
+| `-bssid`    | Specify bssid                |
+| `-w <name>` | Capture the output to files. |
+| `-b`        | Specify bands to monitor     |
+|             |                              |
+
+### Key commands used while airodump is running
+
+| Key Commands | Use                                                                            |
+| ------------ | ------------------------------------------------------------------------------ |
+| `tab`        | Make the dump list interactive                                                 |
+| `a`          | Filter only stations, devices, etc                                             |
+| `m`          | Color code selected AP, use `tab` first                                        |
+| `s`          | Sort by different column in dump. The corresponding column is indicated on top |
+| `p`          | Disable colored display                                                        |
+|              |                                                                                |

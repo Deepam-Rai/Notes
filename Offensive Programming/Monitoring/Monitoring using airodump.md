@@ -1,27 +1,5 @@
-
-| Command | Purpose |
-| -- | -- |
-| `ifconfig` | current network config |
-| `iwconfig` | current wired connections |
-
-
-### Changing mac address
-```shell
-ifconfig <interface> down;
-ifconfig <interface> hw ether <ne:w:v:al:ue>;
-ifconfig <interface> up;
-```
-- reverts back on reboot.
-
-### Setting to monitor mode
-```shell
-ifconfig <interface> down;
-airmon-ng check kill; #not compulsory; killing process that may interfere
-iwconfig <interface> mode monitor;
-ifconfig <interface> up
-```
-
 ### Monitoring using `airodump-ng`
+
 >monitor mode should be set
 
 ```shell

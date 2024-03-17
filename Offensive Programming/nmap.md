@@ -44,13 +44,6 @@ nmap <hostname>
 ```
 nmap -sn <ip address>/<mask>
 ```
-- Hosts often block IP based ping packets.
-
-#### ARP scans
-```
-
-```
-
 
 #### Port scan
 ```
