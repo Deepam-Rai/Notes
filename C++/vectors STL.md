@@ -37,23 +37,24 @@ std::vector<int> vec(5, 7);
 | `.reserve()` | reserving space |
 
 
-| Operations                                                                      | Use                              |
-| ------------------------------------------------------------------------------- | -------------------------------- |
-| `.push_back (value);`                                                           | Add element at end               |
-| `.insert (iterator position, const value_type& val);`                           | Insert single value              |
-| `.insert (const_iterator position, size_type n, const value_type& val)`         | Insert same value repeatedly     |
-| `.insert (iterator position, InputIterator first, InputIterator last)`          | Input range                      |
-| `.insert (iterator position, initializer_list<value_type> il)`                  | Using initializer list           |
-| `.emplace( const_iterator pos, Args&&... args );`                               | Insertion                        |
-| `.at(index)`                                                                    | Accessing element                |
-| `vec[index]`                                                                    | Accessing element                |
-| `.at(index) = <new value>`                                                      | Assigning value                  |
-| `.pop_back()`                                                                   | Remove last element              |
-| `.clear()`                                                                      | Remove all elements              |
-| `.erase(position)`                                                              | Deletion from specified position |
-| `.erase(starting_pos, ending_pos)`                                              | Deletion in range                |
-| `std::merge(vec1.begin(), vec1.end(),vec2.begin(), vec2.end(), merged.begin())` | Merging vectors                  |
-|                                                                                 |                                  |
+| Operations                                                                      | Use                                                             |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `.push_back (value);`                                                           | Add element at end                                              |
+| `.insert (iterator position, const value_type& val);`                           | Insert single value                                             |
+| `.insert (const_iterator position, size_type n, const value_type& val)`         | Insert same value repeatedly                                    |
+| `.insert (iterator position, InputIterator first, InputIterator last)`          | Input range                                                     |
+| `.insert (iterator position, initializer_list<value_type> il)`                  | Using initializer list                                          |
+| `.emplace( const_iterator pos, Args&&... args );`                               | Insertion                                                       |
+| `.at(index)`                                                                    | Accessing element                                               |
+| `vec[index]`                                                                    | Accessing element                                               |
+| `.at(index) = <new value>`                                                      | Assigning value                                                 |
+| `.pop_back()`                                                                   | Remove last element                                             |
+| `.clear()`                                                                      | Remove all elements                                             |
+| `.erase(position)`                                                              | Deletion from specified position                                |
+| `.erase(starting_pos, ending_pos)`                                              | Deletion in range                                               |
+| `std::merge(vec1.begin(), vec1.end(),vec2.begin(), vec2.end(), merged.begin())` | Merging vectors                                                 |
+| `std::fund(vec.begin(), vec.end(), elementToFind)`                              | Finding elements. Returns the iterator if present else `.end()` |
+|                                                                                 |                                                                 |
 
 - `insert()` needs to shift the elements if new element is not in extreme ends of vector. This causes performance issues.
 - When reallocation takes place, all references to elements reallocated are invalidated.
