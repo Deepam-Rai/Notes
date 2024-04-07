@@ -41,3 +41,25 @@ sudo airodump-ng <interface> ...flags and values...
 | `s`          | Sort by different column in dump. The corresponding column is indicated on top |
 | `p`          | Disable colored display                                                        |
 |              |                                                                                |
+
+----
+# airgraph-ng
+Helps visualize the captures from airodump-ng as graph.
+
+Installation:
+```shell
+sudo apt install airgraph-ng
+```
+
+Use:
+```shell
+sudo airgraph-ng -l <capturefile>.csv -o <outputImage>.png -g <type of view>
+```
+
+| flag      | Type of view                                   |
+| --------- | ---------------------------------------------- |
+| `-g CAPR` | Captured network stations and hosts connected. |
+| `-g CPG`  | Un-connected devices.                          |
+|           |                                                |
+
+----
