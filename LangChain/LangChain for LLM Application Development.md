@@ -16,11 +16,12 @@ https://learn.deeplearning.ai/courses/langchain/lesson/1/introduction
 Developed by Harrison Chase and Ankush Gola(Co-Founder).  
 
 ---
-
+## Observations
 1. Provides wrappers and utilities for giving prompt to LLM model and also for the output given by LLM.
 3. [Typical flow here](./Models,%20prompts%20and%20parsers.md) for usual prompt and getting response from LLM.
 4. Gives dedicated memory retaining mechanism for chatbots conversations [here](./Memory.md).
 5. Combines prompt and LLMs to form building blocks, which can be joined in sequence and used as a chain.
+6. Basically, we know what functions we need. So instead of coding the function we use LLM with prompt engineering.
 
 
 ----
@@ -123,7 +124,7 @@ Uses LLM to route between sub chains
 	2. Assign LLMs to chunks of data. Parallel processing is possible.
 	3. Instructs LLM to provide confidence score for its response, and the response with highest confidence score is taken.
 
-![Methods](../Images/Lang%20Chain/LangChain_Q_A.png)
+![Methods](../Images/LangChain/LangChain_Q_A.png)
 
 ----
 
