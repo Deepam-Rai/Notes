@@ -1,4 +1,6 @@
 
+# Map
+
 > **map**:  container used to store indexed values.
 
 - each value is mapped to a key
@@ -6,7 +8,7 @@
 - type of all values are same. but type of key and the value can be different.
 
 ----
-# Usage
+## Usage
 
 Header:
 
@@ -30,7 +32,7 @@ map<string, string> food2(food);
 
 
 ----
-# map operations
+## map operations
 
 | function                    | use                 |
 | --------------------------- | ------------------- |
@@ -41,7 +43,7 @@ map<string, string> food2(food);
 |                             |                     |
 
 ----
-# map functions
+## map functions
 
 | function       | use                                                              |
 | -------------- | ---------------------------------------------------------------- |
@@ -55,7 +57,7 @@ map<string, string> food2(food);
 
 
 ----
-# Common snippets
+## Common snippets
 Iteration:
 ```cpp
 for( auto element: food){
@@ -72,3 +74,4 @@ if(my_map.find("key")==my_map.end()){
 ```
 
 ----
+

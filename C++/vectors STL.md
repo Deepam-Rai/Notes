@@ -50,10 +50,10 @@ std::vector<int> vec(5, 7);
 | `.at(index) = <new value>`                                                      | Assigning value                                                 |
 | `.pop_back()`                                                                   | Remove last element                                             |
 | `.clear()`                                                                      | Remove all elements                                             |
-| `.erase(position)`                                                              | Deletion from specified position                                |
+| `.erase(iterator position)`                                                     | Deletion from specified position                                |
 | `.erase(starting_pos, ending_pos)`                                              | Deletion in range                                               |
 | `std::merge(vec1.begin(), vec1.end(),vec2.begin(), vec2.end(), merged.begin())` | Merging vectors                                                 |
-| `std::fund(vec.begin(), vec.end(), elementToFind)`                              | Finding elements. Returns the iterator if present else `.end()` |
+| `std::find(vec.begin(), vec.end(), elementToFind)`                              | Finding elements. Returns the iterator if present else `.end()` |
 |                                                                                 |                                                                 |
 
 - `insert()` needs to shift the elements if new element is not in extreme ends of vector. This causes performance issues.
@@ -62,18 +62,21 @@ std::vector<int> vec(5, 7);
 - 
 
 ----
-# vector functions
+# vector methods
 
-| function     | Use                                                                       |
-| ------------ | ------------------------------------------------------------------------- |
-| `size()`     | Returns number of elements of vector                                      |
-| `clear()`    | Removes all elements of the vector                                        |
-| `front()`    | Returns the first element                                                 |
-| `back()`     | Returns the last element                                                  |
-| `capacity()` | Returns the overall size of the vector                                    |
-| `empty()`    | Returns `(True)` if the vector is empty                                   |
-| `begin()`    | Returns iterator to the first element                                     |
-| `end()`      | Returns iterator to the theoretical element that comes after last element |
+| function         | Use                                                                        |
+| ---------------- | -------------------------------------------------------------------------- |
+| `.size()`        | Returns number of elements of vector                                       |
+| `.capacity()`    | Returns the overall size of the vector                                     |
+| `.clear()`       | Removes all elements of the vector                                         |
+| `.front()`       | Returns the first element                                                  |
+| `.back()`        | Returns the last element                                                   |
+| `.empty()`       | Returns `(True)` if the vector is empty                                    |
+| `.begin()`       | Returns iterator to the first element                                      |
+| `.end()`         | Returns iterator to the theoretical element that comes after last element  |
+| `.rbegin()`      | Returns reverse iterator pointing to last elements and iterates backwards. |
+| `.rend()`        | Returns reverse iterator pointing to first element and iterates forwards.  |
+|                  |                                                                            |
 
 ----
 # Vector iterators

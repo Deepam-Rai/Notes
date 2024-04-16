@@ -21,7 +21,7 @@ std::unordered_set<data_type> name(vec.begin(), vec.end())
 |                    |           |
 
 ----
-# functions
+# methods
 
 | function         | use                                                     |
 | ---------------- | ------------------------------------------------------- |
