@@ -64,19 +64,20 @@ std::vector<int> vec(5, 7);
 ----
 # vector methods
 
-| function         | Use                                                                        |
-| ---------------- | -------------------------------------------------------------------------- |
-| `.size()`        | Returns number of elements of vector                                       |
-| `.capacity()`    | Returns the overall size of the vector                                     |
-| `.clear()`       | Removes all elements of the vector                                         |
-| `.front()`       | Returns the first element                                                  |
-| `.back()`        | Returns the last element                                                   |
-| `.empty()`       | Returns `(True)` if the vector is empty                                    |
-| `.begin()`       | Returns iterator to the first element                                      |
-| `.end()`         | Returns iterator to the theoretical element that comes after last element  |
-| `.rbegin()`      | Returns reverse iterator pointing to last elements and iterates backwards. |
-| `.rend()`        | Returns reverse iterator pointing to first element and iterates forwards.  |
-|                  |                                                                            |
+| function                              | Use                                                                              |
+| ------------------------------------- | -------------------------------------------------------------------------------- |
+| `.size()`                             | Returns number of elements of vector                                             |
+| `.capacity()`                         | Returns the overall size of the vector                                           |
+| `.clear()`                            | Removes all elements of the vector                                               |
+| `.front()`                            | Returns the first element                                                        |
+| `.back()`                             | Returns the last element                                                         |
+| `.empty()`                            | Returns `(True)` if the vector is empty                                          |
+| `.begin()`                            | Returns iterator to the first element                                            |
+| `.end()`                              | Returns iterator to the theoretical element that comes after last element        |
+| `.rbegin()`                           | Returns reverse iterator pointing to last elements and iterates backwards.       |
+| `.rend()`                             | Returns reverse iterator pointing to first element and iterates forwards.        |
+| `std::unique(vec.begin(), vec.end())` | Bring all duplicates to the end and returns the iterator where duplicates begin. |
+|                                       |                                                                                  |
 
 ----
 # Vector iterators
@@ -102,3 +103,20 @@ value = *iter; // dereferencing the iterator
 
 ----
 
+# Code snippets
+
+Removing duplicates:
+```cpp
+// using unique and erase
+sort(vec.begin(), vec.end());
+auto it = unique(vec.begin(), vec.end());
+vec.erase(it, vec.end());
+```
+
+```cpp
+// converting to set
+unordered_set<data_type> temp_s; // may need to create a hashFunction
+for(auto item: vec)
+	temp_s.insert(item);
+vec.assign(temp_s.begin(), temp_s.end());
+```
