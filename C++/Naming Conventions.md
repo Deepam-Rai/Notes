@@ -1,11 +1,11 @@
 
 | Entity              | Naming Convention |
 | ------------------- | ----------------- |
-| Variables           | snake_case        |
-| Functions           | camelCase         |
-| Classes             | CamelCase         |
+| Variables           | camelCase         |
+| Functions           | PascalCase        |
+| Classes             | PascalCase        |
 | Constants           | UPPER_CASE        |
-| Enums               | CamelCase         |
+| Enums               | PascalCase        |
 | Enumerators         | UPPER_CASE        |
 | Typedefs            | CamelCase         |
 | Namespaces          | snake_case        |
