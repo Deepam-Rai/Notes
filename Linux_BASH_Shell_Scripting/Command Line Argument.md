@@ -1,4 +1,5 @@
 Command Line Arguments are anything that follows command or program invocation.
+
 | Variable | Argument |
 | -- | -- |
 | `$0` | Script file Name |

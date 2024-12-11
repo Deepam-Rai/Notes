@@ -19,6 +19,7 @@ It is a program that acts as an interface between a user and the kernel.
 
 
 ## Don't know where to put yet
-| Syntax | Use |
-|--|--|
-| `$?` | Exit status of last command executed. (0:successfull, non-zero:not successful)|
+| Syntax    | Use                                                                   |
+| --------- | --------------------------------------------------------------------- |
+| `$?`      | Exit status of last command executed. (0:success, non-zero:unsuccess) |
+| `sudo !!` | Execute last command as sudo                                          |

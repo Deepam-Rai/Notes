@@ -2,6 +2,7 @@
 
 # chmod
 To change the permissions of file/directory.   
+
 | Symbol | Users |
 | -- | -- |
 | a | All users |
@@ -15,6 +16,7 @@ To change the permissions of file/directory.
 | - | Remove/evoke permission |
 
 Permissions:  
+
 | Numerical | Symbolic | permission |
 | -- | -- | -- |
 |  4 | r | read |
@@ -25,6 +27,7 @@ Permissions:
 
 
 Use: (Note: The hyphen below has different meaning from minus used to evoke permission.)
+
 | Numerical(Octal Notation) | Symbolic | permission |
 | -- | -- | -- |
 | 7 | rwx | read,write and execute |
@@ -36,6 +39,7 @@ Use: (Note: The hyphen below has different meaning from minus used to evoke perm
 | 1 | --x | execute only |
 
 Example:
+
 | Numerical | Symbolic | Purpose |
 | -- | -- | -- |
 | chmod 777 <file/directory> | chmod +rwx <file/directory> | read,write, execute permission to all |
@@ -51,6 +55,7 @@ Example:
 # umask
 - used to set the default permissions of the new files/directories.
 - umask is restrictive - it denotes which permissions should be removed not which should be granted.
+
 | command | meaning |
 | -- | -- |
 | umask 002 | others wont have write permission set |

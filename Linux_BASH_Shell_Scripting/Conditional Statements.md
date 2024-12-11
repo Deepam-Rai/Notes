@@ -1,7 +1,7 @@
-| Exit Status | Meaning |
-|--|--|
-| `0` | Successfully executed. |
-| `1` | Not successfully executed. |
+| Exit Status | Meaning                    |
+| ----------- | -------------------------- |
+| `0`         | Successfully executed.     |
+| `1`         | Not successfully executed. |
 
 Testing conditions:
 | Syntax | Purpose |
