@@ -1,2 +1,2 @@
 Related:
-- [Bash Scripting](../../Linux_BASH_Shell_Scripting/README.md)
+- [Bash Scripting](Bash/README.md)
