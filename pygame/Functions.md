@@ -1,9 +1,4 @@
 
-# Usage
-```python
-import pygame
-```
-
 # functions
 
 `pygame` functions:  
