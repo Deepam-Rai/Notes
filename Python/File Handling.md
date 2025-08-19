@@ -34,6 +34,7 @@ with open(filename, mode) as f:
 
 # OS operations on file
 `import os`
+
 | Command | Purpose |
 | -- | -- |
 | `os.path.exists(filename)` | Check if file exists. |

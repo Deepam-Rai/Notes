@@ -46,6 +46,18 @@ Demo Experiments:
 ## Clustering on Embeddings
 >**Clustering on Embeddings**: Generate embeddings using language models (e.g., BART) and classify text based upon its distance to category cluster centroids.
 
+Steps:
+Initial phase:
+1. Get embeddings of training data of all categories.
+2. Calculate the centroid of embeddings of each categories. Since each data belonging to a category would be closes to each other, naturally forming a cluster.
+
+Inference phase:
+1. Get the embedding of the input text.
+2. Calculate similarity with the centroids of each category clusters.
+3. Based upon similarity score predict the category of input text.
+
+Demo Experiments:
+- https://github.com/Deepam-Rai/AI_Exps/blob/main/classification/Clustering_on_Embeddings.ipynb
 
 ----
 ## Prompt Engineering

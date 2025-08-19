@@ -39,3 +39,20 @@ set<int> s = {1,2,3,5};
 | `.find(element)` | If present returns the iterator to the element else `.end()`       |
 | `.begin()`       | Iterator to the first element in the set.                          |
 | `.end()`         | Returns iterator to the element after the last element of the set. |
+
+----
+# Snippets
+
+Set diference:
+```cpp
+#include<algorithm>
+
+set<char> setS(s.begin(), s.end()), setT(t.begin(), t.end()), setDiff;
+// setDiff = setT - setS
+set_difference(
+	setT.begin(), setT.end(),
+	setS.begin(), setS.end(),
+	inserter(setDiff, setDiff.begin())
+);
+```
+

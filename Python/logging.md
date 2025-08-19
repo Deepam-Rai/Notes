@@ -82,3 +82,47 @@ logger = logging.getLogger(__name__)
 
 
 ----
+# Adding colors to log-output
+
+## using external library
+
+Tutorial: https://pythonhowtoprogram.com/logging-in-python-3-how-to-output-logs-to-file-and-console/?utm_source=dev.to&utm_medium=cp&utm_campaign=ctalink&utm_term=logging-in-python-3-how-to-output-logs-to-file-and-console
+
+
+```python
+import logging, coloredlogs  
+  
+ 
+LOGGER_FIELD_STYLE = {  
+    'asctime': {'color': 'green'},  
+    'levelname': {'bold': True, 'color': 'black'},  
+    'filename': {'color': 'cyan'},  
+    'funcName': {'color': 'magenta'}  
+}  
+  
+LOGGER_LEVEL_STYLES = {  
+    'critical': {'bold': True, 'color': 'red'},  
+    'debug': {'color': 'green'},  
+    'error': {'color': 'red'},  
+    'info': {'color': 'blue'},  
+    'warning': {'color': 'yellow'}  
+}
+
+
+logging.basicConfig()  
+logger = logging.getLogger(__name__)  
+coloredlogs.install(  
+    level=logging.NOTSET,  
+    logger=logger,  
+    fmt='%(asctime)s:%(levelname)s:%(filename)s:%(funcName)s():%(lineno)s: %(message)s',  
+    field_styles=LOGGER_FIELD_STYLE,  
+    level_styles=LOGGER_LEVEL_STYLES  
+)
+
+
+logger.error("error")  
+logger.warning("warning")  
+logger.critical("critica")  
+logger.info("info")
+```
+

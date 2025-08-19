@@ -55,6 +55,7 @@ std::vector<int> vec(5, 7);
 | `.erase(starting_itr, ending_itr)`                                              | Deletion in range. both inclusive.                                                       |
 | `std::merge(vec1.begin(), vec1.end(),vec2.begin(), vec2.end(), merged.begin())` | Merging vectors                                                                          |
 | `std::find(vec.begin(), vec.end(), elementToFind)`                              | Finding elements. Returns the iterator if present else `.end()`                          |
+| `std::find(vec.begin(), vec.end(), elementToFind)`                              | Checking existence in sorted vector.                                                     |
 | `remove_if(v.begin(), v.end(), func())`                                         | Remove the element if given UnaryPredicate function is true; Inclusivity: `[begin, end)` |
 | `std::min_element(v.begin(), v.end())`                                          | Finds the minimum element                                                                |
 

@@ -9,6 +9,11 @@
 
 **Bluebugging:** Access to device's commands using bluetooth without notifying the device's user.  
 
+----
+## HID attack
+Human Interface Device (HID) attacks.  
+ > CVE: CVE-2023-45866 (Zero click attack)
+  
 
 ---
 ## Bluetooth Low Energy vulnerabilities
@@ -29,3 +34,8 @@ MITM attack:
 2. Masquerade as BLE B.
 3. Perform MITM.
 
+
+# Tools
+
+1. [pybluez](../../Cyber%20Security/Bluetooth/)
+2. 

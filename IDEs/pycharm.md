@@ -11,6 +11,7 @@ Useful pycharm keyboard shortcuts/hotkeys:
 | `ctrl + tab`       | Option for change between tabs.                                                                 |
 | `ctrl + O`         | Override class from super.                                                                      |
 | `ctrl + w`         | Select all in scope(word, span, line, function, class, etc). Press further to expand the scope. |
+| `ctrl + alt + T`   | Surround selected block with code struct.                                                       |
 |                    |                                                                                                 |
 
 `LC`: Left Click  
