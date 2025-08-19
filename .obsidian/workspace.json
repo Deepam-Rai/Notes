@@ -11,10 +11,14 @@
             "id": "d11efaafd8d0e410",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "System Setup/New Windows setup.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "New Windows setup"
             }
           }
         ]
@@ -146,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "publuez.md",
+                "file": "System Setup/New Windows setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of publuez"
+              "title": "Outline of New Windows setup"
             }
           }
         ],
@@ -173,8 +177,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9a97b3aee185a082",
+  "active": "d11efaafd8d0e410",
   "lastOpenFiles": [
+    "publuez.md",
     "Untitled.base",
     "Untitled 1.base",
     "Bash/ports.md",
@@ -211,7 +216,6 @@
     "Cloud Services",
     "Images/OS/Linux/Linux_Distribution_Timeline.svg",
     "Images/OS/Linux",
-    "Images/OS",
     "Images/Technologies/Bluetooth/bluetooth_protocol_stack.png",
     "Images/DL/markov_chains_representation.png",
     "Images/LangChain/LCEL.png",
